@@ -1,4 +1,8 @@
 /server
 /server.o
 /stream
-/test
+/script
+/route_guide
+/file
+*.pb.h
+*.pb.o
