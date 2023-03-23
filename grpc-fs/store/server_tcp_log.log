@@ -1,0 +1,226 @@
+Server listening on 10.8.10.72:50051. Press Ctrl-C to end.
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 0
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read is_first_read
+notify_on_read
+tcp_write
+tcp_flush
+tcp_send
+sendmsg 46
+tcp_send 46
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 82
+recvmsg -1
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 82
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg -1
+notify_on_read
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg 234
+recvmsg -1
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 234
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg -1
+notify_on_read
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg 7876
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 7876
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 8032
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 8032
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 8032
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 8032
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 8032
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 8032
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 8032
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 8032
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 8032
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 8032
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+grpc_slice_buffer_add_indexed
+tcp_do_read
+recvmsg 3204
+recvmsg -1
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 3204
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg -1
+notify_on_read
+tcp_write
+tcp_flush
+tcp_send
+sendmsg 52
+tcp_send 52
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg 43
+recvmsg -1
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 43
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg -1
+notify_on_read
+tcp_write
+tcp_flush
+tcp_send
+sendmsg 127
+tcp_send 127
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg 17
+recvmsg -1
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+1 (&t->read_buffer)->length: 17
+2 (&t->read_buffer)->length: 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked()
+tcp_read
+tcp_read Run
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg -1
+notify_on_read
+tcp_write
+tcp_flush
+tcp_send
+sendmsg 17
+tcp_send 17
+tcp_handle_read
+tcp_handle_read GRPC_ERROR_NONE
+tcp_continue_read
+tcp_do_read
+recvmsg 0
+0
+call_read_cb
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked()
+src/core/lib/iomgr/tcp_posix.cc:tcp_shutdown()
+src/core/lib/iomgr/ev_epollex_linux.cc:fd_shutdown()
+1 (&t->read_buffer)->length: 0
+2 (&t->read_buffer)->length: 0

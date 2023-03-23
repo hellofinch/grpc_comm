@@ -1,0 +1,86 @@
+server ip: 12.8.10.78:5000
+Server listening on port: 12.8.10.78:5000
+Server: on_event RDMA_CM_EVENT_CONNECT_REQUEST
+Server: on_event RDMA_CM_EVENT_ESTABLISHED
+Server: on_event RDMA_CM_EVENT_ESTABLISHED END
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+CALLED WRITE_CB
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 4128768
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+hello
+CALLED WRITE_CB
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+CALLED WRITE_CB
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+CALLED WRITE_CB
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 1
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:continue_read_action_locked
+RDMA_READ CALLED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:grpc_chttp2_act_on_flowctl_action()
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1
+hello
+CALLED WRITE_CB
+src/core/lib/iomgr/rdma_cm.cc:rdma_shutdown() front
+src/core/lib/iomgr/rdma_cm.cc:rdma_shutdown() back
+Server: on_event RDMA_CM_EVENT_DISCONNECTED
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -3 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 1
+src/core/lib/iomgr/rdma_cm.cc:rdma_shutdown() front
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked 2
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -2 0
+src/core/ext/transport/chttp2/transport/chttp2_transport.cc:read_action_locked -1

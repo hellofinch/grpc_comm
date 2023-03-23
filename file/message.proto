@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service RouteGuide {
+  // 客户端文件流例子
+  rpc sendFile(stream FileInfo) returns (Info) {}
+}
+message FileInfo {
+    int32 index = 1;
+    string name=2;
+    bytes content = 3;
+}
+
+message Info {
+    string msg = 1
+}

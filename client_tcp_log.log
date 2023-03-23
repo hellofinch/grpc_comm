@@ -1,0 +1,11 @@
+server ip and port: 10.7.14.59:5000
+before init
+after init
+Chttp2Connector::Connected 0x1f5bb20
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:OnHandshakeDone() after grpc_chttp2_transport_start_reading
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:OnTimeout()
+Answer received: 5 * 10 = 50
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:Shutdown() 
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 1
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 2-1 0
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 2

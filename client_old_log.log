@@ -1,0 +1,11 @@
+server ip and port: 12.7.13.37:5000
+before init
+after init
+Client: on_event RDMA_CM_EVENT_ADDR_RESOLVED
+grpc_rdma_client_on_event
+Client: on_event RDMA_CM_EVENT_ROUTE_RESOLVED
+grpc_rdma_client_on_event
+Client: on_event RDMA_CM_EVENT_ESTABLISHED
+grpc_rdma_client_on_event
+Answer received: 5 * 10 = 50
+Client: on_event RDMA_CM_EVENT_DISCONNECTED

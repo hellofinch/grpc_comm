@@ -1,0 +1,27 @@
+server ip: 12.8.10.78:5000
+grpc_server_add_http2_port(server=0xd58090, addr=12.8.10.78:5000creds=0xd4f330)
+src/core/lib/iomgr/ib_server_posix.cc:rdma_server_create() end
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_add_port()
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_start()
+src/core/ext/transport/chttp2/server/chttp2_server.cc:StartListening() call end?
+Server listening on port: 12.8.10.78:5000
+chttp2_server.cc OnAccept
+chttp2_server.cc OnAccept acceptor 0x2af634000d00
+chttp2_server.cc OnAccept acceptor 0
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_ref()
+Chttp2ServerListener::OnAccept connection_ref->Start(
+src/core/lib/iomgr/ib_server_posix.cc:on_connection 0x2af62729c738
+src/core/ext/transport/chttp2/server/chttp2_server.cc:Chttp2ServerListener::ActiveConnection::HandshakingState::OnHandshakeDone() before grpc_chttp2_transport_start_reading
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_unref()
+hello
+Server: on_event RDMA_CM_EVENT_DISCONNECTED
+chttp2_server.cc OnAccept
+chttp2_server.cc OnAccept acceptor 0x2af638001400
+chttp2_server.cc OnAccept acceptor 0
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_ref()
+Chttp2ServerListener::OnAccept connection_ref->Start(
+src/core/lib/iomgr/ib_server_posix.cc:on_connection 0x2af62749d738
+src/core/ext/transport/chttp2/server/chttp2_server.cc:Chttp2ServerListener::ActiveConnection::HandshakingState::OnHandshakeDone() before grpc_chttp2_transport_start_reading
+src/core/lib/iomgr/ib_server.cc:grpc_rdma_server_unref()
+hello
+Server: on_event RDMA_CM_EVENT_DISCONNECTED

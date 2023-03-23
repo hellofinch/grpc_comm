@@ -1,0 +1,20 @@
+server ip and port: 12.8.10.78:5000
+before init
+after init
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 2
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 1
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 2
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 1
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 2
+Client: on_event RDMA_CM_EVENT_ESTABLISHED
+src/core/lib/iomgr/ib_client_posix.cc:client_on_event() event_handle.event 1
+Answer received: 5 * 10 = 50
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:Shutdown()
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 1
+count: 3
+OBJECT: rdma-client-connection:ipv4:12.8.10.78:5000 fd=9
+OBJECT: rdma-client:ipv4:12.8.10.78:5000 fd=12
+OBJECT: rdma-client:ipv4:12.8.10.78:5000 fd=13
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 3
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 4
+src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start 5

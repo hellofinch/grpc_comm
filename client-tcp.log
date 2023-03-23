@@ -1,0 +1,1055 @@
+D0201 15:49:08.669700038   16672 ev_posix.cc:172]            Using polling engine: epollex
+D0201 15:49:08.670868951   16672 lb_policy_registry.cc:42]   registering LB policy factory for "grpclb"
+D0201 15:49:08.671048637   16672 lb_policy_registry.cc:42]   registering LB policy factory for "priority_experimental"
+D0201 15:49:08.671137679   16672 lb_policy_registry.cc:42]   registering LB policy factory for "weighted_target_experimental"
+D0201 15:49:08.671225542   16672 lb_policy_registry.cc:42]   registering LB policy factory for "pick_first"
+D0201 15:49:08.671301034   16672 lb_policy_registry.cc:42]   registering LB policy factory for "round_robin"
+D0201 15:49:08.671387056   16672 lb_policy_registry.cc:42]   registering LB policy factory for "ring_hash_experimental"
+D0201 15:49:08.671453168   16672 dns_resolver_ares.cc:619]   Using ares dns resolver
+D0201 15:49:08.672232171   16672 certificate_provider_registry.cc:33] registering certificate provider factory for "file_watcher"
+D0201 15:49:08.672332353   16672 lb_policy_registry.cc:42]   registering LB policy factory for "cds_experimental"
+D0201 15:49:08.672420336   16672 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_impl_experimental"
+D0201 15:49:08.672509099   16672 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_resolver_experimental"
+D0201 15:49:08.672589871   16672 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_manager_experimental"
+I0201 15:49:08.672654513   16672 timer_manager.cc:88]        Spawn timer thread
+I0201 15:49:08.672741695   16672 init.cc:200]                grpc_init(void) 1
+I0201 15:49:08.672967512   16672 init.cc:200]                grpc_init(void) 2
+I0201 15:49:08.673117286   16672 chttp2_connector.cc:401]    grpc_secure_channel_create(target=10.7.14.59:5000, creds=0x1f512b0, args=0x7fff79ff6190)
+I0201 15:49:08.676814262   16672 init.cc:200]                grpc_init(void) 3
+I0201 15:49:08.677596325   16672 channel_stack.cc:110]       CHANNEL_STACK: init CLIENT_CHANNEL
+I0201 15:49:08.677653696   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter client-channel
+I0201 15:49:08.677730248   16672 ev_posix.cc:352]            (polling-api) pollset_set_create(0x1f52390)
+I0201 15:49:08.677952845   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 1 -> 2
+I0201 15:49:08.678031527   16672 client_channel.cc:1045]     chand=0x1f544a0: creating client_channel for channel stack 0x1f54420
+I0201 15:49:08.678080859   16672 ev_posix.cc:303]            (polling-api) pollset_init(0x1f51b90)
+I0201 15:49:08.678140850   16672 timer_generic.cc:344]       TIMER 0x1f51c00: SET 6783 now 1783 call 0x1f51c40[0x2ac4cb3b36ad]
+I0201 15:49:08.678199202   16672 timer_generic.cc:382]         .. add to shard 26 with queue_deadline_cap=1776 => is_first_timer=false
+I0201 15:49:08.678239343   16672 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x1f52390, 0x1f51b90)
+I0201 15:49:08.678282704   16672 ev_epollex_linux.cc:1451]   PSS:0x1f52390: add pollset 0x1f51b90
+I0201 15:49:08.678333866   16672 ev_epollex_linux.cc:565]    (fd-trace) Pollable_create: created epfd: 5 (type: 0)
+I0201 15:49:08.678375947   16672 ev_epollex_linux.cc:1249]   PS:0x1f51b90 active pollable transition from empty to multi
+I0201 15:49:08.679177480   16672 init.cc:200]                grpc_init(void) 4
+I0201 15:49:08.679265193   16672 credentials.cc:41]          grpc_channel_credentials_release(creds=0x1f512b0)
+I0201 15:49:08.679306444   16672 init.cc:241]                grpc_shutdown(void)
+I0201 15:49:08.679389836   16672 channel.cc:422]             grpc_channel_register_call(channel=0x1f543a0, method=/mathtest.MathTest/sendRequest, host=(null), reserved=(nil))
+I0201 15:49:08.679639783   16672 init.cc:241]                grpc_shutdown(void)
+I0201 15:49:08.679805428   16672 init.cc:200]                grpc_init(void) 3
+I0201 15:49:08.679854339   16672 completion_queue.cc:515]    grpc_completion_queue_create_internal(completion_type=1, polling_type=0)
+I0201 15:49:08.679889871   16672 ev_posix.cc:303]            (polling-api) pollset_init(0x1f4f5e0)
+I0201 15:49:08.679941322   16672 channel.cc:456]             grpc_channel_create_registered_call(channel=0x1f543a0, parent_call=(nil), propagation_mask=ffff, completion_queue=0x1f4f460, registered_call_handle=0x1f4f410, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+D0201 15:49:08.680059585   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF call
+I0201 15:49:08.680109067   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 call
+I0201 15:49:08.680577870   16672 client_channel.cc:1874]     chand=0x1f544a0 calld=0x1f58e10: created call
+I0201 15:49:08.680645122   16672 grpc_context.cc:29]         grpc_census_call_set_context(call=0x1f58070, census_context=(nil))
+I0201 15:49:08.680849558   16672 call.cc:1761]               grpc_call_start_batch(call=0x1f58070, ops=0x7fff79ff5a50, nops=6, tag=0x7fff79ff5d90, reserved=(nil))
+I0201 15:49:08.680948601   16672 call.cc:1355]               ops[0]: SEND_INITIAL_METADATA(nil)
+I0201 15:49:08.681026723   16672 call.cc:1355]               ops[1]: SEND_MESSAGE ptr=0x1f513a0
+I0201 15:49:08.681072404   16672 call.cc:1355]               ops[2]: RECV_INITIAL_METADATA ptr=0x7fff79ff61d8
+I0201 15:49:08.681115236   16672 call.cc:1355]               ops[3]: RECV_MESSAGE ptr=0x7fff79ff5e20
+I0201 15:49:08.681152667   16672 call.cc:1355]               ops[4]: SEND_CLOSE_FROM_CLIENT
+I0201 15:49:08.681201268   16672 call.cc:1355]               ops[5]: RECV_STATUS_ON_CLIENT metadata=0x7fff79ff6228 status=0x7fff79ff5e58 details=0x7fff79ff5e60
+D0201 15:49:08.681359233   16672 transport.h:158]            CALL_STACK 0x1f58d80:0x1f58070 REF completion
+I0201 15:49:08.681413494   16672 ref_counted.h:115]          stream_refcount:0x1f58d80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 completion
+I0201 15:49:08.681484266   16672 call_combiner.cc:127]       ==> CallCombiner::Start() [0x1f58088] closure=0x1f590c0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:623: executing batch] error="OK"
+I0201 15:49:08.681520907   16672 call_combiner.cc:136]         size: 0 -> 1
+I0201 15:49:08.681553648   16672 call_combiner.cc:144]         EXECUTING IMMEDIATELY
+D0201 15:49:08.681593199   16672 exec_ctx.cc:34]             running closure 0x1f590c0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:621]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0201 15:49:08.682281629   16672 call.cc:610]                OP[client-channel:0x1f58df0]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.682341441   16672 client_channel.cc:2026]     chand=0x1f544a0 calld=0x1f58e10: adding pending batch at index 0
+I0201 15:49:08.682375852   16672 client_channel.cc:1978]     chand=0x1f544a0 calld=0x1f58e10: grabbing resolution mutex to apply service config
+I0201 15:49:08.682430453   16672 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x1f54550]: get current state: IDLE
+D0201 15:49:08.682466564   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF CheckResolutionLocked
+I0201 15:49:08.682500775   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 CheckResolutionLocked
+I0201 15:49:08.682539737   16672 client_channel.cc:2190]     chand=0x1f544a0 calld=0x1f58e10: adding to resolver queued picks list
+I0201 15:49:08.682587978   16672 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x1f52390, 0x1f4f5e0)
+I0201 15:49:08.682623229   16672 ev_epollex_linux.cc:1451]   PSS:0x1f52390: add pollset 0x1f4f5e0
+I0201 15:49:08.682738592   16672 ev_epollex_linux.cc:565]    (fd-trace) Pollable_create: created epfd: 7 (type: 0)
+I0201 15:49:08.682801444   16672 ev_epollex_linux.cc:1249]   PS:0x1f4f5e0 active pollable transition from empty to multi
+D0201 15:49:08.682848285   16672 transport.h:158]            CALL_STACK 0x1f58d80:0x1f58070 REF ResolverQueuedCallCanceller
+I0201 15:49:08.682886977   16672 ref_counted.h:115]          stream_refcount:0x1f58d80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 ResolverQueuedCallCanceller
+I0201 15:49:08.682922298   16672 call_combiner.cc:233]       call_combiner=0x1f58088: setting notify_on_cancel=0x1f50e08
+D0201 15:49:08.682959409   16672 exec_ctx.cc:54]             closure 0x1f590c0 finished
+D0201 15:49:08.682993980   16672 exec_ctx.cc:34]             running closure 0x1f4f720: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2352]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2339]
+I0201 15:49:08.683109543   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2352]
+I0201 15:49:08.683149274   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.683186825   16672 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x1f54550]: get current state: IDLE
+D0201 15:49:08.683219896   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF TryToConnect
+I0201 15:49:08.683253187   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 TryToConnect
+I0201 15:49:08.683288588   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1839]
+I0201 15:49:08.683326449   16672 work_serializer.cc:101]       Scheduling on queue : item 0x1f49380
+D0201 15:49:08.683365860   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF CheckResolutionLocked
+I0201 15:49:08.683398411   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+I0201 15:49:08.683435132   16672 work_serializer.cc:201]       Running item 0x1f49380 : callback scheduled at [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1839]
+I0201 15:49:08.683550166   16672 client_channel.cc:1543]     chand=0x1f544a0: starting name resolution
+D0201 15:49:08.683591547   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF ResolverResultHandler
+I0201 15:49:08.683624038   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 ResolverResultHandler
+I0201 15:49:08.683860525   16674 executor.cc:231]            EXECUTOR (resolver-executor) [0]: step (sub_depth=0)
+I0201 15:49:08.684149103   16675 timer_manager.cc:189]       sleep for a 1001 milliseconds
+I0201 15:49:08.684310717   16673 executor.cc:231]            EXECUTOR (default-executor) [0]: step (sub_depth=0)
+I0201 15:49:08.684905695   16672 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x1f54550]: IDLE -> CONNECTING (started resolving, OK)
+D0201 15:49:08.685028968   16672 dns_resolver_ares.cc:170]   (c-ares resolver) resolver:0x1f59fe0 AresClientChannelDNSResolver::StartLocked() is called.
+D0201 15:49:08.685103150   16672 grpc_ares_wrapper.cc:1048]  (c-ares resolver) request:0x1f49660 c-ares grpc_dns_lookup_ares_impl name=10.7.14.59:5000, default_port=https
+I0201 15:49:08.685430920   16672 grpc_ares_wrapper.cc:531]   (c-ares resolver) request:0x1f49660 c-ares address sorting: input[0]=10.7.14.59:5000
+I0201 15:49:08.685649606   16672 grpc_ares_wrapper.cc:531]   (c-ares resolver) request:0x1f49660 c-ares address sorting: output[0]=10.7.14.59:5000
+D0201 15:49:08.685731128   16672 dns_resolver_ares.cc:465]   (c-ares resolver) resolver:0x1f59fe0 Started resolving. pending_request_:0x1f49660
+I0201 15:49:08.685781140   16672 client_channel.cc:1556]     chand=0x1f544a0: created resolver=0x1f59fe0
+D0201 15:49:08.685818841   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF TryToConnect
+D0201 15:49:08.685856412   16672 exec_ctx.cc:54]             closure 0x1f4f720 finished
+D0201 15:49:08.685890253   16672 exec_ctx.cc:34]             running closure 0x1f5a088: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:158]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc:596]
+I0201 15:49:08.685942184   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:318]
+I0201 15:49:08.685977915   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.686093649   16672 client_channel.cc:1207]     chand=0x1f544a0: got resolver result
+I0201 15:49:08.686255713   16672 client_channel.cc:1264]     chand=0x1f544a0: resolver returned no service config. Using default service config for channel.
+I0201 15:49:08.686510391   16672 client_channel.cc:1446]     chand=0x1f544a0: resolver returned updated service config: "{}"
+I0201 15:49:08.686561282   16672 client_channel.cc:1461]     chand=0x1f544a0: using ConfigSelector (nil)
+D0201 15:49:08.686624614   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF ClientChannelControlHelper
+I0201 15:49:08.686666435   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 ClientChannelControlHelper
+I0201 15:49:08.686785148   16672 ev_posix.cc:352]            (polling-api) pollset_set_create(0x1f51560)
+I0201 15:49:08.686851390   16672 client_channel.cc:1409]     chand=0x1f544a0: created new LB policy 0x1f5aeb0
+I0201 15:49:08.686890032   16672 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x1f51560, 0x1f52390)
+I0201 15:49:08.686924123   16672 ev_epollex_linux.cc:1488]   PSS: merge (0x1f51560, 0x1f52390)
+I0201 15:49:08.686979944   16672 ev_epollex_linux.cc:1522]   PSS: parent 0x1f51560 to 0x1f52390
+I0201 15:49:08.687041266   16672 client_channel.cc:1391]     chand=0x1f544a0: Updating child policy 0x1f5aeb0
+I0201 15:49:08.687086777   16672 child_policy_handler.cc:218] [child_policy_handler 0x1f5aeb0] creating new child policy pick_first
+I0201 15:49:08.687159399   16672 ev_posix.cc:352]            (polling-api) pollset_set_create(0x1f48890)
+I0201 15:49:08.687206601   16672 pick_first.cc:142]          Pick First 0x1f5b270 created.
+I0201 15:49:08.687244792   16672 child_policy_handler.cc:279] [child_policy_handler 0x1f5aeb0] created new LB policy "pick_first" (0x1f5b270)
+I0201 15:49:08.687289053   16672 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x1f48890, 0x1f51560)
+I0201 15:49:08.687323324   16672 ev_epollex_linux.cc:1488]   PSS: merge (0x1f48890, 0x1f51560)
+I0201 15:49:08.687366585   16672 ev_epollex_linux.cc:1522]   PSS: parent 0x1f48890 to 0x1f52390
+I0201 15:49:08.687410177   16672 child_policy_handler.cc:237] [child_policy_handler 0x1f5aeb0] updating child policy 0x1f5b270
+I0201 15:49:08.687461328   16672 pick_first.cc:265]          Pick First 0x1f5b270 received update with 1 addresses
+I0201 15:49:08.687558481   16672 subchannel_list.h:366]      [pick_first 0x1f5b270] Creating subchannel list 0x1f5b600 for 1 subchannels
+I0201 15:49:08.687694615   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 2 -> 3
+I0201 15:49:08.687802768   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 3 -> 4
+I0201 15:49:08.687919021   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 4 -> 5
+I0201 15:49:08.688033784   16672 ev_posix.cc:352]            (polling-api) pollset_set_create(0x1f4f820)
+I0201 15:49:08.688118487   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 5 -> 6
+I0201 15:49:08.688241040   16672 dual_ref_counted.h:261]     Subchannel:0x1f5bf90 ref 1 -> 2; (weak_refs=0)
+I0201 15:49:08.688331003   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 6 -> 7
+I0201 15:49:08.688392715   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 7 -> 8
+I0201 15:49:08.688440966   16672 dual_ref_counted.h:74]      Subchannel:0x1f5bf90 unref 2 -> 1, weak_ref 0 -> 1
+I0201 15:49:08.688477537   16672 dual_ref_counted.h:176]     Subchannel:0x1f5bf90 weak_unref 1 -> 0 (refs=1)
+I0201 15:49:08.688515018   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 8 -> 7
+I0201 15:49:08.688549369   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 7 -> 6
+I0201 15:49:08.688612641   16672 client_channel.cc:452]      chand=0x1f544a0: creating subchannel wrapper 0x1f5d050 for subchannel 0x1f5bf90
+D0201 15:49:08.688648892   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF SubchannelWrapper
+I0201 15:49:08.688683183   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 4 -> 5 SubchannelWrapper
+I0201 15:49:08.689020853   16672 subchannel_list.h:386]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0: Created subchannel 0x1f5d050 for address 10.7.14.59:5000 args={}
+I0201 15:49:08.689084905   16672 subchannel_list.h:313]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0 of 1 (subchannel 0x1f5d050): starting watch (from IDLE)
+I0201 15:49:08.689262490   16672 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x1f4f820, 0x1f48890)
+I0201 15:49:08.689305911   16672 ev_epollex_linux.cc:1488]   PSS: merge (0x1f4f820, 0x1f48890)
+I0201 15:49:08.689353482   16672 ev_epollex_linux.cc:1522]   PSS: parent 0x1f4f820 to 0x1f52390
+I0201 15:49:08.689458705   16672 dual_ref_counted.h:310]     Subchannel:0x1f5bf90 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:876 weak_ref 0 -> 1 (refs=1) connecting
+I0201 15:49:08.689561788   16672 subchannel.cc:933]          src/core/ext/filters/client_channel/subchannel.cc:ContinueConnectingLocked before connect_->Connect()
+I0201 15:49:08.689617680   16672 chttp2_connector.cc:93]     src/core/ext/transport/chttp2/client/chttp2_connector.cc:Connect before grpc_tcp_client_connect
+I0201 15:49:08.689691252   16672 socket_utils_common_posix.cc:429] Disabling AF_INET6 sockets because ::1 is not available.
+I0201 15:49:08.689836826   16672 ev_posix.cc:253]            (polling-api) fd_create(9, tcp-client:ipv4:10.7.14.59:5000, 1)
+I0201 15:49:08.689879337   16672 ev_posix.cc:254]            (fd-trace) fd_create(9, tcp-client:ipv4:10.7.14.59:5000, 1)
+D0201 15:49:08.690024812   16672 ev_epollex_linux.cc:175]    FD 9 0x1f5d5a0 create tcp-client:ipv4:10.7.14.59:5000 fd=9
+I0201 15:49:08.690067823   16672 tcp_client_posix.cc:303]    src/core/lib/iomgr/tcp_client_posix.cc:grpc_tcp_client_create_from_prepared_fd  no return after err if
+I0201 15:49:08.690102164   16672 ev_posix.cc:394]            (polling-api) pollset_set_add_fd(0x1f4f820, 9)
+I0201 15:49:08.690134535   16672 ev_epollex_linux.cc:1353]   PSS:0x1f4f820: add fd 0x1f5d5a0 (9)
+I0201 15:49:08.690170136   16672 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f4ccd0
+I0201 15:49:08.690209827   16672 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f59ab0
+D0201 15:49:08.690245198   16672 ev_epollex_linux.cc:352]    FD 9 0x1f5d5a0   ref 2 1 -> 3 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1367]
+I0201 15:49:08.690292829   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 6 -> 7
+I0201 15:49:08.690331130   16672 tcp_client_posix.cc:320]    CLIENT_CONNECT: ipv4:10.7.14.59:5000: asynchronously connecting fd 0x1f5d5a0
+I0201 15:49:08.690370442   16672 timer_generic.cc:344]       TIMER 0x1f5d720: SET 21791 now 1791 call 0x1f5d760[0x2ac4cb6c76bd]
+I0201 15:49:08.690417203   16672 timer_generic.cc:382]         .. add to shard 14 with queue_deadline_cap=2790 => is_first_timer=false
+D0201 15:49:08.690467934   16672 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x1f5d5e8 curr=0 closure=0x1f5d7b0
+I0201 15:49:08.690502125   16672 tcp_client_posix.cc:349]    src/core/lib/iomgr/tcp_client_posix.cc:tcp_connect:grpc_tcp_client_create_from_prepared_fd
+I0201 15:49:08.690540826   16672 subchannel.cc:935]          src/core/ext/filters/client_channel/subchannel.cc:ContinueConnectingLocked after connect_->Connect()
+I0201 15:49:08.690593168   16672 client_channel.cc:1472]     chand=0x1f544a0: switching to ConfigSelector (nil)
+I0201 15:49:08.690684021   16672 channel_stack.cc:110]       CHANNEL_STACK: init DynamicFilters
+I0201 15:49:08.690732282   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter retry_filter
+I0201 15:49:08.690828805   16672 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x1f54550]: get current state: CONNECTING
+I0201 15:49:08.690873686   16672 client_channel.cc:2204]     chand=0x1f544a0 calld=0x1f58e10: applying service config to call
+I0201 15:49:08.690950398   16672 client_channel.cc:2175]     chand=0x1f544a0 calld=0x1f58e10: removing from resolver queued picks list
+I0201 15:49:08.690989529   16672 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x1f52390, 0x1f4f5e0)
+I0201 15:49:08.691024830   16672 ev_epollex_linux.cc:1398]   PSS:0x1f52390: del pollset 0x1f4f5e0
+I0201 15:49:08.691061461   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.691146374   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+D0201 15:49:08.691190715   16672 exec_ctx.cc:54]             closure 0x1f5a088 finished
+D0201 15:49:08.691226566   16672 exec_ctx.cc:34]             running closure 0x1f5d388: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:371]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:362]
+I0201 15:49:08.691263557   16672 client_channel.cc:577]      chand=0x1f544a0: connectivity change for subchannel wrapper 0x1f5d050 subchannel 0x1f5bf90; hopping into work_serializer
+I0201 15:49:08.691305838   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:589]
+I0201 15:49:08.691340359   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.691392261   16672 client_channel.cc:612]      chand=0x1f544a0: processing connectivity change in work serializer for subchannel wrapper 0x1f5d050 subchannel 0x1f5bf90 watcher=0x1f496b0
+I0201 15:49:08.691453483   16672 subchannel_list.h:246]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0 of 1 (subchannel 0x1f5d050): connectivity changed: state=CONNECTING, shutting_down=0, pending_watcher=0x1f496b0
+I0201 15:49:08.691512894   16672 client_channel.cc:941]      chand=0x1f544a0: update: state=CONNECTING status=(OK) picker=0x1f5b070
+I0201 15:49:08.691569166   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+D0201 15:49:08.691610947   16672 exec_ctx.cc:54]             closure 0x1f5d388 finished
+D0201 15:49:08.691649758   16672 exec_ctx.cc:34]             running closure 0x1f58ed8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2291]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2292]
+I0201 15:49:08.691688859   16672 client_channel.cc:2403]     chand=0x1f544a0 calld=0x1f58e10: creating dynamic call stack on channel_stack=0x1f5b090
+I0201 15:49:08.691872485   16672 retry_filter.cc:2062]       chand=0x1f5dbf0 calld=0x1f59270: created call
+I0201 15:49:08.691921826   16672 client_channel.cc:2103]     chand=0x1f544a0 calld=0x1f58e10: starting 1 pending batches on dynamic_call=0x1f591d0
+I0201 15:49:08.691990858   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f59008 error="OK" reason=resuming pending batch from client channel call
+D0201 15:49:08.692044860   16672 exec_ctx.cc:54]             closure 0x1f58ed8 finished
+D0201 15:49:08.692080461   16672 exec_ctx.cc:34]             running closure 0x1f59008: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2114]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.692158563   16672 dynamic_filters.cc:66]      OP[retry_filter:0x1f59250]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.692230245   16672 retry_filter.cc:2157]       chand=0x1f5dbf0 calld=0x1f59270: batch started from surface:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.692279706   16672 retry_filter.cc:2395]       chand=0x1f5dbf0 calld=0x1f59270: adding pending batch at index 0
+I0201 15:49:08.692480162   16672 retry_filter.cc:2267]       chand=0x1f5dbf0 calld=0x1f59270: creating call attempt
+I0201 15:49:08.692704449   16672 retry_filter.cc:688]        chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: create lb_call=0x1f5e790
+I0201 15:49:08.692759170   16672 retry_filter.cc:1063]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: constructing retriable batches
+I0201 15:49:08.692820052   16672 retry_filter.cc:1298]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: creating batch 0x1f5ea80
+D0201 15:49:08.692856513   16672 transport.h:158]            CALL_STACK 0x1f591e0:0x1f591d0 REF Retry BatchData
+I0201 15:49:08.692891384   16672 ref_counted.h:115]          stream_refcount:0x1f591e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 Retry BatchData
+I0201 15:49:08.693891773   16672 retry_filter.cc:1974]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: starting calld->send_messages[0]
+I0201 15:49:08.694068378   16672 retry_filter.cc:865]        chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: adding batch (start replayable pending batch on call attempt):  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.694120789   16672 retry_filter.cc:1073]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: starting 1 retriable batches on lb_call=0x1f5e790
+I0201 15:49:08.694158470   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f5eac0 error="OK" reason=start replayable pending batch on call attempt
+D0201 15:49:08.694195791   16672 exec_ctx.cc:54]             closure 0x1f59008 finished
+D0201 15:49:08.694229602   16672 exec_ctx.cc:34]             running closure 0x1f5eac0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:871]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.694276064   16672 client_channel.cc:2624]     chand=0x1f544a0 lb_call=0x1f5e790: adding pending batch at index 0
+I0201 15:49:08.694309805   16672 client_channel.cc:2831]     chand=0x1f544a0 lb_call=0x1f5e790: grabbing data plane mutex to perform pick
+I0201 15:49:08.694367406   16672 ref_counted.h:75]           LoadBalancingPolicy:0x1f5b278 ref 3 -> 4
+I0201 15:49:08.694435558   16672 client_channel.cc:3130]     chand=0x1f544a0 lb_call=0x1f5e790: LB pick queued
+I0201 15:49:08.694477309   16672 client_channel.cc:3023]     chand=0x1f544a0 lb_call=0x1f5e790: adding to queued picks list
+I0201 15:49:08.694514101   16672 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x1f52390, 0x1f4f5e0)
+I0201 15:49:08.694552822   16672 ev_epollex_linux.cc:1451]   PSS:0x1f52390: add pollset 0x1f4f5e0
+I0201 15:49:08.694599473   16672 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f59ab0
+I0201 15:49:08.694643374   16672 ref_counted.h:75]           LoadBalancedCall:0x1f5e798 ref 1 -> 2
+D0201 15:49:08.694684605   16672 transport.h:158]            CALL_STACK 0x1f591e0:0x1f591d0 REF LbQueuedCallCanceller
+I0201 15:49:08.694720556   16672 ref_counted.h:115]          stream_refcount:0x1f591e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 LbQueuedCallCanceller
+I0201 15:49:08.694756818   16672 call_combiner.cc:233]       call_combiner=0x1f58088: setting notify_on_cancel=0x1f5d388
+I0201 15:49:08.694799619   16672 call_combiner.cc:242]       call_combiner=0x1f58088: scheduling old cancel callback=0x1f50e08
+D0201 15:49:08.694870471   16672 exec_ctx.cc:54]             closure 0x1f5eac0 finished
+D0201 15:49:08.694909222   16672 exec_ctx.cc:34]             running closure 0x1f5b8c0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:126]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:115]
+I0201 15:49:08.694946703   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:126]
+I0201 15:49:08.694980864   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.695015335   16672 ref_counted.h:165]          LoadBalancingPolicy:0x1f5b278 unref 4 -> 3
+I0201 15:49:08.695046536   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+D0201 15:49:08.695079957   16672 exec_ctx.cc:54]             closure 0x1f5b8c0 finished
+D0201 15:49:08.695120158   16672 exec_ctx.cc:34]             running closure 0x1f50e08: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2136]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:246]
+I0201 15:49:08.695157819   16672 client_channel.cc:2148]     chand=0x1f544a0 calld=0x1f58e10: cancelling resolver queued pick: error="OK" self=0x1f50e00 calld->resolver_pick_canceller=(nil)
+D0201 15:49:08.695193900   16672 transport.h:175]            CALL_STACK 0x1f58d80:0x1f58070 UNREF ResolvingQueuedCallCanceller
+D0201 15:49:08.695226931   16672 exec_ctx.cc:54]             closure 0x1f50e08 finished
+I0201 15:49:08.695274922   16672 completion_queue.cc:1218]   grpc_completion_queue_pluck(cq=0x1f4f460, tag=0x7fff79ff5d90, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+D0201 15:49:08.695326524   16672 completion_queue.cc:948]    PENDING TAGS: 0x7fff79ff5d90
+I0201 15:49:08.695374015   16672 ev_posix.cc:321]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) begin
+I0201 15:49:08.695416536   16672 ev_epollex_linux.cc:1117]   PS:0x1f4f5e0 work hdl=0x7fff79ff5b88 worker=0x7fff79ff59e0 now=1801 deadline=9223372036854775807 kwp=0 pollable=0x1f59ab0
+I0201 15:49:08.695471278   16672 ev_epollex_linux.cc:935]    POLLABLE:0x1f59ab0[type=pollset epfd=7 wakeup=8] poll for -1ms
+I0201 15:49:08.695515179   16672 ev_epollex_linux.cc:954]    POLLABLE:0x1f59ab0 got 1 events
+I0201 15:49:08.695550830   16672 ev_epollex_linux.cc:902]    PS:0x1f4f5e0 got fd 0x1f5d5a0: cancel=0 read=0 write=1
+D0201 15:49:08.695584381   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e8 curr=1f5d7b0
+D0201 15:49:08.695619692   16672 exec_ctx.cc:34]             running closure 0x1f5d7b0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc:316]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:265]
+I0201 15:49:08.695653123   16672 tcp_client_posix.cc:147]    CLIENT_CONNECT: ipv4:10.7.14.59:5000: on_writable: error="OK"
+I0201 15:49:08.695689474   16672 timer_generic.cc:447]       TIMER 0x1f5d720: CANCEL pending=true
+I0201 15:49:08.695728955   16672 ev_posix.cc:400]            (polling-api) pollset_set_del_fd(0x1f4f820, 9)
+I0201 15:49:08.695786607   16672 ev_epollex_linux.cc:1377]   PSS:0x1f4f820: del fd 0x1f5d5a0
+D0201 15:49:08.695824298   16672 ev_epollex_linux.cc:389]    FD 9 0x1f5d5a0 unref 2 3 -> 1 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1383]
+D0201 15:49:08.695980223   16672 tcp_posix.cc:1802]          cannot set inq fd=9 errno=92
+I0201 15:49:08.696023474   16672 tcp_posix.cc:1819]          grpc tcp create
+I0201 15:49:08.696065855   16672 executor.cc:303]            EXECUTOR (default-executor) try to schedule 0x1f5bb80 (short) (created /public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:63) to thread 0
+I0201 15:49:08.696155288   16673 executor.cc:251]            EXECUTOR (default-executor) [0]: execute
+I0201 15:49:08.696202269   16673 executor.cc:119]            EXECUTOR (default-executor) run 0x1f5bb80 [created by /public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:63]
+I0201 15:49:08.696372894   16673 handshaker.cc:62]           handshake_manager 0x2ac4e00008c0: adding handshaker http_connect [0x2ac4e0000a60] at index 0
+I0201 15:49:08.696470837   16673 handshaker.cc:62]           handshake_manager 0x2ac4e00008c0: adding handshaker security [0x2ac4e0001db0] at index 1
+I0201 15:49:08.696517248   16673 ev_posix.cc:394]            (polling-api) pollset_set_add_fd(0x1f4f820, 9)
+I0201 15:49:08.696552969   16673 ev_epollex_linux.cc:1353]   PSS:0x1f4f820: add fd 0x1f5d5a0 (9)
+I0201 15:49:08.696591600   16673 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f4ccd0
+I0201 15:49:08.696630451   16673 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f59ab0
+D0201 15:49:08.696666092   16673 ev_epollex_linux.cc:352]    FD 9 0x1f5d5a0   ref 2 1 -> 3 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1367]
+I0201 15:49:08.696715384   16673 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 7 -> 8
+I0201 15:49:08.696760045   16673 timer_generic.cc:344]       TIMER 0x2ac4e0000958: SET 21791 now 1802 call 0x2ac4e0000998[0x2ac4cb691a5e]
+I0201 15:49:08.696820057   16673 timer_generic.cc:382]         .. add to shard 17 with queue_deadline_cap=2790 => is_first_timer=false
+I0201 15:49:08.696964311   16673 handshaker.cc:89]           handshake_manager 0x2ac4e00008c0: error="OK" shutdown=0 index=0, args={endpoint=0x1f5f460, args=0x2ac4e0001cc0 {size=8: grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x1f506d0, grpc.client_channel_factory=0x1f52bd0, grpc.internal.channel_credentials=0x1f512b0, grpc.server_uri=dns:///10.7.14.59:5000, grpc.internal.subchannel_pool=0x1f52910, grpc.default_authority=10.7.14.59:5000, grpc.internal.security_connector=0x1f5b430}, read_buffer=0x2ac4e0002460 (length=0), exit_early=0}
+I0201 15:49:08.697009952   16673 handshaker.cc:136]          handshake_manager 0x2ac4e00008c0: calling handshaker http_connect [0x2ac4e0000a60] at index 0
+D0201 15:49:08.697057984   16673 exec_ctx.cc:34]             running closure 0x2ac4e0000908: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/handshaker.cc:197]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/http_connect_handshaker.cc:296]
+I0201 15:49:08.697132516   16673 handshaker.cc:89]           handshake_manager 0x2ac4e00008c0: error="OK" shutdown=0 index=1, args={endpoint=0x1f5f460, args=0x2ac4e0001cc0 {size=8: grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x1f506d0, grpc.client_channel_factory=0x1f52bd0, grpc.internal.channel_credentials=0x1f512b0, grpc.server_uri=dns:///10.7.14.59:5000, grpc.internal.subchannel_pool=0x1f52910, grpc.default_authority=10.7.14.59:5000, grpc.internal.security_connector=0x1f5b430}, read_buffer=0x2ac4e0002460 (length=0), exit_early=0}
+I0201 15:49:08.697174337   16673 handshaker.cc:136]          handshake_manager 0x2ac4e00008c0: calling handshaker security [0x2ac4e0001db0] at index 1
+I0201 15:49:08.697250259   16673 security_context.cc:270]    grpc_auth_context_add_cstring_property(ctx=0x2ac4e0002590, name=transport_security_type, value=insecure)
+I0201 15:49:08.697315441   16673 security_context.cc:252]    grpc_auth_context_add_property(ctx=0x2ac4e0002590, name=security_level, value=TSI_SECURITY_NONE, value_length=17)
+D0201 15:49:08.697359262   16673 exec_ctx.cc:54]             closure 0x2ac4e0000908 finished
+D0201 15:49:08.697396653   16673 exec_ctx.cc:34]             running closure 0x2ac4e0001fd0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/security/transport/security_handshaker.cc:125]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/insecure/insecure_security_connector.cc:75]
+I0201 15:49:08.697444315   16673 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 8 -> 9
+I0201 15:49:08.697486466   16673 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 9 -> 8
+D0201 15:49:08.697526177   16673 exec_ctx.cc:54]             closure 0x2ac4e0001fd0 finished
+D0201 15:49:08.697561238   16673 exec_ctx.cc:34]             running closure 0x2ac4e0000908: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/handshaker.cc:197]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/security/transport/security_handshaker.cc:329]
+I0201 15:49:08.697643220   16673 handshaker.cc:89]           handshake_manager 0x2ac4e00008c0: error="OK" shutdown=0 index=2, args={endpoint=0x1f5f460, args=0x2ac4e00023b0 {size=9: grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x1f506d0, grpc.client_channel_factory=0x1f52bd0, grpc.internal.channel_credentials=0x1f512b0, grpc.server_uri=dns:///10.7.14.59:5000, grpc.internal.subchannel_pool=0x1f52910, grpc.default_authority=10.7.14.59:5000, grpc.internal.security_connector=0x1f5b430, grpc.auth_context=0x2ac4e0002590}, read_buffer=0x2ac4e0002460 (length=0), exit_early=0}
+I0201 15:49:08.697686302   16673 handshaker.cc:122]          handshake_manager 0x2ac4e00008c0: handshaking complete -- scheduling on_handshake_done with error="OK"
+I0201 15:49:08.697722743   16673 timer_generic.cc:447]       TIMER 0x2ac4e0000958: CANCEL pending=true
+D0201 15:49:08.697762664   16673 exec_ctx.cc:54]             closure 0x2ac4e0000908 finished
+D0201 15:49:08.697810455   16673 exec_ctx.cc:34]             running closure 0x2ac4e0000998: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/handshaker.cc:203]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+D0201 15:49:08.697844576   16673 exec_ctx.cc:54]             closure 0x2ac4e0000998 finished
+D0201 15:49:08.697877167   16673 exec_ctx.cc:34]             running closure 0x2ac4e00009e0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/handshaker.cc:199]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/handshaker.cc:130]
+I0201 15:49:08.697976850   16673 combiner.cc:60]             C:0x2ac4e0002150 create
+I0201 15:49:08.698865646   16673 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state IDLE -> WRITING [TRANSPORT_FLOW_CONTROL]
+I0201 15:49:08.698916777   16673 combiner.cc:319]            C:0x2ac4e0002150 grpc_combiner_execute_finally c=0x2ac4e0002bd8; ac=(nil)
+I0201 15:49:08.698953108   16673 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0006cd0 last=1
+I0201 15:49:08.698992869   16673 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> WRITING+MORE [INITIAL_WRITE]
+I0201 15:49:08.699048361   16673 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002cb0 last=3
+I0201 15:49:08.699089102   16673 timer_generic.cc:344]       TIMER 0x1f5bc10: SET 21791 now 1802 call 0x1f5bc50[0x2ac4cb573e58]
+I0201 15:49:08.699140273   16673 timer_generic.cc:382]         .. add to shard 9 with queue_deadline_cap=2790 => is_first_timer=false
+D0201 15:49:08.699240946   16673 exec_ctx.cc:54]             closure 0x2ac4e00009e0 finished
+I0201 15:49:08.699282567   16673 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.699323089   16673 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0006cd0
+I0201 15:49:08.699357960   16673 combiner.cc:319]            C:0x2ac4e0002150 grpc_combiner_execute_finally c=0x2ac4e0002bd8; ac=0x2ac4e0002150
+I0201 15:49:08.699390911   16673 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=7
+I0201 15:49:08.699424422   16673 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.699457862   16673 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002cb0
+I0201 15:49:08.699502554   16673 endpoint.cc:29]             endpoint: grpc_endpoint_read
+I0201 15:49:08.699543785   16673 tcp_posix.cc:882]           tcp_read CALLED
+I0201 15:49:08.699586006   16673 tcp_posix.cc:549]           TCP:0x1f5f460 notify_on_read
+D0201 15:49:08.699621747   16673 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x1f5d5e0 curr=0 closure=0x1f5f610
+I0201 15:49:08.699658168   16673 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.699691779   16673 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=1
+I0201 15:49:08.699724570   16673 combiner.cc:250]            C:0x2ac4e0002150 execute_final[0] c=0x2ac4e0002bd8
+D0201 15:49:08.699829763   16673 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt sent | trw:                         65535, tlw:                       4194303, taw:              65535 -> 4194303, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.699886765   16673 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING+MORE -> WRITING [begin write in current thread]
+I0201 15:49:08.699922796   16673 endpoint.cc:37]             endpoint: grpc_endpoint_write
+I0201 15:49:08.699955567   16673 tcp_posix.cc:1548]          tcp_write CALLED
+I0201 15:49:08.699987048   16673 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.700041639   16673 tcp_posix.cc:1562]          DATA: 50 52 49 20 2a 20 48 54 54 50 2f 32 2e 30 0d 0a 0d 0a 53 4d 0d 0a 0d 0a 'PRI * HTTP/2.0....SM....'
+I0201 15:49:08.700075540   16673 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.700111381   16673 tcp_posix.cc:1562]          DATA: 00 00 24 04 00 00 00 00 00 00 02 00 00 00 00 00 03 00 00 00 00 00 04 00 3f ff ff 00 05 00 3f ff ff 00 06 00 00 20 00 fe 03 00 00 00 01 '..$.....................?.....?...... .......'
+I0201 15:49:08.700143772   16673 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.700176633   16673 tcp_posix.cc:1562]          DATA: 00 00 04 08 00 00 00 00 00 00 3f 00 00 '..........?..'
+I0201 15:49:08.700240405   16673 tcp_posix.cc:1607]          write: "OK"
+D0201 15:49:08.700281346   16673 closure.h:259]              running closure 0x2ac4e0002c68: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:986]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1609]
+I0201 15:49:08.700315747   16673 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002c68 last=3
+D0201 15:49:08.700348318   16673 closure.h:268]              closure 0x2ac4e0002c68 finished
+I0201 15:49:08.700381359   16673 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.700415010   16673 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.700447891   16673 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002c68
+I0201 15:49:08.700485732   16673 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> IDLE [finish writing]
+I0201 15:49:08.700540084   16673 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+I0201 15:49:08.700575655   16673 executor.cc:231]            EXECUTOR (default-executor) [0]: step (sub_depth=1)
+D0201 15:49:08.700620566   16672 exec_ctx.cc:54]             closure 0x1f5d7b0 finished
+D0201 15:49:08.700658727   16672 exec_ctx.cc:34]             running closure 0x1f5d760: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc:326]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+I0201 15:49:08.700693338   16672 tcp_client_posix.cc:110]    CLIENT_CONNECT: ipv4:10.7.14.59:5000: on_alarm: error="CANCELLED"
+I0201 15:49:08.700734569   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 8 -> 7
+D0201 15:49:08.700776720   16672 exec_ctx.cc:54]             closure 0x1f5d760 finished
+I0201 15:49:08.700818912   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=1 (target:0)
+I0201 15:49:08.700855423   16672 ev_posix.cc:325]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) end
+I0201 15:49:08.700891114   16672 ev_posix.cc:321]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) begin
+I0201 15:49:08.700926085   16672 ev_epollex_linux.cc:1117]   PS:0x1f4f5e0 work hdl=0x7fff79ff5b88 worker=0x7fff79ff59e0 now=1807 deadline=9223372036854775807 kwp=0 pollable=0x1f59ab0
+I0201 15:49:08.700966636   16672 ev_epollex_linux.cc:935]    POLLABLE:0x1f59ab0[type=pollset epfd=7 wakeup=8] poll for -1ms
+I0201 15:49:08.701003817   16672 ev_epollex_linux.cc:954]    POLLABLE:0x1f59ab0 got 1 events
+I0201 15:49:08.701037468   16672 ev_epollex_linux.cc:902]    PS:0x1f4f5e0 got fd 0x1f5d5a0: cancel=0 read=1 write=1
+D0201 15:49:08.701069509   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e0 curr=1f5f610
+D0201 15:49:08.701106880   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e8 curr=0
+D0201 15:49:08.701140611   16672 exec_ctx.cc:34]             running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:265]
+I0201 15:49:08.701173542   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.701206443   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.701249004   16672 tcp_posix.cc:839]           TCP:0x1f5f460 alloc_slices; min_chunk=256 max_chunk=4194304 target=8192.000000 buf_len=0
+I0201 15:49:08.701299755   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.701364197   16672 tcp_posix.cc:668]           TCP:0x1f5f460 call_cb 0x2ac4e0002cb0 0x2ac4cb589c09:0x2ac4e0002ac0
+I0201 15:49:08.701402648   16672 tcp_posix.cc:670]           READ 0x1f5f460 (peer=ipv4:10.7.14.59:5000) error="OK"
+D0201 15:49:08.701439669   16672 tcp_posix.cc:676]           DATA: 00 00 18 04 00 00 00 00 00 00 04 00 3f ff ff 00 05 00 3f ff ff 00 06 00 00 20 00 fe 03 00 00 00 01 00 00 04 08 00 00 00 00 00 00 3f 00 00 '............?.....?...... .................?..'
+D0201 15:49:08.701473990   16672 closure.h:259]              running closure 0x2ac4e0002cb0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2550]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:684]
+I0201 15:49:08.701507341   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002cb0 last=1
+D0201 15:49:08.701540072   16672 closure.h:268]              closure 0x2ac4e0002cb0 finished
+D0201 15:49:08.701572663   16672 exec_ctx.cc:54]             closure 0x1f5f610 finished
+I0201 15:49:08.701607334   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.701640545   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002cb0
+I0201 15:49:08.701724098   16672 frame_settings.cc:238]      0x2ac4e0002ac0[cli] adding 4128768 for initial_window change
+I0201 15:49:08.701760339   16672 frame_settings.cc:262]      CHTTP2:CLI:ipv4:10.7.14.59:5000: got setting INITIAL_WINDOW_SIZE = 4194303
+I0201 15:49:08.701802740   16672 frame_settings.cc:262]      CHTTP2:CLI:ipv4:10.7.14.59:5000: got setting MAX_FRAME_SIZE = 4194303
+I0201 15:49:08.701836401   16672 frame_settings.cc:262]      CHTTP2:CLI:ipv4:10.7.14.59:5000: got setting MAX_HEADER_LIST_SIZE = 8192
+I0201 15:49:08.701869052   16672 frame_settings.cc:262]      CHTTP2:CLI:ipv4:10.7.14.59:5000: got setting GRPC_ALLOW_TRUE_BINARY_METADATA = 1
+D0201 15:49:08.701915593   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt recv | trw:              65535 -> 4194303, tlw:                       4194303, taw:                       4194303, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.701950824   16672 endpoint.cc:29]             endpoint: grpc_endpoint_read
+I0201 15:49:08.701983945   16672 tcp_posix.cc:882]           tcp_read CALLED
+D0201 15:49:08.702017036   16672 closure.h:259]              running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:907]
+I0201 15:49:08.702049217   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.702081618   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.702113689   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.702148030   16672 tcp_posix.cc:549]           TCP:0x1f5f460 notify_on_read
+D0201 15:49:08.702181571   16672 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x1f5d5e0 curr=0 closure=0x1f5f610
+D0201 15:49:08.702213002   16672 closure.h:268]              closure 0x1f5f610 finished
+I0201 15:49:08.702246153   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+D0201 15:49:08.702284694   16672 exec_ctx.cc:34]             running closure 0x1f5bbc8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:201]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/frame_settings.cc:155]
+I0201 15:49:08.702322905   16672 ev_posix.cc:400]            (polling-api) pollset_set_del_fd(0x1f4f820, 9)
+I0201 15:49:08.702355566   16672 ev_epollex_linux.cc:1377]   PSS:0x1f4f820: del fd 0x1f5d5a0
+D0201 15:49:08.702391787   16672 ev_epollex_linux.cc:389]    FD 9 0x1f5d5a0 unref 2 3 -> 1 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1383]
+I0201 15:49:08.702435378   16672 timer_generic.cc:447]       TIMER 0x1f5bc10: CANCEL pending=true
+D0201 15:49:08.702472569   16672 exec_ctx.cc:54]             closure 0x1f5bbc8 finished
+D0201 15:49:08.702508950   16672 exec_ctx.cc:34]             running closure 0x1f5bc50: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:207]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+D0201 15:49:08.702571302   16672 exec_ctx.cc:54]             closure 0x1f5bc50 finished
+D0201 15:49:08.702605893   16672 exec_ctx.cc:34]             running closure 0x1f5c100: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:651]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:277]
+I0201 15:49:08.702649154   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 7 -> 8
+I0201 15:49:08.702767138   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 8 -> 9
+I0201 15:49:08.702819779   16672 channel_stack.cc:110]       CHANNEL_STACK: init subchannel
+I0201 15:49:08.702854560   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter authority
+I0201 15:49:08.702895711   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter client-auth-filter
+I0201 15:49:08.702932782   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter message_size
+I0201 15:49:08.702969023   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter http-client
+I0201 15:49:08.703000604   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter message_decompress
+I0201 15:49:08.703031645   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter message_compress
+I0201 15:49:08.703062576   16672 channel_stack.cc:112]       CHANNEL_STACK:   filter connected
+I0201 15:49:08.703133388   16672 ref_counted.h:75]           auth_context_refcount:0x2ac4e0002590 ref 3 -> 4
+I0201 15:49:08.703187220   16672 ref_counted.h:75]           security_connector_refcount:0x1f5b438 ref 6 -> 7
+I0201 15:49:08.703349034   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 9 -> 8
+I0201 15:49:08.703408826   16672 ref_counted.h:75]           SubchannelPoolInterface:0x1f52918 ref 8 -> 9
+I0201 15:49:08.703493558   16672 subchannel.cc:1001]         subchannel 0x1f5bf90 {address=ipv4:10.7.14.59:5000, args=grpc.client_channel_factory=0x1f52bd0, grpc.default_authority=10.7.14.59:5000, grpc.internal.channel_credentials=0x1f512b0, grpc.internal.security_connector=0x1f5b430, grpc.internal.subchannel_pool=0x1f52910, grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x1f506d0, grpc.server_uri=dns:///10.7.14.59:5000}: new connected subchannel at 0x1f61b80
+I0201 15:49:08.703542200   16672 dual_ref_counted.h:310]     Subchannel:0x1f5bf90 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:1010 weak_ref 1 -> 2 (refs=1) state_watcher
+I0201 15:49:08.703715995   16672 chttp2_transport.cc:1848]   perform_transport_op[t=0x2ac4e0002ac0]:  START_CONNECTIVITY_WATCH:watcher=0x1f61900:from=READY BIND_POLLSET_SET
+I0201 15:49:08.703757916   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x1f620d0 last=1
+I0201 15:49:08.703822928   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 9 -> 8
+I0201 15:49:08.703867449   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 8 -> 7
+I0201 15:49:08.703907640   16672 dual_ref_counted.h:198]     Subchannel:0x1f5bf90 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:956 weak_unref 2 -> 1 (refs=1) connecting
+D0201 15:49:08.703941491   16672 exec_ctx.cc:54]             closure 0x1f5c100 finished
+D0201 15:49:08.703980692   16672 exec_ctx.cc:34]             running closure 0x1f5f328: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:371]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:362]
+I0201 15:49:08.704015523   16672 client_channel.cc:577]      chand=0x1f544a0: connectivity change for subchannel wrapper 0x1f5d050 subchannel 0x1f5bf90; hopping into work_serializer
+I0201 15:49:08.704053925   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:589]
+I0201 15:49:08.704086965   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.704122817   16672 client_channel.cc:612]      chand=0x1f544a0: processing connectivity change in work serializer for subchannel wrapper 0x1f5d050 subchannel 0x1f5bf90 watcher=0x1f496b0
+I0201 15:49:08.704163618   16672 subchannel_list.h:246]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0 of 1 (subchannel 0x1f5d050): connectivity changed: state=READY, shutting_down=0, pending_watcher=0x1f496b0
+I0201 15:49:08.704201409   16672 pick_first.cc:475]          Pick First 0x1f5b270 selected subchannel 0x1f5d050
+I0201 15:49:08.704237250   16672 ref_counted.h:75]           SubchannelWrapper:0x1f5d058 ref 2 -> 3
+I0201 15:49:08.704279131   16672 client_channel.cc:941]      chand=0x1f544a0: update: state=READY status=(OK) picker=0x1f5d910
+I0201 15:49:08.704316902   16672 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x1f54550]: CONNECTING -> READY (helper, OK)
+I0201 15:49:08.704370824   16672 ref_counted.h:75]           SubchannelWrapper:0x1f5d058 ref 3 -> 4
+I0201 15:49:08.704453246   16672 client_channel.cc:3094]     chand=0x1f544a0 lb_call=0x1f5e790: LB pick succeeded: subchannel=0x1f5d050
+I0201 15:49:08.704502667   16672 ref_counted.h:75]           ConnectedSubchannel:0x1f61b88 ref 1 -> 2
+I0201 15:49:08.704549469   16672 client_channel.cc:3011]     chand=0x1f544a0 lb_call=0x1f5e790: removing from queued picks list
+I0201 15:49:08.704587330   16672 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x1f52390, 0x1f4f5e0)
+I0201 15:49:08.704624411   16672 ev_epollex_linux.cc:1398]   PSS:0x1f52390: del pollset 0x1f4f5e0
+I0201 15:49:08.704661262   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=0x7fff79ff59e0 (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.704707063   16672 ref_counted.h:165]          SubchannelWrapper:0x1f5d058 unref 4 -> 3
+I0201 15:49:08.704750355   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+D0201 15:49:08.704796786   16672 exec_ctx.cc:54]             closure 0x1f5f328 finished
+D0201 15:49:08.704833507   16672 exec_ctx.cc:34]             running closure 0x1f5e830: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3035]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3036]
+D0201 15:49:08.704914299   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF chttp2
+I0201 15:49:08.704956831   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 chttp2
+I0201 15:49:08.705020492   16672 ev_posix.cc:337]            (polling-api) pollset_add_fd(0x1f4f5e0, 9)
+I0201 15:49:08.705066164   16672 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f59ab0
+I0201 15:49:08.705148476   16672 client_channel.cc:2946]     chand=0x1f544a0 lb_call=0x1f5e790: create subchannel_call=0x1f62140: error="OK"
+I0201 15:49:08.705190157   16672 client_channel.cc:2697]     chand=0x1f544a0 lb_call=0x1f5e790: starting 1 pending batches on subchannel_call=0x1f62140
+I0201 15:49:08.705231068   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f5eac0 error="OK" reason=resuming pending batch from LB call
+D0201 15:49:08.705269909   16672 exec_ctx.cc:54]             closure 0x1f5e830 finished
+D0201 15:49:08.705304140   16672 exec_ctx.cc:34]             running closure 0x1f5eac0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2709]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.705378243   16672 subchannel.cc:172]          OP[authority:0x1f62220]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+D0201 15:49:08.705559018   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF finish_poll
+I0201 15:49:08.705599339   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 finish_poll
+I0201 15:49:08.705699012   16672 channel_stack.cc:248]       OP[client-auth-filter:0x1f62238]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.705756233   16672 ref_counted.h:75]           auth_context_refcount:0x2ac4e0002590 ref 1 -> 2
+D0201 15:49:08.706222457   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF finish_poll
+I0201 15:49:08.706273098   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 finish_poll
+I0201 15:49:08.706353150   16672 channel_stack.cc:248]       OP[message_size:0x1f62250]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.706427233   16672 channel_stack.cc:248]       OP[http-client:0x1f62268]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.707207395   16672 channel_stack.cc:248]       OP[message_decompress:0x1f62280]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.707300958   16672 channel_stack.cc:248]       OP[message_compress:0x1f62298]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.707559875   16672 channel_stack.cc:248]       OP[connected:0x1f622b0]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, grpc-accept-encoding: identity, deflate, gzip, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.707672548   16672 chttp2_transport.cc:1652]   perform_stream_op[s=0x1f632e0; op=0x1f5eaa0]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, grpc-accept-encoding: identity, deflate, gzip, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+D0201 15:49:08.707719120   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF perform_stream_op
+I0201 15:49:08.707754131   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 4 -> 5 perform_stream_op
+I0201 15:49:08.707794882   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x1f5eac0 last=3
+I0201 15:49:08.707832963   16672 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x1f58088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:140: passed batch to transport]
+I0201 15:49:08.707869024   16672 call_combiner.cc:172]         size: 1 -> 0
+I0201 15:49:08.707900155   16672 call_combiner.cc:208]         queue empty
+D0201 15:49:08.707932986   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF finish_poll
+D0201 15:49:08.707971197   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF finish_poll
+D0201 15:49:08.708003128   16672 exec_ctx.cc:54]             closure 0x1f5eac0 finished
+I0201 15:49:08.708038819   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.708072690   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x1f620d0
+I0201 15:49:08.708105311   16672 ev_posix.cc:394]            (polling-api) pollset_set_add_fd(0x1f4f820, 9)
+I0201 15:49:08.708137702   16672 ev_epollex_linux.cc:1353]   PSS:0x1f4f820: add fd 0x1f5d5a0 (9)
+I0201 15:49:08.708182083   16672 ev_epollex_linux.cc:616]    add fd 0x1f5d5a0 (9) to pollable 0x1f4ccd0
+D0201 15:49:08.708220394   16672 ev_epollex_linux.cc:352]    FD 9 0x1f5d5a0   ref 2 1 -> 3 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1367]
+I0201 15:49:08.708263805   16672 connectivity_state.cc:122]  ConnectivityStateTracker client_transport[0x2ac4e0002e38]: add watcher 0x1f61900
+I0201 15:49:08.708342208   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+D0201 15:49:08.708380419   16672 exec_ctx.cc:34]             running closure 0x1f61ff0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:210]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1840]
+D0201 15:49:08.708417470   16672 exec_ctx.cc:54]             closure 0x1f61ff0 finished
+I0201 15:49:08.708453871   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.708487122   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x1f5eac0
+I0201 15:49:08.708589375   16672 chttp2_transport.cc:1402]   perform_stream_op_locked[s=0x1f632e0; op=0x1f5eaa0]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, grpc-accept-encoding: identity, deflate, gzip, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA; on_complete = 0x1f62f78
+I0201 15:49:08.708647416   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI::path: /mathtest.MathTest/sendRequest
+I0201 15:49:08.708685857   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI::authority: 10.7.14.59:5000
+I0201 15:49:08.708723569   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI::method: POST
+I0201 15:49:08.708760880   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI::scheme: http
+I0201 15:49:08.708806191   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI:content-type: application/grpc
+I0201 15:49:08.708844092   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI:te: trailers
+I0201 15:49:08.708889913   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI:grpc-accept-encoding: identity, deflate, gzip
+I0201 15:49:08.708933325   16672 chttp2_transport.cc:1382]   HTTP:0:HDR:CLI:user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)
+I0201 15:49:08.709034957   16672 stream_lists.cc:125]        0x2ac4e0002ac0[0][cli]: add to waiting_for_concurrency
+I0201 15:49:08.709078509   16672 stream_lists.cc:71]         0x2ac4e0002ac0[0][cli]: pop from waiting_for_concurrency
+I0201 15:49:08.709112590   16672 chttp2_transport.cc:1166]   HTTP:CLI: Transport 0x2ac4e0002ac0 allocating new grpc_chttp2_stream 0x1f632e0 to id 1
+I0201 15:49:08.709165561   16672 stream_lists.cc:125]        0x2ac4e0002ac0[1][cli]: add to writable
+D0201 15:49:08.709204792   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF chttp2_writing:become
+I0201 15:49:08.709245194   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 chttp2_writing:become
+I0201 15:49:08.709279005   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state IDLE -> WRITING [START_NEW_STREAM]
+I0201 15:49:08.709311985   16672 combiner.cc:319]            C:0x2ac4e0002150 grpc_combiner_execute_finally c=0x2ac4e0002bd8; ac=0x2ac4e0002150
+I0201 15:49:08.709357507   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> WRITING+MORE [SEND_MESSAGE]
+D0201 15:49:08.709417819   16672 flow_control.cc:117]        0x2ac4e0004d30[1][cli] | app st recv | trw:                       4194303, tlw:                       4194303, taw:                       4194303, srw:                       4194303, slw:            4194303 -> 4194308, saw:                       4194303
+I0201 15:49:08.709471050   16672 chttp2_transport.cc:1232]   complete_closure_step: t=0x2ac4e0002ac0 0x1f62f78 refs=3 flags=0x0001 desc=op->on_complete err="OK" write_state=WRITING+MORE
+D0201 15:49:08.709507871   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF perform_stream_op
+I0201 15:49:08.709541022   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.709575703   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=1
+I0201 15:49:08.709609034   16672 combiner.cc:250]            C:0x2ac4e0002150 execute_final[0] c=0x2ac4e0002bd8
+I0201 15:49:08.709643245   16672 stream_lists.cc:71]         0x2ac4e0002ac0[1][cli]: pop from writable
+I0201 15:49:08.709704937   16672 writing.cc:405]             W:0x2ac4e0002ac0 CLIENT[1] im-(sent,send)=(0,1) announce=5
+I0201 15:49:08.710010286   16672 chttp2_transport.cc:1232]   complete_closure_step: t=0x2ac4e0002ac0 0x1f62f78 refs=2 flags=0x0001 desc=send_initial_metadata_finished err="OK" write_state=WRITING+MORE
+D0201 15:49:08.710073487   16672 flow_control.cc:117]        0x2ac4e0004d30[1][cli] | s updt sent | trw:                       4194303, tlw:            4194303 -> 4194308, taw:                       4194303, srw:                       4194303, slw:                       4194308, saw:            4194303 -> 4194308
+D0201 15:49:08.710133809   16672 flow_control.cc:117]        0x2ac4e0004d30[1][cli] |   data sent | trw:            4194303 -> 4194294, tlw:                       4194308, taw:                       4194303, srw:            4194303 -> 4194294, slw:                       4194308, saw:                       4194308
+I0201 15:49:08.710182570   16672 chttp2_transport.cc:1232]   complete_closure_step: t=0x2ac4e0002ac0 0x1f62f78 refs=1 flags=0x0001 desc=send_trailing_metadata_finished err="OK" write_state=WRITING+MORE
+I0201 15:49:08.710226832   16672 chttp2_transport.cc:1232]   complete_closure_step: t=0x2ac4e0002ac0 0x1f62f78 refs=0 flags=0x0001 desc=on_write_finished_cb err="OK" write_state=WRITING+MORE
+I0201 15:49:08.710263743   16672 stream_lists.cc:125]        0x2ac4e0002ac0[1][cli]: add to writing
+D0201 15:49:08.710303664   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt sent | trw:                       4194294, tlw:                       4194308, taw:            4194303 -> 4194308, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.710339135   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING+MORE -> WRITING [begin write in current thread]
+I0201 15:49:08.710371966   16672 endpoint.cc:37]             endpoint: grpc_endpoint_write
+I0201 15:49:08.710403737   16672 tcp_posix.cc:1548]          tcp_write CALLED
+I0201 15:49:08.710435328   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710467999   16672 tcp_posix.cc:1562]          DATA: 00 00 00 04 01 00 00 00 00 '.........'
+I0201 15:49:08.710499190   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710531260   16672 tcp_posix.cc:1562]          DATA: 00 00 d8 01 04 00 00 00 01 40 05 '.........@.'
+I0201 15:49:08.710562921   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710594702   16672 tcp_posix.cc:1562]          DATA: 3a 70 61 74 68 ':path'
+I0201 15:49:08.710626233   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710657694   16672 tcp_posix.cc:1562]          DATA: 1e '.'
+I0201 15:49:08.710688835   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710722346   16672 tcp_posix.cc:1562]          DATA: 2f 6d 61 74 68 74 65 73 74 2e 4d 61 74 68 54 65 73 74 2f 73 65 6e 64 52 65 71 75 65 73 74 '/mathtest.MathTest/sendRequest'
+I0201 15:49:08.710763947   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710803508   16672 tcp_posix.cc:1562]          DATA: 40 0a '@.'
+I0201 15:49:08.710836379   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710868870   16672 tcp_posix.cc:1562]          DATA: 3a 61 75 74 68 6f 72 69 74 79 ':authority'
+I0201 15:49:08.710900401   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710933002   16672 tcp_posix.cc:1562]          DATA: 0f 31 30 2e 37 2e 31 34 2e 35 39 3a 35 30 30 30 83 86 40 0c '.10.7.14.59:5000..@.'
+I0201 15:49:08.710964973   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.710996824   16672 tcp_posix.cc:1562]          DATA: 63 6f 6e 74 65 6e 74 2d 74 79 70 65 'content-type'
+I0201 15:49:08.711028365   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711059486   16672 tcp_posix.cc:1562]          DATA: 10 '.'
+I0201 15:49:08.711090247   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711122897   16672 tcp_posix.cc:1562]          DATA: 61 70 70 6c 69 63 61 74 69 6f 6e 2f 67 72 70 63 'application/grpc'
+I0201 15:49:08.711154738   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711186129   16672 tcp_posix.cc:1562]          DATA: 40 02 '@.'
+I0201 15:49:08.711217220   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711253611   16672 tcp_posix.cc:1562]          DATA: 74 65 'te'
+I0201 15:49:08.711285552   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711316383   16672 tcp_posix.cc:1562]          DATA: 08 '.'
+I0201 15:49:08.711347424   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711379395   16672 tcp_posix.cc:1562]          DATA: 74 72 61 69 6c 65 72 73 'trailers'
+I0201 15:49:08.711410566   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711441787   16672 tcp_posix.cc:1562]          DATA: 40 14 '@.'
+I0201 15:49:08.711473558   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711506229   16672 tcp_posix.cc:1562]          DATA: 67 72 70 63 2d 61 63 63 65 70 74 2d 65 6e 63 6f 64 69 6e 67 'grpc-accept-encoding'
+I0201 15:49:08.711537649   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711570570   16672 tcp_posix.cc:1562]          DATA: 17 69 64 65 6e 74 69 74 79 2c 20 64 65 66 6c 61 74 65 2c 20 67 7a 69 '.identity, deflate, gzi'
+I0201 15:49:08.711602331   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711633502   16672 tcp_posix.cc:1562]          DATA: 70 40 0a 'p@.'
+I0201 15:49:08.711664983   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711696864   16672 tcp_posix.cc:1562]          DATA: 75 73 65 72 2d 61 67 65 6e 74 'user-agent'
+I0201 15:49:08.711728605   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711779476   16672 tcp_posix.cc:1562]          DATA: 2d '-'
+I0201 15:49:08.711812257   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711846168   16672 tcp_posix.cc:1562]          DATA: 67 72 70 63 2d 63 2b 2b 2f 31 2e 34 35 2e 30 20 67 72 70 63 2d 63 2f 32 33 2e 30 2e 30 20 28 6c 69 6e 75 78 3b 20 63 68 74 74 70 32 29 'grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)'
+I0201 15:49:08.711878509   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711911170   16672 tcp_posix.cc:1562]          DATA: 00 00 04 08 00 00 00 00 01 00 00 00 05 00 00 09 00 01 00 00 00 01 00 '.......................'
+I0201 15:49:08.711942901   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.711974892   16672 tcp_posix.cc:1562]          DATA: 00 00 00 04 08 05 10 0a 00 00 04 08 00 00 00 00 00 00 00 00 05 '.....................'
+I0201 15:49:08.712032584   16672 tcp_posix.cc:1607]          write: "OK"
+D0201 15:49:08.712070415   16672 closure.h:259]              running closure 0x2ac4e0002c68: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:986]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1609]
+I0201 15:49:08.712105176   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002c68 last=3
+D0201 15:49:08.712139137   16672 closure.h:268]              closure 0x2ac4e0002c68 finished
+I0201 15:49:08.712172118   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.712206039   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.712239400   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002c68
+I0201 15:49:08.712272221   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> IDLE [finish writing]
+I0201 15:49:08.712306752   16672 stream_lists.cc:71]         0x2ac4e0002ac0[1][cli]: pop from writing
+D0201 15:49:08.712345103   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF chttp2_writing:end
+I0201 15:49:08.712378874   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+D0201 15:49:08.712412685   16672 exec_ctx.cc:34]             running closure 0x1f62f78: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:77]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:804]
+I0201 15:49:08.712448266   16672 call_combiner.cc:127]       ==> CallCombiner::Start() [0x1f58088] closure=0x1f5eb08 [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:60: on_complete] error="OK"
+I0201 15:49:08.712481317   16672 call_combiner.cc:136]         size: 0 -> 1
+I0201 15:49:08.712512727   16672 call_combiner.cc:144]         EXECUTING IMMEDIATELY
+D0201 15:49:08.712545108   16672 exec_ctx.cc:54]             closure 0x1f62f78 finished
+D0201 15:49:08.712578999   16672 exec_ctx.cc:34]             running closure 0x1f5eb08: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1312]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0201 15:49:08.712678652   16672 retry_filter.cc:1851]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90 batch_data=0x1f5ea80: got on_complete, error="OK", batch= SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest, :authority: 10.7.14.59:5000, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, grpc-accept-encoding: identity, deflate, gzip, user-agent: grpc-c++/1.45.0 grpc-c/23.0.0 (linux; chttp2)} SEND_MESSAGE(flag and length unknown, already orphaned) SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0201 15:49:08.712729234   16672 retry_filter.cc:2518]       chand=0x1f5dbf0 calld=0x1f59270: completed pending batch at index 0
+I0201 15:49:08.712778955   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f59108 error="OK" reason=on_complete for pending batch
+I0201 15:49:08.712818756   16672 ref_counted.h:165]          BatchData:0x1f5ea88 unref 4 -> 3
+D0201 15:49:08.712852907   16672 exec_ctx.cc:54]             closure 0x1f5eb08 finished
+D0201 15:49:08.712885668   16672 exec_ctx.cc:34]             running closure 0x1f59108: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1715]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.712919459   16672 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x1f58088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1319: on_complete]
+I0201 15:49:08.712962870   16672 call_combiner.cc:172]         size: 1 -> 0
+I0201 15:49:08.712994771   16672 call_combiner.cc:208]         queue empty
+D0201 15:49:08.713030532   16672 exec_ctx.cc:54]             closure 0x1f59108 finished
+I0201 15:49:08.713068543   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.713105224   16672 ev_posix.cc:325]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) end
+I0201 15:49:08.713140405   16672 ev_posix.cc:321]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) begin
+I0201 15:49:08.713173696   16672 ev_epollex_linux.cc:1117]   PS:0x1f4f5e0 work hdl=0x7fff79ff5b88 worker=0x7fff79ff59e0 now=1814 deadline=9223372036854775807 kwp=0 pollable=0x1f59ab0
+I0201 15:49:08.713215048   16672 ev_epollex_linux.cc:935]    POLLABLE:0x1f59ab0[type=pollset epfd=7 wakeup=8] poll for -1ms
+I0201 15:49:08.722618818   16672 ev_epollex_linux.cc:954]    POLLABLE:0x1f59ab0 got 1 events
+I0201 15:49:08.722659579   16672 ev_epollex_linux.cc:902]    PS:0x1f4f5e0 got fd 0x1f5d5a0: cancel=0 read=1 write=1
+D0201 15:49:08.722692610   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e0 curr=1f5f610
+D0201 15:49:08.722725831   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e8 curr=2
+D0201 15:49:08.722759362   16672 exec_ctx.cc:34]             running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:265]
+I0201 15:49:08.722801373   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.722836464   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.722868255   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.722917936   16672 tcp_posix.cc:668]           TCP:0x1f5f460 call_cb 0x2ac4e0002cb0 0x2ac4cb589c09:0x2ac4e0002ac0
+I0201 15:49:08.722952287   16672 tcp_posix.cc:670]           READ 0x1f5f460 (peer=ipv4:10.7.14.59:5000) error="OK"
+D0201 15:49:08.722988418   16672 tcp_posix.cc:676]           DATA: 00 00 00 04 01 00 00 00 00 00 00 04 08 00 00 00 00 00 00 00 00 09 00 00 08 06 00 00 00 00 00 00 00 00 00 00 00 00 00 '.......................................'
+D0201 15:49:08.723022379   16672 closure.h:259]              running closure 0x2ac4e0002cb0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2550]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:684]
+I0201 15:49:08.723056460   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002cb0 last=1
+D0201 15:49:08.723089521   16672 closure.h:268]              closure 0x2ac4e0002cb0 finished
+D0201 15:49:08.723122362   16672 exec_ctx.cc:54]             closure 0x1f5f610 finished
+I0201 15:49:08.723156603   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.723190344   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002cb0
+D0201 15:49:08.723235915   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt recv | trw:            4194294 -> 4194303, tlw:                       4194308, taw:                       4194308, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.723273086   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state IDLE -> WRITING [PING_RESPONSE]
+I0201 15:49:08.723307207   16672 combiner.cc:319]            C:0x2ac4e0002150 grpc_combiner_execute_finally c=0x2ac4e0002bd8; ac=0x2ac4e0002150
+I0201 15:49:08.723340188   16672 endpoint.cc:29]             endpoint: grpc_endpoint_read
+I0201 15:49:08.723372029   16672 tcp_posix.cc:882]           tcp_read CALLED
+D0201 15:49:08.723405250   16672 closure.h:259]              running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:907]
+I0201 15:49:08.723446241   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.723482172   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.723513883   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.723548094   16672 tcp_posix.cc:549]           TCP:0x1f5f460 notify_on_read
+D0201 15:49:08.723581685   16672 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x1f5d5e0 curr=0 closure=0x1f5f610
+D0201 15:49:08.723613746   16672 closure.h:268]              closure 0x1f5f610 finished
+I0201 15:49:08.723647217   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.723692618   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=1
+I0201 15:49:08.723727029   16672 combiner.cc:250]            C:0x2ac4e0002150 execute_final[0] c=0x2ac4e0002bd8
+D0201 15:49:08.723775801   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt sent | trw:                       4194303, tlw:                       4194308, taw:                       4194308, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.723812362   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> WRITING [begin write in current thread]
+I0201 15:49:08.723845693   16672 endpoint.cc:37]             endpoint: grpc_endpoint_write
+I0201 15:49:08.723877214   16672 tcp_posix.cc:1548]          tcp_write CALLED
+I0201 15:49:08.723908365   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.723941496   16672 tcp_posix.cc:1562]          DATA: 00 00 08 06 01 00 00 00 00 00 00 00 00 00 00 00 00 '.................'
+I0201 15:49:08.723985017   16672 tcp_posix.cc:1607]          write: "OK"
+D0201 15:49:08.724023968   16672 closure.h:259]              running closure 0x2ac4e0002c68: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:986]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1609]
+I0201 15:49:08.724061209   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002c68 last=3
+D0201 15:49:08.724094540   16672 closure.h:268]              closure 0x2ac4e0002c68 finished
+I0201 15:49:08.724127311   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.724161152   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.724194773   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002c68
+I0201 15:49:08.724227854   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> IDLE [finish writing]
+I0201 15:49:08.724262005   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+I0201 15:49:08.724300296   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.724336087   16672 ev_posix.cc:325]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) end
+I0201 15:49:08.724369878   16672 ev_posix.cc:321]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) begin
+I0201 15:49:08.724404549   16672 ev_epollex_linux.cc:1117]   PS:0x1f4f5e0 work hdl=0x7fff79ff5b88 worker=0x7fff79ff59e0 now=1829 deadline=9223372036854775807 kwp=0 pollable=0x1f59ab0
+I0201 15:49:08.724444680   16672 ev_epollex_linux.cc:935]    POLLABLE:0x1f59ab0[type=pollset epfd=7 wakeup=8] poll for -1ms
+I0201 15:49:08.729640079   16672 ev_epollex_linux.cc:954]    POLLABLE:0x1f59ab0 got 1 events
+I0201 15:49:08.729683991   16672 ev_epollex_linux.cc:902]    PS:0x1f4f5e0 got fd 0x1f5d5a0: cancel=0 read=1 write=1
+D0201 15:49:08.729718102   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e0 curr=1f5f610
+D0201 15:49:08.729755263   16672 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x1f5d5e8 curr=2
+D0201 15:49:08.729797714   16672 exec_ctx.cc:34]             running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:265]
+I0201 15:49:08.729832355   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.729864946   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.729896157   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.729934718   16672 tcp_posix.cc:668]           TCP:0x1f5f460 call_cb 0x2ac4e0002cb0 0x2ac4cb589c09:0x2ac4e0002ac0
+I0201 15:49:08.729968709   16672 tcp_posix.cc:670]           READ 0x1f5f460 (peer=ipv4:10.7.14.59:5000) error="OK"
+D0201 15:49:08.730008500   16672 tcp_posix.cc:676]           DATA: 00 00 4e 01 04 00 00 00 01 88 40 0c 63 6f 6e 74 65 6e 74 2d 74 79 70 65 10 61 70 70 6c 69 63 61 74 69 6f 6e 2f 67 72 70 63 40 14 67 72 70 63 2d 61 63 63 65 70 74 2d 65 6e 63 6f 64 69 6e 67 17 69 64 65 6e 74 69 74 79 2c 20 64 65 66 6c 61 74 65 2c 20 67 7a 69 70 00 00 04 08 00 00 00 00 01 00 00 00 0e 00 00 07 00 00 00 00 00 01 00 00 00 00 02 08 32 00 00 0f 01 05 00 00 00 01 40 0b 67 72 70 63 2d 73 74 61 74 75 73 01 30 00 00 04 08 00 00 00 00 00 00 00 00 05 '..N.......@.content-type.application/grpc@.grpc-accept-encoding.identity, deflate, gzip............................2.........@.grpc-status.0.............'
+D0201 15:49:08.730043571   16672 closure.h:259]              running closure 0x2ac4e0002cb0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2550]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:684]
+I0201 15:49:08.730077272   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002cb0 last=1
+D0201 15:49:08.730110503   16672 closure.h:268]              closure 0x2ac4e0002cb0 finished
+D0201 15:49:08.730142784   16672 exec_ctx.cc:54]             closure 0x1f5f610 finished
+I0201 15:49:08.730177755   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=0
+I0201 15:49:08.730211576   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002cb0
+I0201 15:49:08.730247287   16672 parsing.cc:522]             parsing initial_metadata
+D0201 15:49:08.730360870   16672 hpack_parser.cc:1047]       HTTP:1:HDR:CLI: :status: 200
+D0201 15:49:08.730607527   16672 hpack_parser.cc:1047]       HTTP:1:HDR:CLI: content-type: application/grpc
+D0201 15:49:08.730814583   16672 hpack_parser.cc:1047]       HTTP:1:HDR:CLI: grpc-accept-encoding: identity, deflate, gzip
+D0201 15:49:08.730976498   16672 flow_control.cc:117]        0x2ac4e0004d30[1][cli] | s updt recv | trw:                       4194303, tlw:                       4194308, taw:                       4194308, srw:            4194294 -> 4194308, slw:                       4194308, saw:                       4194308
+I0201 15:49:08.731023579   16672 bdp_estimator.h:53]         bdp[ipv4:10.7.14.59:5000]:sched acc=0 est=65536
+I0201 15:49:08.731058530   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state IDLE -> WRITING [BDP_PING]
+I0201 15:49:08.731091251   16672 combiner.cc:319]            C:0x2ac4e0002150 grpc_combiner_execute_finally c=0x2ac4e0002bd8; ac=0x2ac4e0002150
+D0201 15:49:08.731141112   16672 flow_control.cc:117]        0x2ac4e0004d30[1][cli] |   data recv | trw:                       4194303, tlw:            4194308 -> 4194303, taw:            4194308 -> 4194301, srw:                       4194308, slw:            4194308 -> 4194301, saw:            4194308 -> 4194301
+I0201 15:49:08.731194744   16672 parsing.cc:528]             parsing trailing_metadata
+D0201 15:49:08.731280446   16672 hpack_parser.cc:1047]       HTTP:1:TRL:CLI: grpc-status: 0
+D0201 15:49:08.731379529   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF chttp2
+D0201 15:49:08.731429871   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt recv | trw:            4194303 -> 4194308, tlw:                       4194303, taw:                       4194301, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.731466042   16672 endpoint.cc:29]             endpoint: grpc_endpoint_read
+I0201 15:49:08.731499133   16672 tcp_posix.cc:882]           tcp_read CALLED
+D0201 15:49:08.731533244   16672 closure.h:259]              running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:907]
+I0201 15:49:08.731565885   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.731598286   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: "OK"
+I0201 15:49:08.731635587   16672 tcp_posix.cc:856]           TCP:0x1f5f460 do_read
+I0201 15:49:08.731670538   16672 tcp_posix.cc:549]           TCP:0x1f5f460 notify_on_read
+D0201 15:49:08.731704759   16672 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x1f5d5e0 curr=0 closure=0x1f5f610
+D0201 15:49:08.731736240   16672 closure.h:268]              closure 0x1f5f610 finished
+I0201 15:49:08.731777701   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+D0201 15:49:08.731814472   16672 exec_ctx.cc:34]             running closure 0x1f631b8: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:77]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1215]
+I0201 15:49:08.731850743   16672 call_combiner.cc:127]       ==> CallCombiner::Start() [0x1f58088] closure=0x1f62830 [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:60: recv_initial_metadata_ready] error="OK"
+I0201 15:49:08.731884094   16672 call_combiner.cc:136]         size: 0 -> 1
+I0201 15:49:08.731915585   16672 call_combiner.cc:144]         EXECUTING IMMEDIATELY
+D0201 15:49:08.731947936   16672 exec_ctx.cc:54]             closure 0x1f631b8 finished
+D0201 15:49:08.731981787   16672 exec_ctx.cc:34]             running closure 0x1f63218: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:77]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1215]
+I0201 15:49:08.732016408   16672 call_combiner.cc:127]       ==> CallCombiner::Start() [0x1f58088] closure=0x1f62898 [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:60: recv_message_ready] error="OK"
+I0201 15:49:08.732048579   16672 call_combiner.cc:136]         size: 1 -> 2
+I0201 15:49:08.732080579   16672 call_combiner.cc:150]         QUEUING
+D0201 15:49:08.732112940   16672 exec_ctx.cc:54]             closure 0x1f63218 finished
+D0201 15:49:08.732150281   16672 exec_ctx.cc:34]             running closure 0x1f62830: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:70]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+D0201 15:49:08.732211983   16672 closure.h:259]              running closure 0x1f62560: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/client/http_client_filter.cc:65]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:152]
+D0201 15:49:08.732277725   16672 closure.h:259]              running closure 0x1f5e3d0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2013]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/client/http_client_filter.cc:162]
+I0201 15:49:08.732330927   16672 retry_filter.cc:1391]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90 batch_data=0x1f5ea80: got recv_initial_metadata_ready, error="OK"
+I0201 15:49:08.732366218   16672 retry_filter.cc:2536]       chand=0x1f5dbf0 calld=0x1f59270: committing retries
+I0201 15:49:08.732399649   16672 retry_filter.cc:2337]       chand=0x1f5dbf0 calld=0x1f59270: destroying send_initial_metadata
+I0201 15:49:08.732441520   16672 retry_filter.cc:2346]       chand=0x1f5dbf0 calld=0x1f59270: destroying send_messages[0]
+I0201 15:49:08.732478051   16672 retry_filter.cc:2357]       chand=0x1f5dbf0 calld=0x1f59270: destroying send_trailing_metadata
+I0201 15:49:08.732517372   16672 retry_filter.cc:783]        chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: retry state no longer needed; moving LB call to parent and unreffing the call attempt
+I0201 15:49:08.732558443   16672 retry_filter.cc:2518]       chand=0x1f5dbf0 calld=0x1f59270: invoking recv_initial_metadata_ready for pending batch at index 0
+I0201 15:49:08.732608755   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f58c68 error="OK" reason=recv_initial_metadata_ready for pending batch
+I0201 15:49:08.732654216   16672 ref_counted.h:165]          BatchData:0x1f5ea88 unref 3 -> 2
+D0201 15:49:08.732688857   16672 closure.h:268]              closure 0x1f5e3d0 finished
+D0201 15:49:08.732720728   16672 closure.h:268]              closure 0x1f62560 finished
+D0201 15:49:08.732751559   16672 exec_ctx.cc:54]             closure 0x1f62830 finished
+D0201 15:49:08.732790400   16672 exec_ctx.cc:34]             running closure 0x1f58c68: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1599]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.732834011   16672 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x1f58088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1252: recv_initial_metadata_ready]
+I0201 15:49:08.732867892   16672 call_combiner.cc:172]         size: 2 -> 1
+I0201 15:49:08.732898523   16672 call_combiner.cc:179]         checking queue
+I0201 15:49:08.732932124   16672 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x1f62898 error="OK"
+D0201 15:49:08.733021057   16672 exec_ctx.cc:54]             closure 0x1f58c68 finished
+D0201 15:49:08.733062338   16672 exec_ctx.cc:34]             running closure 0x1f62898: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:76]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+D0201 15:49:08.733097729   16672 closure.h:259]              running closure 0x1f62480: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/message_size/message_size_filter.cc:151]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:277]
+D0201 15:49:08.733132950   16672 closure.h:259]              running closure 0x1f5e420: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2025]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/message_size/message_size_filter.cc:233]
+I0201 15:49:08.733168081   16672 retry_filter.cc:1491]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90 batch_data=0x1f5ea80: got recv_message_ready, error="OK"
+I0201 15:49:08.733202662   16672 retry_filter.cc:2518]       chand=0x1f5dbf0 calld=0x1f59270: invoking recv_message_ready for pending batch at index 0
+I0201 15:49:08.733241543   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f58c20 error="OK" reason=recv_message_ready for pending batch
+I0201 15:49:08.733278964   16672 ref_counted.h:165]          BatchData:0x1f5ea88 unref 2 -> 1
+D0201 15:49:08.733312445   16672 closure.h:268]              closure 0x1f5e420 finished
+D0201 15:49:08.733349116   16672 closure.h:268]              closure 0x1f62480 finished
+D0201 15:49:08.733381057   16672 exec_ctx.cc:54]             closure 0x1f62898 finished
+D0201 15:49:08.733413268   16672 exec_ctx.cc:34]             running closure 0x1f58c20: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1633]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0201 15:49:08.733451559   16672 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x1f58088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1200: recv_message_ready]
+I0201 15:49:08.733483470   16672 call_combiner.cc:172]         size: 1 -> 0
+I0201 15:49:08.733514221   16672 call_combiner.cc:208]         queue empty
+I0201 15:49:08.733555862   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x1f65580 last=3
+D0201 15:49:08.733590323   16672 exec_ctx.cc:54]             closure 0x1f58c20 finished
+I0201 15:49:08.733625234   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=0 time_to_execute_final_list=1
+I0201 15:49:08.733658085   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x1f65580
+I0201 15:49:08.733720197   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+D0201 15:49:08.733761298   16672 exec_ctx.cc:34]             running closure 0x1f63278: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:77]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1215]
+I0201 15:49:08.733808339   16672 call_combiner.cc:127]       ==> CallCombiner::Start() [0x1f58088] closure=0x1f62ba8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/connected_channel.cc:60: recv_trailing_metadata_ready] error="OK"
+I0201 15:49:08.733842280   16672 call_combiner.cc:136]         size: 0 -> 1
+I0201 15:49:08.733873701   16672 call_combiner.cc:144]         EXECUTING IMMEDIATELY
+D0201 15:49:08.733905612   16672 exec_ctx.cc:54]             closure 0x1f63278 finished
+D0201 15:49:08.733938663   16672 exec_ctx.cc:34]             running closure 0x1f62ba8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:80]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+D0201 15:49:08.733986854   16672 closure.h:259]              running closure 0x1f625b8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/client/http_client_filter.cc:68]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/message_compress/message_decompress_filter.cc:306]
+D0201 15:49:08.734026215   16672 closure.h:259]              running closure 0x1f624c8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/message_size/message_size_filter.cc:154]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/http/client/http_client_filter.cc:184]
+D0201 15:49:08.734064846   16672 closure.h:259]              running closure 0x1f62410: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/promise_based_filter.cc:60]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/message_size/message_size_filter.cc:253]
+D0201 15:49:08.734147029   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF finish_poll
+I0201 15:49:08.734185980   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 finish_poll
+D0201 15:49:08.734220031   16672 closure.h:259]              running closure 0x1f62340: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/promise_based_filter.cc:60]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/promise_based_filter.cc:390]
+D0201 15:49:08.734256932   16672 transport.h:158]            CALL_STACK 0x1f621b0:0x1f62140 REF finish_poll
+I0201 15:49:08.734292313   16672 ref_counted.h:115]          stream_refcount:0x1f621b0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 finish_poll
+D0201 15:49:08.734331114   16672 closure.h:259]              running closure 0x1f62150: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:236]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/channel/promise_based_filter.cc:390]
+D0201 15:49:08.734430997   16672 closure.h:259]              running closure 0x1f5e9d0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2775]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:277]
+D0201 15:49:08.734473418   16672 closure.h:259]              running closure 0x1f5e680: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2040]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2932]
+I0201 15:49:08.734509009   16672 retry_filter.cc:1686]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90 batch_data=0x1f5ea80: got recv_trailing_metadata_ready, error="OK"
+I0201 15:49:08.734580761   16672 retry_filter.cc:1713]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: call finished, status=OK server_pushback=N/A is_lb_drop=0 stream_network_state=N/A
+I0201 15:49:08.734624433   16672 retry_filter.cc:2518]       chand=0x1f5dbf0 calld=0x1f59270: invoking recv_trailing_metadata_ready for pending batch at index 0
+I0201 15:49:08.734679854   16672 retry_filter.cc:2462]       chand=0x1f5dbf0 calld=0x1f59270: clearing pending batch
+I0201 15:49:08.734722565   16672 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x1f58088: closure=0x1f58f48 error="OK" reason=recv_trailing_metadata_ready for pending batch
+I0201 15:49:08.734761997   16672 ref_counted.h:165]          BatchData:0x1f5ea88 unref 1 -> 0
+I0201 15:49:08.734809848   16672 retry_filter.cc:1319]       chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: destroying batch 0x1f5ea80
+D0201 15:49:08.734843159   16672 transport.h:175]            CALL_STACK 0x1f591e0:0x1f591d0 UNREF Retry BatchData
+I0201 15:49:08.734875960   16672 retry_filter.cc:717]        chand=0x1f5dbf0 calld=0x1f59270 attempt=0x1f5dc90: destroying call attempt
+D0201 15:49:08.734965162   16672 closure.h:268]              closure 0x1f5e680 finished
+D0201 15:49:08.735005034   16672 closure.h:268]              closure 0x1f5e9d0 finished
+D0201 15:49:08.735037664   16672 closure.h:268]              closure 0x1f62150 finished
+D0201 15:49:08.735070205   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF finish_poll
+D0201 15:49:08.735102656   16672 closure.h:268]              closure 0x1f62340 finished
+D0201 15:49:08.735134717   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF finish_poll
+D0201 15:49:08.735166338   16672 closure.h:268]              closure 0x1f62410 finished
+D0201 15:49:08.735198289   16672 closure.h:268]              closure 0x1f624c8 finished
+D0201 15:49:08.735229010   16672 closure.h:268]              closure 0x1f625b8 finished
+D0201 15:49:08.735260721   16672 exec_ctx.cc:54]             closure 0x1f62ba8 finished
+D0201 15:49:08.735293622   16672 exec_ctx.cc:34]             running closure 0x1f58f48: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2283]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+D0201 15:49:08.735328553   16672 closure.h:259]              running closure 0x1f58e30: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/deadline/deadline_filter.cc:152]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2272]
+D0201 15:49:08.735362334   16672 closure.h:259]              running closure 0x1f58cb0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1668]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/deadline/deadline_filter.cc:140]
+I0201 15:49:08.735407205   16672 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x1f58088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1310: recv_trailing_metadata_ready]
+I0201 15:49:08.735439766   16672 call_combiner.cc:172]         size: 1 -> 0
+I0201 15:49:08.735471087   16672 call_combiner.cc:208]         queue empty
+D0201 15:49:08.735527428   16672 call.cc:716]                set_final_status CLI
+D0201 15:49:08.735562789   16672 call.cc:717]                "OK"
+I0201 15:49:08.735614691   16672 completion_queue.cc:776]    cq_end_op_for_pluck(cq=0x1f4f460, tag=0x7fff79ff5d90, error="OK", done=0x2ac4cb77fc8c, done_arg=0x1f58fe0, storage=0x1f59050)
+I0201 15:49:08.735658622   16672 ev_posix.cc:331]            (polling-api) pollset_kick(0x1f4f5e0, 0x7fff79ff59e0)
+I0201 15:49:08.735696113   16672 ev_epollex_linux.cc:727]    PS:0x1f4f5e0 kick 0x7fff79ff59e0 tls_pollset=0x1f4f5e0 tls_worker=0x7fff79ff59e0 pollset.root_worker=0x7fff79ff59e0
+I0201 15:49:08.735731544   16672 ev_epollex_linux.cc:693]    PS:0x1f59ab0 kicked_specific_but_awake
+D0201 15:49:08.735768035   16672 closure.h:268]              closure 0x1f58cb0 finished
+D0201 15:49:08.735811597   16672 closure.h:268]              closure 0x1f58e30 finished
+D0201 15:49:08.735843158   16672 exec_ctx.cc:54]             closure 0x1f58f48 finished
+I0201 15:49:08.735878609   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=1
+I0201 15:49:08.735912120   16672 combiner.cc:250]            C:0x2ac4e0002150 execute_final[0] c=0x2ac4e0002bd8
+D0201 15:49:08.735955081   16672 flow_control.cc:117]        0x2ac4e0004d30[0][cli] | t updt sent | trw:                       4194308, tlw:                       4194303, taw:                       4194301, srw:                              , slw:                              , saw:                              
+I0201 15:49:08.735997292   16672 writing.cc:131]             CLIENT: Ping sent [ipv4:10.7.14.59:5000]: 2/2
+I0201 15:49:08.736039043   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> WRITING [begin write in current thread]
+I0201 15:49:08.736071484   16672 endpoint.cc:37]             endpoint: grpc_endpoint_write
+I0201 15:49:08.736102705   16672 tcp_posix.cc:1548]          tcp_write CALLED
+I0201 15:49:08.736133996   16672 tcp_posix.cc:1558]          WRITE 0x1f5f460 (peer=ipv4:10.7.14.59:5000)
+D0201 15:49:08.736166727   16672 tcp_posix.cc:1562]          DATA: 00 00 08 06 00 00 00 00 00 00 00 00 00 00 00 00 00 '.................'
+I0201 15:49:08.736211668   16672 tcp_posix.cc:1607]          write: "OK"
+D0201 15:49:08.736248559   16672 closure.h:259]              running closure 0x2ac4e0002c68: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:986]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1609]
+I0201 15:49:08.736282420   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002c68 last=3
+D0201 15:49:08.736315951   16672 closure.h:268]              closure 0x2ac4e0002c68 finished
+I0201 15:49:08.736348082   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+D0201 15:49:08.736381323   16672 exec_ctx.cc:34]             running closure 0x2ac4e0004ea0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2562]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/writing.cc:120]
+I0201 15:49:08.736414324   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0004ea0 last=3
+D0201 15:49:08.736447435   16672 exec_ctx.cc:54]             closure 0x2ac4e0004ea0 finished
+I0201 15:49:08.736480996   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.736514157   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002c68
+I0201 15:49:08.736557218   16672 chttp2_transport.cc:795]    W:0x2ac4e0002ac0 CLIENT [ipv4:10.7.14.59:5000] state WRITING -> IDLE [finish writing]
+I0201 15:49:08.736591729   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.736625940   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.736659121   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0004ea0
+I0201 15:49:08.736692552   16672 chttp2_transport.cc:2578]   ipv4:10.7.14.59:5000: Start BDP ping err="OK"
+I0201 15:49:08.736726483   16672 bdp_estimator.h:66]         bdp[ipv4:10.7.14.59:5000]:start acc=7 est=65536
+I0201 15:49:08.736757454   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+I0201 15:49:08.736803275   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.736840136   16672 ev_posix.cc:325]            (polling-api) pollset_work(0x1f4f5e0, 9223372036854775807) end
+D0201 15:49:08.736876437   16672 transport.h:175]            CALL_STACK 0x1f58d80:0x1f58070 UNREF completion
+I0201 15:49:08.736941969   16672 completion_queue.cc:1311]   RETURN_EVENT[0x1f4f460]: OP_COMPLETE: tag:0x7fff79ff5d90 OK
+I0201 15:49:08.737045062   16672 completion_queue.cc:1417]   grpc_completion_queue_destroy(cq=0x1f4f460)
+I0201 15:49:08.737089813   16672 completion_queue.cc:1411]   grpc_completion_queue_shutdown(cq=0x1f4f460)
+I0201 15:49:08.737126244   16672 ev_posix.cc:308]            (polling-api) pollset_shutdown(0x1f4f5e0)
+I0201 15:49:08.737162145   16672 ev_epollex_linux.cc:660]    PS:0x1f4f5e0 (pollable:0x1f59ab0) maybe_finish_shutdown sc=0x1f4f4a0 (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+D0201 15:49:08.737199407   16672 exec_ctx.cc:34]             running closure 0x1f4f4a0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/completion_queue.cc:538]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:669]
+D0201 15:49:08.737238668   16672 exec_ctx.cc:54]             closure 0x1f4f4a0 finished
+I0201 15:49:08.737277029   16672 init.cc:241]                grpc_shutdown(void)
+I0201 15:49:08.737315150   16672 call.cc:559]                grpc_call_unref(c=0x1f58070)
+I0201 15:49:08.737352511   16672 call_combiner.cc:233]       call_combiner=0x1f58088: setting notify_on_cancel=(nil)
+I0201 15:49:08.737384982   16672 call_combiner.cc:242]       call_combiner=0x1f58088: scheduling old cancel callback=0x1f5d388
+D0201 15:49:08.737417683   16672 transport.h:175]            CALL_STACK 0x1f58d80:0x1f58070 UNREF destroy
+D0201 15:49:08.737459144   16672 exec_ctx.cc:34]             running closure 0x1f5d388: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2973]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:246]
+I0201 15:49:08.737496885   16672 client_channel.cc:2985]     chand=0x1f544a0 lb_call=0x1f5e790: cancelling queued pick: error="OK" self=0x1f5d380 calld->pick_canceller=(nil)
+D0201 15:49:08.737532796   16672 transport.h:175]            CALL_STACK 0x1f591e0:0x1f591d0 UNREF LbQueuedCallCanceller
+I0201 15:49:08.737569177   16672 ref_counted.h:165]          LoadBalancedCall:0x1f5e798 unref 2 -> 1
+D0201 15:49:08.737600658   16672 exec_ctx.cc:54]             closure 0x1f5d388 finished
+D0201 15:49:08.737632899   16672 exec_ctx.cc:34]             running closure 0x1f58d90: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0201 15:49:08.737672790   16672 ev_posix.cc:313]            (polling-api) pollset_destroy(0x1f4f5e0)
+I0201 15:49:08.737707761   16672 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 7
+D0201 15:49:08.737768193   16672 transport.h:175]            CALL_STACK 0x1f591e0:0x1f591d0 UNREF 
+D0201 15:49:08.737821814   16672 exec_ctx.cc:54]             closure 0x1f58d90 finished
+D0201 15:49:08.737862746   16672 exec_ctx.cc:34]             running closure 0x1f591f0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0201 15:49:08.737897587   16672 retry_filter.cc:2337]       chand=0x1f5dbf0 calld=0x1f59270: destroying send_initial_metadata
+I0201 15:49:08.737934988   16672 retry_filter.cc:2357]       chand=0x1f5dbf0 calld=0x1f59270: destroying send_trailing_metadata
+I0201 15:49:08.737994669   16672 ref_counted.h:165]          LoadBalancedCall:0x1f5e798 unref 1 -> 0
+D0201 15:49:08.738037421   16672 transport.h:175]            CALL_STACK 0x1f621b0:0x1f62140 UNREF 
+D0201 15:49:08.738079532   16672 exec_ctx.cc:54]             closure 0x1f591f0 finished
+D0201 15:49:08.738113943   16672 exec_ctx.cc:34]             running closure 0x1f621c0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0201 15:49:08.738161714   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x1f63300 last=1
+I0201 15:49:08.738196925   16672 ref_counted.h:165]          ConnectedSubchannel:0x1f61b88 unref 2 -> 1
+D0201 15:49:08.738229966   16672 exec_ctx.cc:54]             closure 0x1f621c0 finished
+I0201 15:49:08.738263317   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.738296548   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x1f63300
+I0201 15:49:08.738348719   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+D0201 15:49:08.738389311   16672 exec_ctx.cc:34]             running closure 0x1f59960: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:649]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:730]
+D0201 15:49:08.738425132   16672 exec_ctx.cc:54]             closure 0x1f59960 finished
+D0201 15:49:08.738458643   16672 exec_ctx.cc:34]             running closure 0x1f58d08: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:545]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:634]
+D0201 15:49:08.738533755   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF call
+D0201 15:49:08.738574786   16672 exec_ctx.cc:54]             closure 0x1f58d08 finished
+I0201 15:49:08.738631067   16672 metadata_array.cc:34]       grpc_metadata_array_destroy(array=0x7fff79ff6228)
+I0201 15:49:08.738674289   16672 metadata_array.cc:34]       grpc_metadata_array_destroy(array=0x7fff79ff61d8)
+I0201 15:49:08.738795842   16672 channel.cc:491]             grpc_channel_destroy(channel=0x1f543a0)
+D0201 15:49:08.738840303   16672 error.cc:508]               0x1f5e410 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/channel.cc:493]
+D0201 15:49:08.738877685   16672 transport.h:158]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 REF start_transport_op
+I0201 15:49:08.738912496   16672 ref_counted.h:115]          stream_refcount:0x1f54420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 4 -> 5 start_transport_op
+I0201 15:49:08.738950077   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1779]
+I0201 15:49:08.738982238   16672 work_serializer.cc:90]        Executing immediately
+I0201 15:49:08.739030439   16672 client_channel.cc:1737]     chand=0x1f544a0: disconnect_with_error: {"created":"@1675237748.738875044","description":"Channel Destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/channel.cc","file_line":493}
+I0201 15:49:08.739072000   16672 client_channel.cc:1563]     chand=0x1f544a0: shutting down resolver=0x1f59fe0
+I0201 15:49:08.739112351   16672 ref_counted.h:165]          Resolver:0x1f59fe8 unref 1 -> 0
+D0201 15:49:08.739146122   16672 dns_resolver_ares.cc:163]   (c-ares resolver) resolver:0x1f59fe0 destroying AresClientChannelDNSResolver
+I0201 15:49:08.739190074   16672 client_channel.cc:414]      chand=0x1f544a0: resolver shutdown complete
+D0201 15:49:08.739222775   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF ResolverResultHandler
+I0201 15:49:08.739260896   16672 client_channel.cc:1569]     chand=0x1f544a0: shutting down lb_policy=0x1f5aeb0
+I0201 15:49:08.739294857   16672 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x1f51560, 0x1f52390)
+I0201 15:49:08.739330858   16672 child_policy_handler.cc:127] [child_policy_handler 0x1f5aeb0] shutting down
+I0201 15:49:08.739362569   16672 child_policy_handler.cc:132] [child_policy_handler 0x1f5aeb0] shutting down lb_policy 0x1f5b270
+I0201 15:49:08.739394689   16672 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x1f48890, 0x1f51560)
+I0201 15:49:08.739428660   16672 pick_first.cc:156]          Pick First 0x1f5b270 Shutting down
+I0201 15:49:08.739463151   16672 subchannel_list.h:411]      [pick_first 0x1f5b270] Shutting down subchannel_list 0x1f5b600
+I0201 15:49:08.739499433   16672 subchannel_list.h:333]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0 of 1 (subchannel 0x1f5d050): canceling connectivity watch (shutdown)
+I0201 15:49:08.739548224   16672 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x1f4f820, 0x1f48890)
+I0201 15:49:08.739623836   16672 work_serializer.cc:78]      WorkSerializer::Run() 0x1f51220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:572]
+I0201 15:49:08.739662637   16672 work_serializer.cc:101]       Scheduling on queue : item 0x1f4f2a0
+I0201 15:49:08.739745670   16672 subchannel_list.h:290]      [pick_first 0x1f5b270] subchannel list 0x1f5b600 index 0 of 1 (subchannel 0x1f5d050): unreffing subchannel (shutdown)
+I0201 15:49:08.739795311   16672 ref_counted.h:165]          SubchannelWrapper:0x1f5d058 unref 3 -> 2
+I0201 15:49:08.739832532   16672 subchannel_list.h:400]      [pick_first 0x1f5b270] Destroying subchannel_list 0x1f5b600
+I0201 15:49:08.739870863   16672 pick_first.cc:148]          Destroying Pick First 0x1f5b270
+I0201 15:49:08.739914344   16672 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x1f48890)
+I0201 15:49:08.739964496   16672 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x1f51560)
+D0201 15:49:08.740007327   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF ClientChannelControlHelper
+D0201 15:49:08.740098360   16672 transport.h:175]            DynamicFilters 0x1f5db70:0x1f5db70 UNREF ~DynamicFilters
+I0201 15:49:08.740150801   16672 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x1f54550]: READY -> SHUTDOWN (shutdown from API, OK)
+I0201 15:49:08.740198973   16672 ref_counted.h:165]          SubchannelWrapper:0x1f5d058 unref 2 -> 1
+D0201 15:49:08.740240874   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF start_transport_op
+I0201 15:49:08.740273525   16672 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x1f51220
+I0201 15:49:08.740307226   16672 work_serializer.cc:201]       Running item 0x1f4f2a0 : callback scheduled at [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:572]
+I0201 15:49:08.740346877   16672 client_channel.cc:474]      chand=0x1f544a0: destroying subchannel wrapper 0x1f5d050 for subchannel 0x1f5bf90
+D0201 15:49:08.740451010   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF SubchannelWrapper
+I0201 15:49:08.740500091   16672 dual_ref_counted.h:74]      Subchannel:0x1f5bf90 unref 1 -> 0, weak_ref 1 -> 2
+I0201 15:49:08.740558593   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 7 -> 6
+I0201 15:49:08.740604434   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 6 -> 5
+D0201 15:49:08.740649025   16672 error.cc:508]               0x1f659f0 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/connector.h:72]
+D0201 15:49:08.740720027   16672 error.cc:352]               0x1f659f0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:110]
+I0201 15:49:08.740776949   16672 ref_counted.h:165]          ConnectedSubchannel:0x1f61b88 unref 1 -> 0
+I0201 15:49:08.740817540   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 5 -> 4
+D0201 15:49:08.740854311   16672 transport.h:175]            subchannel 0x1f61e40:0x1f61e40 UNREF connected_subchannel_dtor
+I0201 15:49:08.740898673   16672 dual_ref_counted.h:176]     Subchannel:0x1f5bf90 weak_unref 2 -> 1 (refs=0)
+D0201 15:49:08.740938254   16672 transport.h:175]            CLIENT_CHANNEL 0x1f54420:0x1f543a0 UNREF channel
+D0201 15:49:08.740974965   16672 exec_ctx.cc:34]             running closure 0x1f5db80: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+D0201 15:49:08.741009556   16672 exec_ctx.cc:54]             closure 0x1f5db80 finished
+D0201 15:49:08.741043137   16672 exec_ctx.cc:34]             running closure 0x1f64fd0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:210]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1762]
+D0201 15:49:08.741078318   16672 exec_ctx.cc:54]             closure 0x1f64fd0 finished
+D0201 15:49:08.741110529   16672 exec_ctx.cc:34]             running closure 0x1f61e50: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0201 15:49:08.741148580   16672 ref_counted.h:165]          auth_context_refcount:0x2ac4e0002590 unref 1 -> 0
+I0201 15:49:08.741186861   16672 ref_counted.h:165]          security_connector_refcount:0x1f5b438 unref 3 -> 2
+I0201 15:49:08.741223582   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x1f5ced0 last=1
+D0201 15:49:08.741256323   16672 exec_ctx.cc:54]             closure 0x1f61e50 finished
+D0201 15:49:08.741295164   16672 exec_ctx.cc:34]             running closure 0x1f54430: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0201 15:49:08.741334855   16672 client_channel.cc:1120]     chand=0x1f544a0: destroying channel
+I0201 15:49:08.741423978   16672 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x1f52390, 0x1f51b90)
+I0201 15:49:08.741465279   16672 ev_epollex_linux.cc:1398]   PSS:0x1f52390: del pollset 0x1f51b90
+I0201 15:49:08.741501460   16672 ev_epollex_linux.cc:660]    PS:0x1f51b90 (pollable:0x1f4ccd0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.741539711   16672 ev_posix.cc:308]            (polling-api) pollset_shutdown(0x1f51b90)
+I0201 15:49:08.741575522   16672 ev_epollex_linux.cc:660]    PS:0x1f51b90 (pollable:0x1f4ccd0) maybe_finish_shutdown sc=0x1f51c88 (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0201 15:49:08.741612593   16672 timer_generic.cc:447]       TIMER 0x1f51c00: CANCEL pending=true
+I0201 15:49:08.741650134   16672 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x1f52390)
+D0201 15:49:08.741686015   16672 error.cc:352]               0x1f5e410: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1127]
+I0201 15:49:08.741739117   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 4 -> 3
+I0201 15:49:08.741796479   16672 work_serializer.cc:122]     WorkSerializer::Orphan() 0x1f51220
+I0201 15:49:08.741842760   16672 work_serializer.cc:128]       Destroying
+I0201 15:49:08.742041516   16672 init.cc:241]                grpc_shutdown(void)
+D0201 15:49:08.742089917   16672 exec_ctx.cc:54]             closure 0x1f54430 finished
+D0201 15:49:08.742131988   16672 exec_ctx.cc:34]             running closure 0x1f51c88: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/backup_poller.cc:109]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:669]
+D0201 15:49:08.742165649   16672 exec_ctx.cc:54]             closure 0x1f51c88 finished
+D0201 15:49:08.742198410   16672 exec_ctx.cc:34]             running closure 0x1f51c40: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/backup_poller.cc:153]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+I0201 15:49:08.742232641   16672 ev_posix.cc:313]            (polling-api) pollset_destroy(0x1f51b90)
+I0201 15:49:08.742264792   16672 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 5
+D0201 15:49:08.742305523   16672 exec_ctx.cc:54]             closure 0x1f51c40 finished
+I0201 15:49:08.742341024   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.742373975   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x1f5ced0
+D0201 15:49:08.742407936   16672 error.cc:508]               0x1f5db50 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:562]
+D0201 15:49:08.742447467   16672 error.cc:304]               0x1f5db50: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:577]
+D0201 15:49:08.742482408   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2371]
+D0201 15:49:08.742515699   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1075]
+D0201 15:49:08.742550820   16672 error.cc:352]               0x1f5db50: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2374]
+D0201 15:49:08.742584731   16672 error.cc:304]               0x1f5db50: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:578]
+D0201 15:49:08.742617682   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.742652683   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.742689234   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.742722355   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.742755646   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.742797807   16672 error.cc:304]               0x1f5db50: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:220]
+D0201 15:49:08.742832368   16672 error.cc:352]               0x1f5db50: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.742866109   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1672]
+D0201 15:49:08.742900320   16672 error.cc:591]               0x1f5bb20 create copying 0x1f5db50
+D0201 15:49:08.742933441   16672 error.cc:352]               0x1f5db50: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:606]
+D0201 15:49:08.742972972   16672 error.cc:304]               0x1f5bb20: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:595]
+I0201 15:49:08.743006483   16672 chttp2_transport.cc:2863]   transport 0x2ac4e0002ac0 set connectivity_state=4
+I0201 15:49:08.743041104   16672 connectivity_state.cc:159]  ConnectivityStateTracker client_transport[0x2ac4e0002e38]: READY -> SHUTDOWN (close_transport, OK)
+I0201 15:49:08.743078265   16672 connectivity_state.cc:167]  ConnectivityStateTracker client_transport[0x2ac4e0002e38]: notifying watcher 0x1f61900: READY -> SHUTDOWN
+D0201 15:49:08.743139727   16672 error.cc:304]               0x1f5bb20: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:624]
+I0201 15:49:08.743180018   16672 ev_posix.cc:273]            (polling-api) fd_shutdown(9)
+I0201 15:49:08.743211169   16672 ev_posix.cc:274]            (fd-trace) fd_shutdown(9)
+D0201 15:49:08.743243000   16672 error.cc:304]               0x1f5bb20: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:512]
+D0201 15:49:08.743300732   16672 lockfree_event.cc:182]      LockfreeEvent::SetShutdown: 0x1f5d5e0 curr=1f5f610 err={"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"grpc_status":14,"occurred_during_write":0}
+D0201 15:49:08.743337373   16672 error.cc:508]               0x1f5d200 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:217]
+D0201 15:49:08.743371344   16672 error.cc:304]               0x1f5bb20: 4 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:531]
+D0201 15:49:08.743421855   16672 error.cc:304]               0x1f5bb20: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:519]
+D0201 15:49:08.743459746   16672 lockfree_event.cc:182]      LockfreeEvent::SetShutdown: 0x1f5d5e8 curr=2 err={"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"grpc_status":14,"occurred_during_write":0}
+D0201 15:49:08.743493907   16672 error.cc:304]               0x1f5bb20: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:520]
+D0201 15:49:08.743528188   16672 lockfree_event.cc:182]      LockfreeEvent::SetShutdown: 0x1f5d5f0 curr=0 err={"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"grpc_status":14,"occurred_during_write":0}
+D0201 15:49:08.743561609   16672 error.cc:352]               0x1f5bb20: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:522]
+D0201 15:49:08.743594950   16672 error.cc:352]               0x1f5bb20: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:636]
+I0201 15:49:08.743652872   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=3
+D0201 15:49:08.743694763   16672 exec_ctx.cc:34]             running closure 0x2ac4e0004ee8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2564]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1670]
+D0201 15:49:08.743729324   16672 error.cc:304]               0x1f5db50: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2596]
+I0201 15:49:08.743762655   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0004ee8 last=1
+D0201 15:49:08.743805716   16672 error.cc:352]               0x1f5db50: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0201 15:49:08.743844807   16672 exec_ctx.cc:54]             closure 0x2ac4e0004ee8 finished
+D0201 15:49:08.743883558   16672 exec_ctx.cc:34]             running closure 0x1f66658: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/connectivity_state.cc:70]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/connectivity_state.cc:71]
+I0201 15:49:08.743919540   16672 connectivity_state.cc:79]   watcher 0x1f61900: delivering async notification for SHUTDOWN (OK)
+I0201 15:49:08.743961131   16672 dual_ref_counted.h:198]     Subchannel:0x1f5bf90 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:302 weak_unref 1 -> 0 (refs=0) state_watcher
+I0201 15:49:08.744003242   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 3 -> 2
+I0201 15:49:08.744038223   16672 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x1f4f820)
+D0201 15:49:08.744076814   16672 ev_epollex_linux.cc:389]    FD 9 0x1f5d5a0 unref 2 3 -> 1 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1343]
+I0201 15:49:08.744156876   16672 ref_counted.h:165]          SubchannelPoolInterface:0x1f52918 unref 2 -> 1
+D0201 15:49:08.744203698   16672 exec_ctx.cc:54]             closure 0x1f66658 finished
+D0201 15:49:08.744238949   16672 exec_ctx.cc:34]             running closure 0x1f5f610: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:1784]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:215]
+I0201 15:49:08.744270570   16672 tcp_posix.cc:862]           tcp_handle_read CALLED
+I0201 15:49:08.744319011   16672 tcp_posix.cc:866]           TCP:0x1f5f460 got_read: {"created":"@1675237748.743402675","description":"FD Shutdown","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc","file_line":217,"referenced_errors":[{"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"grpc_status":14,"occurred_during_write":0}]}
+D0201 15:49:08.744356802   16672 error.cc:304]               0x1f5d200: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:873]
+I0201 15:49:08.744390063   16672 tcp_posix.cc:668]           TCP:0x1f5f460 call_cb 0x2ac4e0002cb0 0x2ac4cb589c09:0x2ac4e0002ac0
+I0201 15:49:08.744424404   16672 tcp_posix.cc:670]           READ 0x1f5f460 (peer=ipv4:10.7.14.59:5000) error={"created":"@1675237748.743402675","description":"FD Shutdown","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc","file_line":217,"referenced_errors":[{"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"grpc_status":14,"occurred_during_write":0}]}
+D0201 15:49:08.744459035   16672 closure.h:259]              running closure 0x2ac4e0002cb0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2550]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:684]
+D0201 15:49:08.744492606   16672 error.cc:304]               0x1f5d200: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2452]
+I0201 15:49:08.744530287   16672 combiner.cc:132]            C:0x2ac4e0002150 grpc_combiner_execute c=0x2ac4e0002cb0 last=3
+D0201 15:49:08.744563338   16672 closure.h:268]              closure 0x2ac4e0002cb0 finished
+D0201 15:49:08.744596309   16672 error.cc:352]               0x1f5d200: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:271]
+D0201 15:49:08.744628730   16672 error.cc:352]               0x1f5d200: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0201 15:49:08.744660781   16672 exec_ctx.cc:54]             closure 0x1f5f610 finished
+I0201 15:49:08.744693292   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.744731643   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0004ee8
+I0201 15:49:08.744783594   16672 chttp2_transport.cc:2602]   ipv4:10.7.14.59:5000: Complete BDP ping err={"created":"@1675237748.742440427","description":"Transport destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc","file_line":562,"occurred_during_write":0}
+D0201 15:49:08.744821965   16672 error.cc:352]               0x1f5db50: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/combiner.cc:241]
+I0201 15:49:08.744871957   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=5
+I0201 15:49:08.744908008   16672 combiner.cc:198]            C:0x2ac4e0002150 grpc_combiner_continue_exec_ctx contended=0 exec_ctx_ready_to_finish=1 time_to_execute_final_list=0
+I0201 15:49:08.744941359   16672 combiner.cc:220]            C:0x2ac4e0002150 maybe_finish_one n=0x2ac4e0002cb0
+D0201 15:49:08.744974250   16672 error.cc:304]               0x1f5d200: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2461]
+D0201 15:49:08.745008511   16672 error.cc:508]               0x1f5db50 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2466]
+D0201 15:49:08.745042372   16672 error.cc:304]               0x1f5d200: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:531]
+D0201 15:49:08.745077113   16672 error.cc:352]               0x1f5d200: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2471]
+D0201 15:49:08.745115354   16672 error.cc:304]               0x1f5db50: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2517]
+D0201 15:49:08.745148235   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:577]
+D0201 15:49:08.745180866   16672 error.cc:304]               0x1f5db50: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2371]
+D0201 15:49:08.745214167   16672 error.cc:352]               0x1f5db50: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1075]
+D0201 15:49:08.745247418   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2374]
+D0201 15:49:08.745279949   16672 error.cc:304]               0x1f5db50: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:578]
+D0201 15:49:08.745312819   16672 error.cc:304]               0x1f5db50: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.745345580   16672 error.cc:352]               0x1f5db50: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.745378451   16672 error.cc:304]               0x1f5db50: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.745411452   16672 error.cc:352]               0x1f5db50: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.745443883   16672 error.cc:304]               0x1f5db50: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.745475914   16672 error.cc:352]               0x1f5db50: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.745509085   16672 error.cc:352]               0x1f5db50: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1672]
+D0201 15:49:08.745549456   16672 error.cc:352]               0x1f5db50: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:636]
+I0201 15:49:08.745597188   16672 ev_posix.cc:266]            (polling-api) fd_orphan(9, (nil), (nil), tcp_unref_orphan)
+I0201 15:49:08.745637839   16672 ev_posix.cc:267]            (fd-trace) grpc_fd_orphan, fd:9 closed
+D0201 15:49:08.745691990   16672 ev_epollex_linux.cc:352]    FD 9 0x1f5d5a0   ref 1 1 -> 2 [tcp_unref_orphan; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:492]
+D0201 15:49:08.745732422   16672 ev_epollex_linux.cc:389]    FD 9 0x1f5d5a0 unref 2 2 -> 0 [tcp_unref_orphan; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:503]
+D0201 15:49:08.745779753   16672 error.cc:508]               0x1f5b270 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_posix.cc:620]
+D0201 15:49:08.745821844   16672 error.cc:352]               0x1f5b270: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/buffer_list.h:151]
+D0201 15:49:08.745893596   16672 error.cc:508]               0x1f5d0c0 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:216]
+D0201 15:49:08.745938618   16672 error.cc:352]               0x1f5d0c0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:220]
+D0201 15:49:08.745977299   16672 chttp2_transport.cc:237]    C:0x2ac4e0002150 UNREF 1 --> 0 chttp2_transport
+I0201 15:49:08.746009330   16672 combiner.cc:73]             C:0x2ac4e0002150 really_destroy old_state=3
+D0201 15:49:08.746042330   16672 error.cc:508]               0x1f543a0 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:240]
+D0201 15:49:08.746077061   16672 error.cc:304]               0x1f543a0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.746111032   16672 error.cc:352]               0x1f543a0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.746144733   16672 error.cc:304]               0x1f543a0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.746178054   16672 error.cc:352]               0x1f543a0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.746211615   16672 error.cc:304]               0x1f543a0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1669]
+D0201 15:49:08.746244926   16672 error.cc:352]               0x1f543a0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:224]
+D0201 15:49:08.746283987   16672 error.cc:352]               0x1f543a0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:1672]
+D0201 15:49:08.746321168   16672 error.cc:352]               0x1f5bb20: 5 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:250]
+D0201 15:49:08.746417101   16672 error.cc:352]               0x1f5db50: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/transport/chttp2_transport.cc:2543]
+D0201 15:49:08.746458272   16672 error.cc:352]               0x1f5d200: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:323]
+D0201 15:49:08.746492023   16672 error.cc:352]               0x1f5d200: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/combiner.cc:241]
+D0201 15:49:08.746524774   16672 error.cc:352]               0x1f5bb20: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:323]
+I0201 15:49:08.746557265   16672 combiner.cc:276]            C:0x2ac4e0002150 finish old_state=2
+I0201 15:49:08.746589956   16672 combiner.cc:65]             C:0x2ac4e0002150 really_destroy
+D0201 15:49:08.746625357   16672 exec_ctx.cc:34]             running closure 0x1f54490: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:401]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:400]
+D0201 15:49:08.746778932   16672 error.cc:352]               0x1f5bb20: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:83]
+D0201 15:49:08.746822383   16672 error.cc:352]               0x1f5bb20: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:83]
+D0201 15:49:08.746855904   16672 error.cc:352]               0x1f5bb20: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:83]
+D0201 15:49:08.746907755   16672 exec_ctx.cc:54]             closure 0x1f54490 finished
+I0201 15:49:08.746948036   16672 init.cc:241]                grpc_shutdown(void)
+D0201 15:49:08.746987828   16672 init.cc:252]                grpc_shutdown starts clean-up now
+I0201 15:49:08.747028099   16672 timer_manager.cc:318]       stop timer threads: threaded=1
+I0201 15:49:08.747110841   16672 timer_manager.cc:324]       num timer threads: 1
+I0201 15:49:08.747217164   16675 timer_manager.cc:205]       wait ended: was_timed:1 kicked:0
+I0201 15:49:08.747273686   16675 timer_manager.cc:277]       End timer thread
+I0201 15:49:08.747379429   16672 timer_manager.cc:329]       num timer threads: 0
+I0201 15:49:08.747549864   16672 iomgr.cc:102]               src/core/lib/iomgr/iomgr.cc:grpc_iomgr_shutdown() start
+I0201 15:49:08.747623956   16672 timer_manager.cc:318]       stop timer threads: threaded=0
+D0201 15:49:08.747700488   16672 error.cc:508]               0x1f5db50 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:279]
+D0201 15:49:08.747832902   16672 error.cc:352]               0x1f5db50: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:663]
+I0201 15:49:08.747997107   16672 executor.cc:411]            EXECUTOR Executor::ShutdownAll() enter
+I0201 15:49:08.748034898   16672 executor.cc:150]            EXECUTOR (default-executor) SetThreading(0) begin
+I0201 15:49:08.748081439   16673 executor.cc:242]            EXECUTOR (default-executor) [0]: shutdown
+I0201 15:49:08.748230053   16672 executor.cc:196]            EXECUTOR (default-executor) Thread 1 of 1 joined
+I0201 15:49:08.748318126   16672 executor.cc:217]            EXECUTOR (default-executor) SetThreading(0) done
+I0201 15:49:08.748354747   16672 executor.cc:150]            EXECUTOR (resolver-executor) SetThreading(0) begin
+I0201 15:49:08.748404068   16674 executor.cc:242]            EXECUTOR (resolver-executor) [0]: shutdown
+I0201 15:49:08.748545722   16672 executor.cc:196]            EXECUTOR (resolver-executor) Thread 1 of 1 joined
+I0201 15:49:08.748629405   16672 executor.cc:217]            EXECUTOR (resolver-executor) SetThreading(0) done
+I0201 15:49:08.748664976   16672 executor.cc:440]            EXECUTOR Executor::ShutdownAll() done
+I0201 15:49:08.748706827   16672 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 3

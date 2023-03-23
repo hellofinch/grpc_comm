@@ -1,0 +1,42 @@
+
+export PKG_CONFIG_PATH:=/public/home/lifei/xinzk/toolbox/grpc-old-install/lib/pkgconfig:/public/home/lifei/xinzk/toolbox/protoc/lib/pkgconfig
+export PATH:=/public/home/lifei/xinzk/toolbox/grpc-old-install/bin:/public/home/lifei/xinzk/toolbox/protoc/bin:$(PATH)
+export LD_LIBRARY_PATH:=/public/home/lifei/xinzk/toolbox/grpc-old-install/lib:/lib64:/public/home/lifei/xinzk/toolbox/protoc/lib:${LD_LIBRARY_PATH}
+
+LDFLAGS = -L/usr/local/lib `pkg-config --libs protobuf grpc++`\
+           -Wl,--no-as-needed -lgrpc++_reflection -Wl,--as-needed\
+           -ldl
+
+CXX = g++
+CPPFLAGS += `pkg-config --cflags protobuf grpc`
+CXXFLAGS += -std=c++14
+LDFLAGS += -L/usr/local/lib `pkg-config --libs protobuf grpc++`\
+           -Wl,--no-as-needed -lgrpc++_reflection -Wl,--as-needed\
+           -ldl
+PROTOC = protoc
+GRPC_CPP_PLUGIN = grpc_cpp_plugin
+GRPC_CPP_PLUGIN_PATH ?= `which $(GRPC_CPP_PLUGIN)`
+
+PROTOS_PATH = .
+PROJECT_NAME = grpc_fs
+
+COMMON_OBJS = $(PROJECT_NAME).pb.o $(PROJECT_NAME).grpc.pb.o sequential_file_reader.o sequential_file_writer.o utils.o messages.o
+
+vpath %.proto $(PROTOS_PATH)
+
+all: $(PROJECT_NAME)_old_client $(PROJECT_NAME)_old_server
+
+$(PROJECT_NAME)_old_client: $(COMMON_OBJS) $(PROJECT_NAME)_client.o
+	$(CXX) $^ $(LDFLAGS) -o $@
+
+$(PROJECT_NAME)_old_server: $(COMMON_OBJS) $(PROJECT_NAME)_server.o
+	$(CXX) $^ $(LDFLAGS) -o $@
+
+%.grpc.pb.cc: %.proto
+	$(PROTOC) -I $(PROTOS_PATH) --grpc_out=. --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
+
+%.pb.cc: %.proto
+	$(PROTOC) -I $(PROTOS_PATH) --cpp_out=. $<
+
+clean:
+	rm -f *.o *.pb.cc *.pb.h $(PROJECT_NAME)_client $(PROJECT_NAME)_server

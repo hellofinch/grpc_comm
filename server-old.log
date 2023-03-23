@@ -1,0 +1,175 @@
+D1207 17:31:09.651049274  118837 ev_posix.c:101]             Using polling engine: poll
+I1207 17:31:09.651239479  118837 init.c:188]                 grpc_init(void)
+I1207 17:31:09.651270500  118837 init.c:188]                 grpc_init(void)
+I1207 17:31:09.651297441  118837 completion_queue.c:129]     grpc_completion_queue_create(reserved=(nil))
+I1207 17:31:09.651353072  118837 server.c:984]               grpc_server_create(0x7ffe93a5b210, (nil))
+I1207 17:31:09.651863597  118837 server.c:968]               grpc_server_register_completion_queue(server=0x1578700, cq=0x1578580, reserved=(nil))
+I1207 17:31:09.651939769  118837 server.c:1030]              grpc_server_register_method(server=0x1578700, method=/mathtest.MathTest/sendRequest, host=(null), flags=0x00000000)
+I1207 17:31:09.651974710  118837 metadata_array.c:42]        grpc_metadata_array_init(array=0x156a450)
+I1207 17:31:09.652040422  118837 server.c:1030]              grpc_server_register_method(server=0x1578700, method=/grpc.reflection.v1alpha.ServerReflection/ServerReflectionInfo, host=(null), flags=0x00000000)
+I1207 17:31:09.652068562  118837 metadata_array.c:42]        grpc_metadata_array_init(array=0x1568750)
+I1207 17:31:09.652109884  118837 server_chttp2.c:94]         grpc_server_add_insecure_http2_port(server=0x1578700, addr=12.7.13.37:5000)
+I1207 17:31:09.652160465  118837 rdma_server_posix.c:185]    src/core/lib/iomgr/rdma_server_posix.c:grpc_rdma_server_create end
+D1207 17:31:09.652196546  118837 rdma_server_posix.c:733]    add_listener_to_server
+D1207 17:31:09.652238877  118837 rdma_utils_posix.c:24]      ADDR: AF_INET addr:12.7.13.37:5000 port:5000
+I1207 17:31:09.655829909  118837 server.c:1064]              grpc_server_start(server=0x1578700)
+I1207 17:31:09.656180679  118837 metadata_array.c:42]        grpc_metadata_array_init(array=0x7ffe93a5b1f0)
+I1207 17:31:09.656219910  118837 metadata_array.c:47]        grpc_metadata_array_destroy(array=0x7ffe93a5b1f0)
+I1207 17:31:09.656246260  118837 completion_queue.c:129]     grpc_completion_queue_create(reserved=(nil))
+I1207 17:31:09.656274811  118837 server.c:1413]              grpc_server_request_registered_call(server=0x1578700, rmp=0x156aa80, call=0x156a430, deadline=0x156a440, initial_metadata=0x156a450, optional_payload=0x156a468, cq_bound_to_call=0x1569910, cq_for_notification=0x1578580, tag=0x156a410)
+I1207 17:31:09.656308002  118837 completion_queue.c:129]     grpc_completion_queue_create(reserved=(nil))
+I1207 17:31:09.656336233  118837 server.c:1413]              grpc_server_request_registered_call(server=0x1578700, rmp=0x156a550, call=0x1568730, deadline=0x1568740, initial_metadata=0x1568750, optional_payload=(nil), cq_bound_to_call=0x1569e30, cq_for_notification=0x1578580, tag=0x1568710)
+I1207 17:31:09.656361954  118837 completion_queue.c:129]     grpc_completion_queue_create(reserved=(nil))
+I1207 17:31:09.656398715  118837 call_details.c:42]          grpc_call_details_init(cd=0x156b2f0)
+I1207 17:31:09.656427166  118837 server.c:1371]              grpc_server_request_call(server=0x1578700, call=0x156c670, details=0x156b2f0, initial_metadata=0x156c690, cq_bound_to_call=0x1567ce0, cq_for_notification=0x1578580, tag=0x156c650)
+I1207 17:31:09.656528698  118844 completion_queue.c:323]     grpc_completion_queue_next(cc=0x1578580, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+I1207 17:31:16.215192413  118844 rdma_server_posix.c:677]    Server: on_event RDMA_CM_EVENT_CONNECT_REQUEST
+I1207 17:31:16.218510996  118844 rdma_server_posix.c:682]    Server: on_event RDMA_CM_EVENT_ESTABLISHED
+I1207 17:31:16.218573298  118844 rdma_server_posix.c:621]    Server: on_event RDMA_CM_EVENT_ESTABLISHED ipv4:12.7.13.38:44500,tcp-server-connection:ipv4:12.7.13.38:44500
+I1207 17:31:16.218604769  118844 rdma_cm.c:641]              CREATE:RDMA_CM_ID=0x2b775c000b10
+I1207 17:31:16.218843306  118844 chttp2_transport.c:1171]    perform_transport_op_locked before op->on_consumed
+D1207 17:31:16.218875347  118844 connectivity_state.c:109]   CONWATCH: 0x2b775c233e80 server_transport: from IDLE [cur=READY] notify=0x2b775c234810
+I1207 17:31:16.218981000  118844 chttp2_transport.c:1171]    perform_transport_op_locked before op->on_consumed
+D1207 17:31:16.219010360  118844 connectivity_state.c:109]   CONWATCH: 0x2b775c233e80 server_transport: from READY [cur=READY] notify=0x2b775c234810
+I1207 17:31:16.219047921  118844 rdma_cm.c:551]              RDMA_WRITE_CALLED
+I1207 17:31:16.219077142  118844 rdma_cm.c:449]              Send a message 21
+I1207 17:31:16.219100363  118844 rdma_cm.c:595]              rdma write completed
+D1207 17:31:16.219140354  118844 parsing.c:168]              FLOW parsed: server transport CREDIT       global.announce_incoming_window(0) by                   announce_bytes(983041) giving 983041
+D1207 17:31:16.219168555  118844 parsing.c:170]              FLOW parsed: server transport CREDIT           parsing.incoming_window(65535) by                   announce_bytes(983041) giving 1048576
+I1207 17:31:16.219196906  118844 rdma_cm.c:378]              RDMA_READ CALLED
+I1207 17:31:16.219227107  118844 rdma_cm.c:471]              HANDLE_WRITE_CALLED
+I1207 17:31:16.219262818  118844 rdma_cm.c:507]              A Message sent
+I1207 17:31:16.219289728  118844 rdma_cm.c:526]              rdma_on_send_complete no flush
+I1207 17:31:16.219312039  118844 rdma_cm.c:395]              CALLED WRITE_CB
+I1207 17:31:16.219337080  118844 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.219360090  118844 rdma_cm.c:238]              A Message of 73 Bytes Received
+I1207 17:31:16.219382251  118844 rdma_cm.c:251]              A Message 57
+I1207 17:31:16.219413562  118844 rdma_cm.c:257]              MR_ADDR=0x2b775c001f70
+I1207 17:31:16.219475083  118844 rdma_cm.c:349]              Send a short message
+I1207 17:31:16.219508244  118844 rdma_cm.c:212]              Called_READCB
+D1207 17:31:16.219543475  118844 writing.c:163]              FLOW write: server transport DEBIT   global.announce_incoming_window(983041) by                        announced(983041) giving 0
+I1207 17:31:16.219571586  118844 rdma_cm.c:551]              RDMA_WRITE_CALLED
+I1207 17:31:16.219596137  118844 rdma_cm.c:449]              Send a message 13
+I1207 17:31:16.219619078  118844 rdma_cm.c:595]              rdma write completed
+D1207 17:31:16.219645438  118844 frame_settings.c:250]       CHTTP2:SVR: got setting 2 = 0
+D1207 17:31:16.219669019  118844 frame_settings.c:250]       CHTTP2:SVR: got setting 3 = 0
+D1207 17:31:16.219691740  118844 frame_settings.c:250]       CHTTP2:SVR: got setting 4 = 65535
+D1207 17:31:16.219714270  118844 frame_settings.c:250]       CHTTP2:SVR: got setting 6 = 16384
+I1207 17:31:16.219742391  118844 rdma_cm.c:378]              RDMA_READ CALLED
+I1207 17:31:16.219772112  118844 rdma_cm.c:471]              HANDLE_WRITE_CALLED
+I1207 17:31:16.219798593  118844 rdma_cm.c:507]              A Message sent
+I1207 17:31:16.219822193  118844 rdma_cm.c:526]              rdma_on_send_complete no flush
+I1207 17:31:16.219844454  118844 rdma_cm.c:395]              CALLED WRITE_CB
+I1207 17:31:16.219872715  118844 rdma_cm.c:551]              RDMA_WRITE_CALLED
+I1207 17:31:16.219896835  118844 rdma_cm.c:449]              Send a message 9
+I1207 17:31:16.219928526  118844 rdma_cm.c:595]              rdma write completed
+I1207 17:31:16.219955447  118844 rdma_cm.c:471]              HANDLE_WRITE_CALLED
+I1207 17:31:16.219980318  118844 rdma_cm.c:507]              A Message sent
+I1207 17:31:16.220004628  118844 rdma_cm.c:526]              rdma_on_send_complete no flush
+I1207 17:31:16.220027019  118844 rdma_cm.c:395]              CALLED WRITE_CB
+I1207 17:31:16.220051870  118844 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.220073850  118844 rdma_cm.c:238]              A Message of 24 Bytes Received
+I1207 17:31:16.220094951  118844 rdma_cm.c:242]              A sms
+I1207 17:31:16.220365879  118844 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.220395380  118844 rdma_cm.c:238]              A Message of 333 Bytes Received
+I1207 17:31:16.220418440  118844 rdma_cm.c:251]              A Message 317
+I1207 17:31:16.220446811  118844 rdma_cm.c:257]              MR_ADDR=0x2b775c008c30
+I1207 17:31:16.220470542  118844 rdma_cm.c:349]              Send a short message
+I1207 17:31:16.220493722  118844 rdma_cm.c:212]              Called_READCB
+D1207 17:31:16.220526953  118844 frame_window_update.c:122]  FLOW parse: server transport CREDIT               parsing.outgoing_window(0) by                  received_update(983041) giving 983041
+I1207 17:31:16.220603285  118844 call.c:1353]                ops[0]: RECV_INITIAL_METADATA ptr=0x2b775c23d230
+I1207 17:31:16.220642357  118844 server.c:780]               OP[server:0x2b775c23d160]: RECV_INITIAL_METADATA
+I1207 17:31:16.220669677  118844 http_server_filter.c:219]   OP[http-server:0x2b775c23d178]: RECV_INITIAL_METADATA
+I1207 17:31:16.220694138  118844 connected_channel.c:70]     OP[connected:0x2b775c23d1a8]: RECV_INITIAL_METADATA
+I1207 17:31:16.220744409  118844 parsing.c:657]              HTTP:1:HDR:SVR: :scheme: http
+I1207 17:31:16.220772260  118844 parsing.c:657]              HTTP:1:HDR:SVR: :method: POST
+I1207 17:31:16.220797561  118844 parsing.c:657]              HTTP:1:HDR:SVR: :path: /mathtest.MathTest/sendRequest
+I1207 17:31:16.220822742  118844 parsing.c:657]              HTTP:1:HDR:SVR: :authority: 12.7.13.37:5000
+I1207 17:31:16.220846762  118844 parsing.c:657]              HTTP:1:HDR:SVR: grpc-encoding: identity
+I1207 17:31:16.220870773  118844 parsing.c:657]              HTTP:1:HDR:SVR: grpc-accept-encoding: identity,deflate,gzip
+I1207 17:31:16.220894374  118844 parsing.c:657]              HTTP:1:HDR:SVR: te: trailers
+I1207 17:31:16.220926225  118844 parsing.c:657]              HTTP:1:HDR:SVR: content-type: application/grpc
+I1207 17:31:16.220952485  118844 parsing.c:657]              HTTP:1:HDR:SVR: user-agent: grpc-c++/0.15.1 grpc-c/0.15.1 (linux; chttp2)
+D1207 17:31:16.220984696  118844 frame_window_update.c:116]  FLOW parse: server stream[1] CREDIT               parsing.outgoing_window(0) by                   received_update(65535) giving 65535
+D1207 17:31:16.221012777  118844 parsing.c:592]              FLOW parse: server transport DEBIT          parsing.incoming_window(1048576) by                   incoming_frame_size(9) giving 1048567
+D1207 17:31:16.221040468  118844 parsing.c:594]              FLOW parse: server stream[1] DEBIT            parsing.incoming_window(65535) by                   incoming_frame_size(9) giving 65526
+D1207 17:31:16.221080329  118844 parsing.c:154]              FLOW parsed: server transport MOVE                  global.outgoing_window(0) <-          parsing.outgoing_window(983041) giving 983041
+D1207 17:31:16.221114290  118844 parsing.c:190]              FLOW parsed: server stream[1] MOVE              global.outgoing_window(65535) <-           parsing.outgoing_window(65535) giving 131070
+I1207 17:31:16.221140581  118844 rdma_cm.c:378]              RDMA_READ CALLED
+D1207 17:31:16.221167751  118844 writing.c:77]               FLOW write: server transport MOVE             writing.outgoing_window(65535) <-           global.outgoing_window(983041) giving 1048576
+I1207 17:31:16.221202932  118844 call.c:1353]                ops[0]: RECV_MESSAGE ptr=0x2b775c23d250
+I1207 17:31:16.221229433  118844 server.c:780]               OP[server:0x2b775c23d160]: RECV_MESSAGE
+I1207 17:31:16.221252974  118844 http_server_filter.c:219]   OP[http-server:0x2b775c23d178]: RECV_MESSAGE
+I1207 17:31:16.221276394  118844 connected_channel.c:70]     OP[connected:0x2b775c23d1a8]: RECV_MESSAGE
+D1207 17:31:16.221302545  118844 chttp2_transport.c:1905]    FLOW op: server stream[1] CREDIT             global.max_recv_bytes(65526) by                add_max_recv_bytes(65544) giving 131070
+D1207 17:31:16.221329326  118844 chttp2_transport.c:1908]    FLOW op: server stream[1] CREDIT global.unannounced_incoming_window_for_parse(0) by                add_max_recv_bytes(65544) giving 65544
+D1207 17:31:16.221354867  118844 chttp2_transport.c:1911]    FLOW op: server stream[1] CREDIT global.unannounced_incoming_window_for_writing(0) by                add_max_recv_bytes(65544) giving 65544
+D1207 17:31:16.221390998  118844 writing.c:94]               FLOW write: server stream[1] MOVE                 writing.outgoing_window(0) <-           global.outgoing_window(131070) giving 131070
+I1207 17:31:16.221441609  118844 completion_queue.c:242]     grpc_cq_end_op(exec_ctx=0x2b7756efeac0, cc=0x1578580, tag=0x156a410, error=null, done=0x2b775532f4d0, done_arg=0x2b775a458fa8, storage=0x2b775a458fd0)
+E1207 17:31:16.221469490  118844 completion_queue.c:244]     Operation failed: tag=0x156a410, error=null
+I1207 17:31:16.221501291  118844 completion_queue.c:384]     RETURN_EVENT[0x1578580]: OP_COMPLETE: tag:0x156a410 OK
+I1207 17:31:16.221561412  118845 completion_queue.c:323]     grpc_completion_queue_next(cc=0x1578580, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+I1207 17:31:16.221609164  118845 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.221635155  118845 rdma_cm.c:238]              A Message of 24 Bytes Received
+I1207 17:31:16.221658115  118845 rdma_cm.c:242]              A sms
+I1207 17:31:16.221680956  118845 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.221703446  118845 rdma_cm.c:238]              A Message of 25 Bytes Received
+I1207 17:31:16.221725157  118845 rdma_cm.c:251]              A Message 9
+I1207 17:31:16.221747478  118845 rdma_cm.c:257]              MR_ADDR=0x2b775c008d50
+I1207 17:31:16.221770228  118845 rdma_cm.c:349]              Send a short message
+I1207 17:31:16.221793459  118845 rdma_cm.c:212]              Called_READCB
+D1207 17:31:16.221821050  118845 parsing.c:98]               FLOW parse: server stream[1] MOVE             parsing.incoming_window(65526) <- global.unannounced_incoming_window_for_parse(65544) giving 131070
+I1207 17:31:16.221852731  118845 rdma_cm.c:378]              RDMA_READ CALLED
+I1207 17:31:16.221887872  118844 init.c:188]                 grpc_init(void)
+I1207 17:31:16.221942373  118844 completion_queue.c:129]     grpc_completion_queue_create(reserved=(nil))
+I1207 17:31:16.221974784  118844 server.c:1413]              grpc_server_request_registered_call(server=0x1578700, rmp=0x156aa80, call=0x156a430, deadline=0x156a440, initial_metadata=0x156a450, optional_payload=0x156a468, cq_bound_to_call=0x2b775c23e250, cq_for_notification=0x1578580, tag=0x156a410)
+I1207 17:31:16.222006575  118844 call.c:1677]                grpc_call_start_batch(call=0x2b775c23cb70, ops=0x2b7756efe8c0, nops=1, tag=0x2b775c23db50, reserved=(nil))
+I1207 17:31:16.222031416  118844 call.c:1353]                ops[0]: RECV_CLOSE_ON_SERVER cancelled=0x2b775c23dbb0
+I1207 17:31:16.222055136  118844 server.c:780]               OP[server:0x2b775c23d160]: RECV_TRAILING_METADATA
+I1207 17:31:16.222079187  118844 http_server_filter.c:219]   OP[http-server:0x2b775c23d178]: RECV_TRAILING_METADATA
+I1207 17:31:16.222102628  118844 connected_channel.c:70]     OP[connected:0x2b775c23d1a8]: RECV_TRAILING_METADATA
+I1207 17:31:16.222225331  118844 call.c:1677]                grpc_call_start_batch(call=0x2b775c23cb70, ops=0x2b7756efe780, nops=3, tag=0x2b7756efea50, reserved=(nil))
+I1207 17:31:16.222252472  118844 call.c:1353]                ops[0]: SEND_INITIAL_METADATA
+I1207 17:31:16.222276463  118844 call.c:1353]                ops[1]: SEND_MESSAGE ptr=0x2b775c23e150
+I1207 17:31:16.222300453  118844 call.c:1353]                ops[2]: SEND_STATUS_FROM_SERVER status=0 details=(null)
+I1207 17:31:16.222336684  118844 server.c:780]               OP[server:0x2b775c23d160]: SEND_INITIAL_METADATA{} SEND_MESSAGE:flags=0x00000000:len=2 SEND_TRAILING_METADATA{key=67 72 70 63 2d 73 74 61 74 75 73 'grpc-status' value=30 '0'}
+I1207 17:31:16.222364565  118844 http_server_filter.c:219]   OP[http-server:0x2b775c23d178]: SEND_INITIAL_METADATA{} SEND_MESSAGE:flags=0x00000000:len=2 SEND_TRAILING_METADATA{key=67 72 70 63 2d 73 74 61 74 75 73 'grpc-status' value=30 '0'}
+I1207 17:31:16.222411686  118844 connected_channel.c:70]     OP[connected:0x2b775c23d1a8]: SEND_INITIAL_METADATA{key=3a 73 74 61 74 75 73 ':status' value=32 30 30 '200', key=63 6f 6e 74 65 6e 74 2d 74 79 70 65 'content-type' value=61 70 70 6c 69 63 61 74 69 6f 6e 2f 67 72 70 63 'application/grpc', key=67 72 70 63 2d 65 6e 63 6f 64 69 6e 67 'grpc-encoding' value=69 64 65 6e 74 69 74 79 'identity', key=67 72 70 63 2d 61 63 63 65 70 74 2d 65 6e 63 6f 64 69 6e 67 'grpc-accept-encoding' value=69 64 65 6e 74 69 74 79 2c 64 65 66 6c 61 74 65 2c 67 7a 69 70 'identity,deflate,gzip'} SEND_MESSAGE:flags=0x00000000:len=2 SEND_TRAILING_METADATA{key=67 72 70 63 2d 73 74 61 74 75 73 'grpc-status' value=30 '0'}
+D1207 17:31:16.222463008  118844 writing.c:267]              FLOW write: server stream[1] DEBIT           writing.outgoing_window(131070) by                            send_bytes(7) giving 131063
+D1207 17:31:16.222491929  118844 writing.c:269]              FLOW write: server transport DEBIT          writing.outgoing_window(1048576) by                            send_bytes(7) giving 1048569
+I1207 17:31:16.222517339  118844 rdma_cm.c:551]              RDMA_WRITE_CALLED
+I1207 17:31:16.222544790  118844 rdma_cm.c:449]              Send a message 161
+I1207 17:31:16.222601862  118844 rdma_cm.c:595]              rdma write completed
+I1207 17:31:16.222630513  118844 rdma_cm.c:471]              HANDLE_WRITE_CALLED
+I1207 17:31:16.222656013  118844 rdma_cm.c:507]              A Message sent
+I1207 17:31:16.222679634  118844 rdma_cm.c:526]              rdma_on_send_complete no flush
+I1207 17:31:16.222710945  118845 rdma_cm.c:236]              Continue Read,Get a slice
+I1207 17:31:16.222742096  118845 rdma_cm.c:238]              A Message of 24 Bytes Received
+I1207 17:31:16.222765116  118845 rdma_cm.c:242]              A sms
+I1207 17:31:16.222793937  118844 rdma_cm.c:395]              CALLED WRITE_CB
+I1207 17:31:16.222830308  118844 completion_queue.c:242]     grpc_cq_end_op(exec_ctx=0x2b7756efe700, cc=0x1569910, tag=0x2b7756efea50, error=null, done=0x2b775532ac30, done_arg=0x2b775c23cc40, storage=0x2b775c23cc48)
+E1207 17:31:16.222856039  118844 completion_queue.c:244]     Operation failed: tag=0x2b7756efea50, error=null
+I1207 17:31:16.222880470  118844 completion_queue.c:242]     grpc_cq_end_op(exec_ctx=0x2b7756efe700, cc=0x1569910, tag=0x2b775c23db50, error=null, done=0x2b775532ac30, done_arg=0x2b775c23cbd8, storage=0x2b775c23cbe0)
+E1207 17:31:16.222903940  118844 completion_queue.c:244]     Operation failed: tag=0x2b775c23db50, error=null
+I1207 17:31:16.222939261  118844 completion_queue.c:436]     grpc_completion_queue_pluck(cc=0x1569910, tag=0x2b7756efea50, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+I1207 17:31:16.222966392  118844 completion_queue.c:515]     RETURN_EVENT[0x1569910]: OP_COMPLETE: tag:0x2b7756efea50 OK
+I1207 17:31:16.222996793  118844 completion_queue.c:529]     grpc_completion_queue_shutdown(cc=0x1569910)
+I1207 17:31:16.223026184  118844 completion_queue.c:323]     grpc_completion_queue_next(cc=0x1569910, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+I1207 17:31:16.223051075  118844 completion_queue.c:384]     RETURN_EVENT[0x1569910]: OP_COMPLETE: tag:0x2b775c23db50 OK
+I1207 17:31:16.223076205  118844 completion_queue.c:323]     grpc_completion_queue_next(cc=0x1569910, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+I1207 17:31:16.223100006  118844 completion_queue.c:384]     RETURN_EVENT[0x1569910]: QUEUE_SHUTDOWN
+I1207 17:31:16.223125637  118844 call.c:686]                 grpc_call_destroy(c=0x2b775c23cb70)
+I1207 17:31:16.223152077  118844 metadata_array.c:47]        grpc_metadata_array_destroy(array=0x2b775c23d230)
+I1207 17:31:16.223215229  118844 completion_queue.c:549]     grpc_completion_queue_destroy(cc=0x1569910)
+I1207 17:31:16.223241650  118844 completion_queue.c:529]     grpc_completion_queue_shutdown(cc=0x1569910)
+I1207 17:31:16.223268021  118844 init.c:193]                 grpc_shutdown(void)
+I1207 17:31:16.224192727  118845 rdma_server_posix.c:687]    Server: on_event RDMA_CM_EVENT_DISCONNECTED
+I1207 17:31:16.224221658  118845 rdma_cm.c:121]              DESTROY:RDMA_CM_ID=0x2b775c000b10
+I1207 17:31:16.224736902  118845 rdma_cm.c:123]              ENDPOINT:DISCONNECTED
+I1207 17:31:16.224778153  118845 rdma_cm.c:127]              ENDPOINT:FD CLOSED
+I1207 17:31:16.224809964  118845 rdma_cm.c:212]              Called_READCB
+D1207 17:31:16.224843555  118845 chttp2_transport.c:1822]    set connectivity_state=4
+D1207 17:31:16.224889477  118845 connectivity_state.c:156]   SET: 0x2b775c233e80 server_transport: READY --> SHUTDOWN [close_transport] error=0x2b7760000930 {"created":"@1670405476.224840705","description":"Failed parsing HTTP/2","file":"src/core/ext/transport/chttp2/transport/chttp2_transport.c","file_line":1727,"referenced_errors":[{"created":"@1670405476.224777183","description":"EOF","file":"src/core/lib/iomgr/ev_poll_posix.c","file_line":427}]}
+I1207 17:31:16.225007970  118845 rdma_cm.c:141]              Endpoint:Goodbye~
+E1207 17:31:16.225052901  118845 chttp2_transport.c:1811]    close_transport: {"created":"@1670405476.224840705","description":"Failed parsing HTTP/2","file":"src/core/ext/transport/chttp2/transport/chttp2_transport.c","file_line":1727,"referenced_errors":[{"created":"@1670405476.224777183","description":"EOF","file":"src/core/lib/iomgr/ev_poll_posix.c","file_line":427}]}
+I1207 17:31:16.225081302  118845 chttp2_transport.c:1171]    perform_transport_op_locked before op->on_consumed

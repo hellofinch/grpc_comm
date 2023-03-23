@@ -1,0 +1,987 @@
+D0309 17:12:43.991279456   21026 ev_posix.cc:172]            Using polling engine: epollex
+D0309 17:12:43.992515473   21026 lb_policy_registry.cc:42]   registering LB policy factory for "grpclb"
+D0309 17:12:43.992719779   21026 lb_policy_registry.cc:42]   registering LB policy factory for "priority_experimental"
+D0309 17:12:43.992829582   21026 lb_policy_registry.cc:42]   registering LB policy factory for "weighted_target_experimental"
+D0309 17:12:43.992909244   21026 lb_policy_registry.cc:42]   registering LB policy factory for "pick_first"
+D0309 17:12:43.992990956   21026 lb_policy_registry.cc:42]   registering LB policy factory for "round_robin"
+D0309 17:12:43.993084379   21026 lb_policy_registry.cc:42]   registering LB policy factory for "ring_hash_experimental"
+D0309 17:12:43.993161531   21026 dns_resolver_ares.cc:619]   Using ares dns resolver
+D0309 17:12:43.993973045   21026 certificate_provider_registry.cc:33] registering certificate provider factory for "file_watcher"
+D0309 17:12:43.994078238   21026 lb_policy_registry.cc:42]   registering LB policy factory for "cds_experimental"
+D0309 17:12:43.994171971   21026 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_impl_experimental"
+D0309 17:12:43.994263654   21026 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_resolver_experimental"
+D0309 17:12:43.994352106   21026 lb_policy_registry.cc:42]   registering LB policy factory for "xds_cluster_manager_experimental"
+I0309 17:12:43.994440639   21026 timer_manager.cc:88]        Spawn timer thread
+I0309 17:12:43.994528981   21026 init.cc:196]                grpc_init(void)
+I0309 17:12:43.994751828   21026 init.cc:196]                grpc_init(void)
+I0309 17:12:43.994914263   21026 chttp2_connector.cc:399]    grpc_secure_channel_create(target=12.8.10.78:5000, creds=0x9152b0, args=0x7ffd689b8c90)
+I0309 17:12:44.003639757   21026 init.cc:196]                grpc_init(void)
+I0309 17:12:44.004518063   21026 channel_stack.cc:110]       CHANNEL_STACK: init CLIENT_CHANNEL
+I0309 17:12:44.004579945   21026 channel_stack.cc:112]       CHANNEL_STACK:   filter client-channel
+I0309 17:12:44.004656037   21026 ev_posix.cc:352]            (polling-api) pollset_set_create(0x916390)
+I0309 17:12:44.004890744   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 1 -> 2
+I0309 17:12:44.004964806   21026 client_channel.cc:1045]     chand=0x9184a0: creating client_channel for channel stack 0x918420
+I0309 17:12:44.005024638   21026 ev_posix.cc:303]            (polling-api) pollset_init(0x915b90)
+I0309 17:12:44.005091500   21026 timer_generic.cc:344]       TIMER 0x915c00: SET 6203 now 1203 call 0x915c40[0x2b7c3007fa3d]
+I0309 17:12:44.005156622   21026 timer_generic.cc:382]         .. add to shard 11 with queue_deadline_cap=1191 => is_first_timer=false
+I0309 17:12:44.005203213   21026 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x916390, 0x915b90)
+I0309 17:12:44.005249604   21026 ev_epollex_linux.cc:1452]   PSS:0x916390: add pollset 0x915b90
+I0309 17:12:44.005300956   21026 ev_epollex_linux.cc:566]    (fd-trace) Pollable_create: created epfd: 5 (type: 0)
+I0309 17:12:44.005345937   21026 ev_epollex_linux.cc:1250]   PS:0x915b90 active pollable transition from empty to multi
+I0309 17:12:44.005396629   21026 ref_counted.h:86]           pollable_refcount:0x910cd8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1281 ref 1 -> 2 pollset_set
+I0309 17:12:44.005441130   21026 ref_counted.h:182]          pollable_refcount:0x910cd8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1480 unref 2 -> 1 pollset_set
+I0309 17:12:44.006201272   21026 init.cc:196]                grpc_init(void)
+I0309 17:12:44.006287605   21026 credentials.cc:41]          grpc_channel_credentials_release(creds=0x9152b0)
+I0309 17:12:44.006334996   21026 init.cc:237]                grpc_shutdown(void)
+I0309 17:12:44.006450089   21029 executor.cc:231]            EXECUTOR (resolver-executor) [0]: step (sub_depth=0)
+I0309 17:12:44.006602104   21028 executor.cc:231]            EXECUTOR (default-executor) [0]: step (sub_depth=0)
+I0309 17:12:44.006729258   21030 timer_generic.cc:705]       TIMER CHECK BEGIN: now=1206 next=9223372036854775807 tls_min=0 glob_min=1191
+I0309 17:12:44.006787759   21030 timer_generic.cc:603]         .. shard[0]->min_deadline = 1192
+I0309 17:12:44.006833481   21030 timer_generic.cc:518]         .. shard[0]: heap_empty=true
+I0309 17:12:44.006894002   21030 timer_generic.cc:489]         .. shard[0]->queue_deadline_cap --> 2206
+I0309 17:12:44.006934174   21030 timer_generic.cc:563]         .. shard[0] popped 0
+I0309 17:12:44.006970705   21030 timer_generic.cc:622]         .. result --> 1, shard[0]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007016396   21030 timer_generic.cc:518]         .. shard[1]: heap_empty=true
+I0309 17:12:44.007056697   21030 timer_generic.cc:489]         .. shard[1]->queue_deadline_cap --> 2206
+I0309 17:12:44.007094598   21030 timer_generic.cc:563]         .. shard[1] popped 0
+I0309 17:12:44.007131749   21030 timer_generic.cc:622]         .. result --> 1, shard[1]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007171361   21030 timer_generic.cc:518]         .. shard[2]: heap_empty=true
+I0309 17:12:44.007208992   21030 timer_generic.cc:489]         .. shard[2]->queue_deadline_cap --> 2206
+I0309 17:12:44.007245803   21030 timer_generic.cc:563]         .. shard[2] popped 0
+I0309 17:12:44.007286094   21030 timer_generic.cc:622]         .. result --> 1, shard[2]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007326535   21030 timer_generic.cc:518]         .. shard[3]: heap_empty=true
+I0309 17:12:44.007365496   21030 timer_generic.cc:489]         .. shard[3]->queue_deadline_cap --> 2206
+I0309 17:12:44.007413858   21030 timer_generic.cc:563]         .. shard[3] popped 0
+I0309 17:12:44.007451029   21030 timer_generic.cc:622]         .. result --> 1, shard[3]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007490940   21030 timer_generic.cc:518]         .. shard[4]: heap_empty=true
+I0309 17:12:44.007529021   21030 timer_generic.cc:489]         .. shard[4]->queue_deadline_cap --> 2206
+I0309 17:12:44.007566482   21030 timer_generic.cc:563]         .. shard[4] popped 0
+I0309 17:12:44.007601813   21030 timer_generic.cc:622]         .. result --> 1, shard[4]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007694496   21030 timer_generic.cc:518]         .. shard[5]: heap_empty=true
+I0309 17:12:44.007737187   21030 timer_generic.cc:489]         .. shard[5]->queue_deadline_cap --> 2206
+I0309 17:12:44.007774218   21030 timer_generic.cc:563]         .. shard[5] popped 0
+I0309 17:12:44.007809379   21030 timer_generic.cc:622]         .. result --> 1, shard[5]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.007849360   21030 timer_generic.cc:518]         .. shard[6]: heap_empty=true
+I0309 17:12:44.007888111   21030 timer_generic.cc:489]         .. shard[6]->queue_deadline_cap --> 2206
+I0309 17:12:44.007926013   21030 timer_generic.cc:563]         .. shard[6] popped 0
+I0309 17:12:44.007967774   21030 timer_generic.cc:622]         .. result --> 1, shard[6]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008011045   21030 timer_generic.cc:518]         .. shard[7]: heap_empty=true
+I0309 17:12:44.008052006   21030 timer_generic.cc:489]         .. shard[7]->queue_deadline_cap --> 2206
+I0309 17:12:44.008089697   21030 timer_generic.cc:563]         .. shard[7] popped 0
+I0309 17:12:44.008125678   21030 timer_generic.cc:622]         .. result --> 1, shard[7]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008165030   21030 timer_generic.cc:518]         .. shard[8]: heap_empty=true
+I0309 17:12:44.008202631   21030 timer_generic.cc:489]         .. shard[8]->queue_deadline_cap --> 2206
+I0309 17:12:44.008239472   21030 timer_generic.cc:563]         .. shard[8] popped 0
+I0309 17:12:44.008275553   21030 timer_generic.cc:622]         .. result --> 1, shard[8]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008315554   21030 timer_generic.cc:518]         .. shard[9]: heap_empty=true
+I0309 17:12:44.008354765   21030 timer_generic.cc:489]         .. shard[9]->queue_deadline_cap --> 2206
+I0309 17:12:44.008408517   21030 timer_generic.cc:563]         .. shard[9] popped 0
+I0309 17:12:44.008447308   21030 timer_generic.cc:622]         .. result --> 1, shard[9]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008487419   21030 timer_generic.cc:518]         .. shard[10]: heap_empty=true
+I0309 17:12:44.008526090   21030 timer_generic.cc:489]         .. shard[10]->queue_deadline_cap --> 2206
+I0309 17:12:44.008568511   21030 timer_generic.cc:563]         .. shard[10] popped 0
+I0309 17:12:44.008604612   21030 timer_generic.cc:622]         .. result --> 1, shard[10]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008680135   21030 timer_generic.cc:518]         .. shard[11]: heap_empty=true
+I0309 17:12:44.008722136   21030 timer_generic.cc:489]         .. shard[11]->queue_deadline_cap --> 2206
+I0309 17:12:44.008759427   21030 timer_generic.cc:563]         .. shard[11] popped 0
+I0309 17:12:44.008794828   21030 timer_generic.cc:622]         .. result --> 1, shard[11]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008835229   21030 timer_generic.cc:518]         .. shard[12]: heap_empty=true
+I0309 17:12:44.008874050   21030 timer_generic.cc:489]         .. shard[12]->queue_deadline_cap --> 2206
+I0309 17:12:44.008910981   21030 timer_generic.cc:563]         .. shard[12] popped 0
+I0309 17:12:44.008946272   21030 timer_generic.cc:622]         .. result --> 1, shard[12]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.008985964   21030 timer_generic.cc:518]         .. shard[13]: heap_empty=true
+I0309 17:12:44.009024505   21030 timer_generic.cc:489]         .. shard[13]->queue_deadline_cap --> 2206
+I0309 17:12:44.009061776   21030 timer_generic.cc:563]         .. shard[13] popped 0
+I0309 17:12:44.009097607   21030 timer_generic.cc:622]         .. result --> 1, shard[13]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009140078   21030 timer_generic.cc:518]         .. shard[14]: heap_empty=true
+I0309 17:12:44.009179559   21030 timer_generic.cc:489]         .. shard[14]->queue_deadline_cap --> 2206
+I0309 17:12:44.009222730   21030 timer_generic.cc:563]         .. shard[14] popped 0
+I0309 17:12:44.009258612   21030 timer_generic.cc:622]         .. result --> 1, shard[14]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009301683   21030 timer_generic.cc:518]         .. shard[15]: heap_empty=true
+I0309 17:12:44.009341824   21030 timer_generic.cc:489]         .. shard[15]->queue_deadline_cap --> 2206
+I0309 17:12:44.009389935   21030 timer_generic.cc:563]         .. shard[15] popped 0
+I0309 17:12:44.009429997   21030 timer_generic.cc:622]         .. result --> 1, shard[15]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009471278   21030 timer_generic.cc:518]         .. shard[16]: heap_empty=true
+I0309 17:12:44.009509799   21030 timer_generic.cc:489]         .. shard[16]->queue_deadline_cap --> 2206
+I0309 17:12:44.009547050   21030 timer_generic.cc:563]         .. shard[16] popped 0
+I0309 17:12:44.009582851   21030 timer_generic.cc:622]         .. result --> 1, shard[16]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009622802   21030 timer_generic.cc:518]         .. shard[17]: heap_empty=true
+I0309 17:12:44.009661413   21030 timer_generic.cc:489]         .. shard[17]->queue_deadline_cap --> 2206
+I0309 17:12:44.009698474   21030 timer_generic.cc:563]         .. shard[17] popped 0
+I0309 17:12:44.009734135   21030 timer_generic.cc:622]         .. result --> 1, shard[17]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009774507   21030 timer_generic.cc:518]         .. shard[18]: heap_empty=true
+I0309 17:12:44.009812558   21030 timer_generic.cc:489]         .. shard[18]->queue_deadline_cap --> 2206
+I0309 17:12:44.009854659   21030 timer_generic.cc:563]         .. shard[18] popped 0
+I0309 17:12:44.009890460   21030 timer_generic.cc:622]         .. result --> 1, shard[18]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.009929771   21030 timer_generic.cc:518]         .. shard[19]: heap_empty=true
+I0309 17:12:44.009967412   21030 timer_generic.cc:489]         .. shard[19]->queue_deadline_cap --> 2206
+I0309 17:12:44.010010093   21030 timer_generic.cc:563]         .. shard[19] popped 0
+I0309 17:12:44.010047265   21030 timer_generic.cc:622]         .. result --> 1, shard[19]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010087546   21030 timer_generic.cc:518]         .. shard[20]: heap_empty=true
+I0309 17:12:44.010126637   21030 timer_generic.cc:489]         .. shard[20]->queue_deadline_cap --> 2206
+I0309 17:12:44.010164318   21030 timer_generic.cc:563]         .. shard[20] popped 0
+I0309 17:12:44.010201239   21030 timer_generic.cc:622]         .. result --> 1, shard[20]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010240210   21030 timer_generic.cc:518]         .. shard[21]: heap_empty=true
+I0309 17:12:44.010278021   21030 timer_generic.cc:489]         .. shard[21]->queue_deadline_cap --> 2206
+I0309 17:12:44.010314612   21030 timer_generic.cc:563]         .. shard[21] popped 0
+I0309 17:12:44.010351163   21030 timer_generic.cc:622]         .. result --> 1, shard[21]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010402225   21030 timer_generic.cc:518]         .. shard[22]: heap_empty=true
+I0309 17:12:44.010444356   21030 timer_generic.cc:489]         .. shard[22]->queue_deadline_cap --> 2206
+I0309 17:12:44.010486127   21030 timer_generic.cc:563]         .. shard[22] popped 0
+I0309 17:12:44.010521578   21030 timer_generic.cc:622]         .. result --> 1, shard[22]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010564690   21030 timer_generic.cc:518]         .. shard[23]: heap_empty=true
+I0309 17:12:44.010604411   21030 timer_generic.cc:489]         .. shard[23]->queue_deadline_cap --> 2206
+I0309 17:12:44.010641842   21030 timer_generic.cc:563]         .. shard[23] popped 0
+I0309 17:12:44.010676953   21030 timer_generic.cc:622]         .. result --> 1, shard[23]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010716114   21030 timer_generic.cc:518]         .. shard[24]: heap_empty=true
+I0309 17:12:44.010754705   21030 timer_generic.cc:489]         .. shard[24]->queue_deadline_cap --> 2206
+I0309 17:12:44.010791976   21030 timer_generic.cc:563]         .. shard[24] popped 0
+I0309 17:12:44.010827257   21030 timer_generic.cc:622]         .. result --> 1, shard[24]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.010866378   21030 timer_generic.cc:518]         .. shard[25]: heap_empty=true
+I0309 17:12:44.010903360   21030 timer_generic.cc:489]         .. shard[25]->queue_deadline_cap --> 2206
+I0309 17:12:44.010941181   21030 timer_generic.cc:563]         .. shard[25] popped 0
+I0309 17:12:44.010977722   21030 timer_generic.cc:622]         .. result --> 1, shard[25]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011016113   21030 timer_generic.cc:518]         .. shard[26]: heap_empty=true
+I0309 17:12:44.011053594   21030 timer_generic.cc:489]         .. shard[26]->queue_deadline_cap --> 2206
+I0309 17:12:44.011095325   21030 timer_generic.cc:563]         .. shard[26] popped 0
+I0309 17:12:44.011131696   21030 timer_generic.cc:622]         .. result --> 1, shard[26]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011171067   21030 timer_generic.cc:518]         .. shard[27]: heap_empty=true
+I0309 17:12:44.011209659   21030 timer_generic.cc:489]         .. shard[27]->queue_deadline_cap --> 2206
+I0309 17:12:44.011246770   21030 timer_generic.cc:563]         .. shard[27] popped 0
+I0309 17:12:44.011282121   21030 timer_generic.cc:622]         .. result --> 1, shard[27]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011320382   21030 timer_generic.cc:518]         .. shard[28]: heap_empty=true
+I0309 17:12:44.011358503   21030 timer_generic.cc:489]         .. shard[28]->queue_deadline_cap --> 2206
+I0309 17:12:44.011403784   21030 timer_generic.cc:563]         .. shard[28] popped 0
+I0309 17:12:44.011441755   21030 timer_generic.cc:622]         .. result --> 1, shard[28]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011481836   21030 timer_generic.cc:518]         .. shard[29]: heap_empty=true
+I0309 17:12:44.011520998   21030 timer_generic.cc:489]         .. shard[29]->queue_deadline_cap --> 2206
+I0309 17:12:44.011564619   21030 timer_generic.cc:563]         .. shard[29] popped 0
+I0309 17:12:44.011601700   21030 timer_generic.cc:622]         .. result --> 1, shard[29]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011646701   21030 timer_generic.cc:518]         .. shard[30]: heap_empty=true
+I0309 17:12:44.011692173   21030 timer_generic.cc:489]         .. shard[30]->queue_deadline_cap --> 2206
+I0309 17:12:44.011730394   21030 timer_generic.cc:563]         .. shard[30] popped 0
+I0309 17:12:44.011766135   21030 timer_generic.cc:622]         .. result --> 1, shard[30]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011804746   21030 timer_generic.cc:518]         .. shard[31]: heap_empty=true
+I0309 17:12:44.011841937   21030 timer_generic.cc:489]         .. shard[31]->queue_deadline_cap --> 2206
+I0309 17:12:44.011879498   21030 timer_generic.cc:563]         .. shard[31] popped 0
+I0309 17:12:44.011915729   21030 timer_generic.cc:622]         .. result --> 1, shard[31]->min_deadline 1192 --> 2207, now=1206
+I0309 17:12:44.011959130   21030 timer_generic.cc:730]       TIMER CHECK END: r=1; next=2207
+I0309 17:12:44.011998381   21030 timer_manager.cc:189]       sleep for a 1001 milliseconds
+I0309 17:12:44.024441335   21026 channel.cc:422]             grpc_channel_register_call(channel=0x9183a0, method=/mathtest.MathTest/sendRequest, host=(null), reserved=(nil))
+I0309 17:12:44.024720083   21026 init.cc:237]                grpc_shutdown(void)
+I0309 17:12:44.024888398   21026 init.cc:196]                grpc_init(void)
+I0309 17:12:44.024953490   21026 completion_queue.cc:515]    grpc_completion_queue_create_internal(completion_type=1, polling_type=0)
+I0309 17:12:44.024995351   21026 ev_posix.cc:303]            (polling-api) pollset_init(0x913420)
+I0309 17:12:44.025044382   21026 channel.cc:456]             grpc_channel_create_registered_call(channel=0x9183a0, parent_call=(nil), propagation_mask=ffff, completion_queue=0x9132a0, registered_call_handle=0x915ee0, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+D0309 17:12:44.025164176   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF call
+I0309 17:12:44.025217707   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 call
+I0309 17:12:44.025731822   21026 client_channel.cc:1874]     chand=0x9184a0 calld=0x91ce10: created call
+I0309 17:12:44.025805705   21026 grpc_context.cc:29]         grpc_census_call_set_context(call=0x91c070, census_context=(nil))
+I0309 17:12:44.025991520   21026 call.cc:1761]               grpc_call_start_batch(call=0x91c070, ops=0x7ffd689b8550, nops=6, tag=0x7ffd689b8890, reserved=(nil))
+I0309 17:12:44.026098413   21026 call.cc:1355]               ops[0]: SEND_INITIAL_METADATA(nil)
+I0309 17:12:44.026173695   21026 call.cc:1355]               ops[1]: SEND_MESSAGE ptr=0x90c920
+I0309 17:12:44.026221847   21026 call.cc:1355]               ops[2]: RECV_INITIAL_METADATA ptr=0x7ffd689b8cd8
+I0309 17:12:44.026268858   21026 call.cc:1355]               ops[3]: RECV_MESSAGE ptr=0x7ffd689b8920
+I0309 17:12:44.026311739   21026 call.cc:1355]               ops[4]: SEND_CLOSE_FROM_CLIENT
+I0309 17:12:44.026366351   21026 call.cc:1355]               ops[5]: RECV_STATUS_ON_CLIENT metadata=0x7ffd689b8d28 status=0x7ffd689b8958 details=0x7ffd689b8960
+D0309 17:12:44.026565517   21026 transport.h:158]            CALL_STACK 0x91cd80:0x91c070 REF completion
+I0309 17:12:44.026608428   21026 ref_counted.h:115]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 completion
+I0309 17:12:44.026671130   21026 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x91d0c0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:623: executing batch] error="OK"
+I0309 17:12:44.026710531   21026 call_combiner.cc:136]         size: 0 -> 1
+I0309 17:12:44.026752552   21026 call_combiner.cc:144]         EXECUTING IMMEDIATELY
+D0309 17:12:44.026801654   21026 exec_ctx.cc:34]             running closure 0x91d0c0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:621]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.027514495   21026 call.cc:610]                OP[client-channel:0x91cdf0]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0309 17:12:44.027577366   21026 client_channel.cc:2026]     chand=0x9184a0 calld=0x91ce10: adding pending batch at index 0
+I0309 17:12:44.027616137   21026 client_channel.cc:1978]     chand=0x9184a0 calld=0x91ce10: grabbing resolution mutex to apply service config
+I0309 17:12:44.027665099   21026 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x918550]: get current state: IDLE
+D0309 17:12:44.027703980   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF CheckResolutionLocked
+I0309 17:12:44.027741401   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 CheckResolutionLocked
+I0309 17:12:44.027798603   21026 client_channel.cc:2190]     chand=0x9184a0 calld=0x91ce10: adding to resolver queued picks list
+I0309 17:12:44.027847594   21026 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x916390, 0x913420)
+I0309 17:12:44.027884925   21026 ev_epollex_linux.cc:1452]   PSS:0x916390: add pollset 0x913420
+I0309 17:12:44.027930207   21026 ev_epollex_linux.cc:566]    (fd-trace) Pollable_create: created epfd: 7 (type: 0)
+I0309 17:12:44.027975388   21026 ev_epollex_linux.cc:1250]   PS:0x913420 active pollable transition from empty to multi
+I0309 17:12:44.028014489   21026 ref_counted.h:86]           pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1281 ref 1 -> 2 pollset_set
+I0309 17:12:44.028058110   21026 ref_counted.h:182]          pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1480 unref 2 -> 1 pollset_set
+D0309 17:12:44.028100252   21026 transport.h:158]            CALL_STACK 0x91cd80:0x91c070 REF ResolverQueuedCallCanceller
+I0309 17:12:44.028137303   21026 ref_counted.h:115]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 ResolverQueuedCallCanceller
+I0309 17:12:44.028178214   21026 call_combiner.cc:233]       call_combiner=0x91c088: setting notify_on_cancel=0x90b3f8
+D0309 17:12:44.028216725   21026 exec_ctx.cc:54]             closure 0x91d0c0 finished
+D0309 17:12:44.028254966   21026 exec_ctx.cc:34]             running closure 0x913560: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2352]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2339]
+I0309 17:12:44.028386690   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2352]
+I0309 17:12:44.028430741   21026 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.028469022   21026 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x918550]: get current state: IDLE
+D0309 17:12:44.028505834   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF TryToConnect
+I0309 17:12:44.028541375   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 TryToConnect
+I0309 17:12:44.028580376   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1839]
+I0309 17:12:44.028621417   21026 work_serializer.cc:101]       Scheduling on queue : item 0x90d660
+D0309 17:12:44.028668358   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF CheckResolutionLocked
+I0309 17:12:44.028706349   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 4 -> 3 CheckResolutionLocked
+I0309 17:12:44.028742320   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+I0309 17:12:44.028782622   21026 work_serializer.cc:201]       Running item 0x90d660 : callback scheduled at [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1839]
+I0309 17:12:44.028890465   21026 client_channel.cc:1543]     chand=0x9184a0: starting name resolution
+D0309 17:12:44.028949346   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF ResolverResultHandler
+I0309 17:12:44.028987888   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 ResolverResultHandler
+I0309 17:12:44.029675938   21026 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x918550]: IDLE -> CONNECTING (started resolving, OK)
+D0309 17:12:44.029786131   21026 dns_resolver_ares.cc:170]   (c-ares resolver) resolver:0x91dfe0 AresClientChannelDNSResolver::StartLocked() is called.
+I0309 17:12:44.029849733   21026 ref_counted.h:86]           Resolver:0x91dfe8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:453 ref 1 -> 2 dns-resolving
+D0309 17:12:44.029907094   21026 grpc_ares_wrapper.cc:1048]  (c-ares resolver) request:0x914e70 c-ares grpc_dns_lookup_ares_impl name=12.8.10.78:5000, default_port=https
+I0309 17:12:44.030227624   21026 grpc_ares_wrapper.cc:531]   (c-ares resolver) request:0x914e70 c-ares address sorting: input[0]=12.8.10.78:5000
+I0309 17:12:44.030437760   21026 grpc_ares_wrapper.cc:531]   (c-ares resolver) request:0x914e70 c-ares address sorting: output[0]=12.8.10.78:5000
+D0309 17:12:44.030525803   21026 dns_resolver_ares.cc:465]   (c-ares resolver) resolver:0x91dfe0 Started resolving. pending_request_:0x914e70
+I0309 17:12:44.030568034   21026 client_channel.cc:1556]     chand=0x9184a0: created resolver=0x91dfe0
+D0309 17:12:44.030604065   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF TryToConnect
+I0309 17:12:44.030640436   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 4 -> 3 TryToConnect
+D0309 17:12:44.030680757   21026 exec_ctx.cc:54]             closure 0x913560 finished
+D0309 17:12:44.030718018   21026 exec_ctx.cc:34]             running closure 0x91e088: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:158]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.cc:596]
+I0309 17:12:44.030758779   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:318]
+I0309 17:12:44.030795920   21026 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.030940575   21026 client_channel.cc:1207]     chand=0x9184a0: got resolver result
+I0309 17:12:44.031104369   21026 client_channel.cc:1264]     chand=0x9184a0: resolver returned no service config. Using default service config for channel.
+I0309 17:12:44.031360207   21026 client_channel.cc:1446]     chand=0x9184a0: resolver returned updated service config: "{}"
+I0309 17:12:44.031425499   21026 client_channel.cc:1461]     chand=0x9184a0: using ConfigSelector (nil)
+D0309 17:12:44.031495821   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF ClientChannelControlHelper
+I0309 17:12:44.031543922   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 ClientChannelControlHelper
+I0309 17:12:44.031661906   21026 ev_posix.cc:352]            (polling-api) pollset_set_create(0x90c890)
+I0309 17:12:44.031729708   21026 client_channel.cc:1409]     chand=0x9184a0: created new LB policy 0x91ecf0
+I0309 17:12:44.031773169   21026 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x90c890, 0x916390)
+I0309 17:12:44.031808460   21026 ev_epollex_linux.cc:1489]   PSS: merge (0x90c890, 0x916390)
+I0309 17:12:44.031867232   21026 ev_epollex_linux.cc:1523]   PSS: parent 0x90c890 to 0x916390
+I0309 17:12:44.031922313   21026 client_channel.cc:1391]     chand=0x9184a0: Updating child policy 0x91ecf0
+I0309 17:12:44.031983675   21026 child_policy_handler.cc:218] [child_policy_handler 0x91ecf0] creating new child policy pick_first
+I0309 17:12:44.032028516   21026 ref_counted.h:86]           LoadBalancingPolicy:0x91ecf8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc:265 ref 1 -> 2 Helper
+I0309 17:12:44.032103928   21026 ev_posix.cc:352]            (polling-api) pollset_set_create(0x91f020)
+I0309 17:12:44.032153040   21026 pick_first.cc:142]          Pick First 0x91f190 created.
+I0309 17:12:44.032200641   21026 child_policy_handler.cc:279] [child_policy_handler 0x91ecf0] created new LB policy "pick_first" (0x91f190)
+I0309 17:12:44.032248563   21026 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x91f020, 0x90c890)
+I0309 17:12:44.032288784   21026 ev_epollex_linux.cc:1489]   PSS: merge (0x91f020, 0x90c890)
+I0309 17:12:44.032333055   21026 ev_epollex_linux.cc:1523]   PSS: parent 0x91f020 to 0x916390
+I0309 17:12:44.032387947   21026 child_policy_handler.cc:237] [child_policy_handler 0x91ecf0] updating child policy 0x91f190
+I0309 17:12:44.032435788   21026 pick_first.cc:265]          Pick First 0x91f190 received update with 1 addresses
+I0309 17:12:44.032512390   21026 subchannel_list.h:366]      [pick_first 0x91f190] Creating subchannel list 0x91f610 for 1 subchannels
+I0309 17:12:44.032653234   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 2 -> 3
+I0309 17:12:44.032772018   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 3 -> 4
+I0309 17:12:44.032817049   21026 ref_counted.h:86]           security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:87 ref 1 -> 2 connector_arg_copy
+I0309 17:12:44.032860371   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:345 unref 2 -> 1 lb_channel_create
+I0309 17:12:44.032968174   21026 ref_counted.h:86]           security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:87 ref 1 -> 2 connector_arg_copy
+I0309 17:12:44.033011165   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 4 -> 5
+I0309 17:12:44.033138549   21026 ev_posix.cc:352]            (polling-api) pollset_set_create(0x91f340)
+I0309 17:12:44.033226091   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 5 -> 6
+I0309 17:12:44.033271783   21026 ref_counted.h:86]           security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:87 ref 2 -> 3 connector_arg_copy
+I0309 17:12:44.033383346   21026 dual_ref_counted.h:261]     Subchannel:0x920180 ref 1 -> 2; (weak_refs=0)
+I0309 17:12:44.033482789   21026 ref_counted.h:86]           security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:87 ref 3 -> 4 connector_arg_copy
+I0309 17:12:44.033525460   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 6 -> 7
+I0309 17:12:44.033582252   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 7 -> 8
+I0309 17:12:44.033634153   21026 dual_ref_counted.h:74]      Subchannel:0x920180 unref 2 -> 1, weak_ref 0 -> 1
+I0309 17:12:44.033671434   21026 dual_ref_counted.h:176]     Subchannel:0x920180 weak_unref 1 -> 0 (refs=1)
+I0309 17:12:44.033711695   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 8 -> 7
+I0309 17:12:44.033749437   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:80 unref 4 -> 3 connector_arg_destroy
+I0309 17:12:44.033785918   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 7 -> 6
+I0309 17:12:44.033842699   21026 client_channel.cc:452]      chand=0x9184a0: creating subchannel wrapper 0x921110 for subchannel 0x920180
+D0309 17:12:44.033883070   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF SubchannelWrapper
+I0309 17:12:44.033919711   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 4 -> 5 SubchannelWrapper
+I0309 17:12:44.034269072   21026 subchannel_list.h:386]      [pick_first 0x91f190] subchannel list 0x91f610 index 0: Created subchannel 0x921110 for address 12.8.10.78:5000 args={}
+I0309 17:12:44.034324243   21026 ref_counted.h:86]           LoadBalancingPolicy:0x91f198 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc:92 ref 1 -> 2 subchannel_list
+I0309 17:12:44.034382395   21026 subchannel_list.h:313]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): starting watch (from IDLE)
+I0309 17:12:44.034430476   21026 ref_counted.h:86]           SubchannelList:0x91f618 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/subchannel_list.h:322 ref 1 -> 2 Watcher
+I0309 17:12:44.034566190   21026 ref_counted.h:86]           SubchannelWrapper:0x921118 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:506 ref 1 -> 2 WatcherWrapper
+I0309 17:12:44.034652713   21026 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x91f340, 0x91f020)
+I0309 17:12:44.034693874   21026 ev_epollex_linux.cc:1489]   PSS: merge (0x91f340, 0x91f020)
+I0309 17:12:44.034740235   21026 ev_epollex_linux.cc:1523]   PSS: parent 0x91f340 to 0x916390
+I0309 17:12:44.034836808   21026 dual_ref_counted.h:310]     Subchannel:0x920180 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:876 weak_ref 0 -> 1 (refs=1) connecting
+I0309 17:12:44.034985553   21026 socket_utils_common_posix.cc:429] Disabling AF_INET6 sockets because ::1 is not available.
+I0309 17:12:44.035111626   21026 ev_posix.cc:253]            (polling-api) fd_create(9, tcp-client:ipv4:12.8.10.78:5000, 1)
+I0309 17:12:44.035158988   21026 ev_posix.cc:254]            (fd-trace) fd_create(9, tcp-client:ipv4:12.8.10.78:5000, 1)
+D0309 17:12:44.035307992   21026 ev_epollex_linux.cc:175]    FD 9 0x9216e0 create tcp-client:ipv4:12.8.10.78:5000 fd=9
+I0309 17:12:44.035355943   21026 ev_posix.cc:394]            (polling-api) pollset_set_add_fd(0x91f340, 9)
+I0309 17:12:44.035401045   21026 ev_epollex_linux.cc:1354]   PSS:0x91f340: add fd 0x9216e0 (9)
+I0309 17:12:44.035439856   21026 ev_epollex_linux.cc:617]    add fd 0x9216e0 (9) to pollable 0x910cd0
+I0309 17:12:44.035479217   21026 ev_epollex_linux.cc:617]    add fd 0x9216e0 (9) to pollable 0x91dab0
+D0309 17:12:44.035518948   21026 ev_epollex_linux.cc:352]    FD 9 0x9216e0   ref 2 1 -> 3 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1368]
+I0309 17:12:44.035570050   21026 ref_counted.h:75]           SubchannelPoolInterface:0x916918 ref 6 -> 7
+I0309 17:12:44.035622311   21026 ref_counted.h:86]           security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:87 ref 3 -> 4 connector_arg_copy
+I0309 17:12:44.035658672   21026 tcp_client_posix.cc:314]    CLIENT_CONNECT: ipv4:12.8.10.78:5000: asynchronously connecting fd 0x9216e0
+I0309 17:12:44.035706734   21026 timer_generic.cc:344]       TIMER 0x921860: SET 21229 now 1229 call 0x9218a0[0x2b7c30393e11]
+I0309 17:12:44.035759445   21026 timer_generic.cc:382]         .. add to shard 2 with queue_deadline_cap=2206 => is_first_timer=false
+D0309 17:12:44.035804367   21026 lockfree_event.cc:103]      LockfreeEvent::NotifyOn: 0x921728 curr=0 closure=0x9218f0
+I0309 17:12:44.035862588   21026 client_channel.cc:1472]     chand=0x9184a0: switching to ConfigSelector (nil)
+I0309 17:12:44.035946541   21026 channel_stack.cc:110]       CHANNEL_STACK: init DynamicFilters
+I0309 17:12:44.036000682   21026 channel_stack.cc:112]       CHANNEL_STACK:   filter retry_filter
+I0309 17:12:44.036076564   21026 connectivity_state.cc:182]  ConnectivityStateTracker client_channel[0x918550]: get current state: CONNECTING
+I0309 17:12:44.036121416   21026 client_channel.cc:2204]     chand=0x9184a0 calld=0x91ce10: applying service config to call
+I0309 17:12:44.036191638   21026 client_channel.cc:2175]     chand=0x9184a0 calld=0x91ce10: removing from resolver queued picks list
+I0309 17:12:44.036231809   21026 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x916390, 0x913420)
+I0309 17:12:44.036266080   21026 ev_epollex_linux.cc:1399]   PSS:0x916390: del pollset 0x913420
+I0309 17:12:44.036305671   21026 ev_epollex_linux.cc:661]    PS:0x913420 (pollable:0x91dab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0309 17:12:44.036405924   21026 ref_counted.h:182]          Resolver:0x91dfe8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:410 unref 2 -> 1 dns-resolving
+I0309 17:12:44.036454095   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+D0309 17:12:44.036496957   21026 exec_ctx.cc:54]             closure 0x91e088 finished
+D0309 17:12:44.036534368   21026 exec_ctx.cc:34]             running closure 0x91f858: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:371]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:362]
+I0309 17:12:44.036575269   21026 client_channel.cc:577]      chand=0x9184a0: connectivity change for subchannel wrapper 0x921110 subchannel 0x920180; hopping into work_serializer
+I0309 17:12:44.036621140   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:589]
+I0309 17:12:44.036657661   21026 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.036699783   21026 client_channel.cc:612]      chand=0x9184a0: processing connectivity change in work serializer for subchannel wrapper 0x921110 subchannel 0x920180 watcher=0x914ec0
+I0309 17:12:44.036765595   21026 subchannel_list.h:246]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): connectivity changed: state=CONNECTING, shutting_down=0, pending_watcher=0x914ec0
+I0309 17:12:44.036808346   21026 ref_counted.h:86]           LoadBalancingPolicy:0x91f198 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc:440 ref 2 -> 3 QueuePicker
+I0309 17:12:44.036865148   21026 client_channel.cc:941]      chand=0x9184a0: update: state=CONNECTING status=(OK) picker=0x921c10
+I0309 17:12:44.036925959   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+D0309 17:12:44.036971721   21026 exec_ctx.cc:54]             closure 0x91f858 finished
+D0309 17:12:44.037009292   21026 exec_ctx.cc:34]             running closure 0x91ced8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2291]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2292]
+I0309 17:12:44.037048153   21026 client_channel.cc:2403]     chand=0x9184a0 calld=0x91ce10: creating dynamic call stack on channel_stack=0x91efd0
+I0309 17:12:44.037235478   21026 retry_filter.cc:2062]       chand=0x921d50 calld=0x91d270: created call
+I0309 17:12:44.037285260   21026 client_channel.cc:2103]     chand=0x9184a0 calld=0x91ce10: starting 1 pending batches on dynamic_call=0x91d1d0
+I0309 17:12:44.037370812   21026 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x91d008 error="OK" reason=resuming pending batch from client channel call
+D0309 17:12:44.050458324   21026 exec_ctx.cc:54]             closure 0x91ced8 finished
+D0309 17:12:44.050500896   21026 exec_ctx.cc:34]             running closure 0x91d008: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2114]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0309 17:12:44.050583688   21026 dynamic_filters.cc:66]      OP[retry_filter:0x91d250]:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0309 17:12:44.050657490   21026 retry_filter.cc:2157]       chand=0x921d50 calld=0x91d270: batch started from surface:  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0309 17:12:44.050721742   21026 retry_filter.cc:2395]       chand=0x921d50 calld=0x91d270: adding pending batch at index 0
+I0309 17:12:44.050925008   21026 retry_filter.cc:2267]       chand=0x921d50 calld=0x91d270: creating call attempt
+I0309 17:12:44.051162915   21026 retry_filter.cc:688]        chand=0x921d50 calld=0x91d270 attempt=0x921ed0: create lb_call=0x9229d0
+I0309 17:12:44.051227227   21026 retry_filter.cc:1063]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: constructing retriable batches
+I0309 17:12:44.051273318   21026 ref_counted.h:86]           CallAttempt:0x921ed8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:360 ref 1 -> 2 CreateBatch
+I0309 17:12:44.051323710   21026 retry_filter.cc:1298]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: creating batch 0x91f870
+D0309 17:12:44.051361481   21026 transport.h:158]            CALL_STACK 0x91d1e0:0x91d1d0 REF Retry BatchData
+I0309 17:12:44.051406142   21026 ref_counted.h:115]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 1 -> 2 Retry BatchData
+I0309 17:12:44.052442172   21026 retry_filter.cc:1974]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: starting calld->send_messages[0]
+I0309 17:12:44.052615987   21026 retry_filter.cc:865]        chand=0x921d50 calld=0x91d270 attempt=0x921ed0: adding batch (start replayable pending batch on call attempt):  SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE:flags=0x00000000:len=4 SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0309 17:12:44.052671859   21026 retry_filter.cc:1073]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: starting 1 retriable batches on lb_call=0x9229d0
+I0309 17:12:44.052725911   21026 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x91f8b0 error="OK" reason=start replayable pending batch on call attempt
+D0309 17:12:44.052766442   21026 exec_ctx.cc:54]             closure 0x91d008 finished
+D0309 17:12:44.052804483   21026 exec_ctx.cc:34]             running closure 0x91f8b0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:871]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0309 17:12:44.052855454   21026 client_channel.cc:2624]     chand=0x9184a0 lb_call=0x9229d0: adding pending batch at index 0
+I0309 17:12:44.052892665   21026 client_channel.cc:2831]     chand=0x9184a0 lb_call=0x9229d0: grabbing data plane mutex to perform pick
+I0309 17:12:44.052964288   21026 ref_counted.h:75]           LoadBalancingPolicy:0x91f198 ref 3 -> 4
+I0309 17:12:44.053034740   21026 client_channel.cc:3130]     chand=0x9184a0 lb_call=0x9229d0: LB pick queued
+I0309 17:12:44.053074871   21026 client_channel.cc:3023]     chand=0x9184a0 lb_call=0x9229d0: adding to queued picks list
+I0309 17:12:44.053113722   21026 ev_posix.cc:364]            (polling-api) pollset_set_add_pollset(0x916390, 0x913420)
+I0309 17:12:44.053148723   21026 ev_epollex_linux.cc:1452]   PSS:0x916390: add pollset 0x913420
+I0309 17:12:44.053193564   21026 ref_counted.h:86]           pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1242 ref 1 -> 2 pollset_as_multipollable
+I0309 17:12:44.053234455   21026 ref_counted.h:86]           pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1281 ref 2 -> 3 pollset_set
+I0309 17:12:44.053271277   21026 ref_counted.h:182]          pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1282 unref 3 -> 2 pollset_as_multipollable
+I0309 17:12:44.053314558   21026 ev_epollex_linux.cc:617]    add fd 0x9216e0 (9) to pollable 0x91dab0
+I0309 17:12:44.053356899   21026 ref_counted.h:182]          pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1480 unref 2 -> 1 pollset_set
+I0309 17:12:44.053410521   21026 ref_counted.h:75]           LoadBalancedCall:0x9229d8 ref 1 -> 2
+D0309 17:12:44.053459002   21026 transport.h:158]            CALL_STACK 0x91d1e0:0x91d1d0 REF LbQueuedCallCanceller
+I0309 17:12:44.053496363   21026 ref_counted.h:115]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 LbQueuedCallCanceller
+I0309 17:12:44.053532404   21026 call_combiner.cc:233]       call_combiner=0x91c088: setting notify_on_cancel=0x921338
+I0309 17:12:44.053567125   21026 call_combiner.cc:242]       call_combiner=0x91c088: scheduling old cancel callback=0x90b3f8
+D0309 17:12:44.053641217   21026 exec_ctx.cc:54]             closure 0x91f8b0 finished
+D0309 17:12:44.053682329   21026 exec_ctx.cc:34]             running closure 0x91ef30: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:126]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:115]
+I0309 17:12:44.053721850   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:126]
+I0309 17:12:44.053759561   21026 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.053796962   21026 ref_counted.h:165]          LoadBalancingPolicy:0x91f198 unref 4 -> 3
+I0309 17:12:44.053831993   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+D0309 17:12:44.053867514   21026 exec_ctx.cc:54]             closure 0x91ef30 finished
+D0309 17:12:44.053903475   21026 exec_ctx.cc:34]             running closure 0x90b3f8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2136]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:246]
+I0309 17:12:44.053942876   21026 client_channel.cc:2148]     chand=0x9184a0 calld=0x91ce10: cancelling resolver queued pick: error="OK" self=0x90b3f0 calld->resolver_pick_canceller=(nil)
+D0309 17:12:44.053982467   21026 transport.h:175]            CALL_STACK 0x91cd80:0x91c070 UNREF ResolvingQueuedCallCanceller
+I0309 17:12:44.054019768   21026 ref_counted.h:182]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 3 -> 2 ResolvingQueuedCallCanceller
+D0309 17:12:44.054054669   21026 exec_ctx.cc:54]             closure 0x90b3f8 finished
+I0309 17:12:44.054110921   21026 completion_queue.cc:1218]   grpc_completion_queue_pluck(cq=0x9132a0, tag=0x7ffd689b8890, deadline=gpr_timespec { tv_sec: 9223372036854775807, tv_nsec: 0, clock_type: 1 }, reserved=(nil))
+D0309 17:12:44.054180523   21026 completion_queue.cc:948]    PENDING TAGS: 0x7ffd689b8890
+I0309 17:12:44.054232465   21026 ev_posix.cc:321]            (polling-api) pollset_work(0x913420, 9223372036854775807) begin
+I0309 17:12:44.054281936   21026 ev_epollex_linux.cc:1118]   PS:0x913420 work hdl=0x7ffd689b8688 worker=0x7ffd689b84e0 now=1253 deadline=9223372036854775807 kwp=0 pollable=0x91dab0
+I0309 17:12:44.054320107   21026 ref_counted.h:86]           pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1016 ref 1 -> 2 pollset_worker
+I0309 17:12:44.054387139   21026 ev_epollex_linux.cc:936]    POLLABLE:0x91dab0[type=pollset epfd=7 wakeup=8] poll for -1ms
+I0309 17:12:44.054436811   21026 ev_epollex_linux.cc:955]    POLLABLE:0x91dab0 got 1 events
+I0309 17:12:44.054474932   21026 ev_epollex_linux.cc:903]    PS:0x913420 got fd 0x9216e0: cancel=1 read=1 write=1
+D0309 17:12:44.054512313   21026 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x921720 curr=0
+D0309 17:12:44.054547714   21026 lockfree_event.cc:236]      LockfreeEvent::SetReady: 0x921728 curr=9218f0
+D0309 17:12:44.054585365   21026 exec_ctx.cc:34]             running closure 0x9218f0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc:310]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/lockfree_event.cc:265]
+I0309 17:12:44.054622526   21026 tcp_client_posix.cc:144]    CLIENT_CONNECT: ipv4:12.8.10.78:5000: on_writable: error="OK"
+I0309 17:12:44.054663007   21026 timer_generic.cc:447]       TIMER 0x921860: CANCEL pending=true
+D0309 17:12:44.054739979   21026 error.cc:508]               0x9233c0 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc:201]
+I0309 17:12:44.054790011   21026 ev_posix.cc:400]            (polling-api) pollset_set_del_fd(0x91f340, 9)
+I0309 17:12:44.054833192   21026 ev_epollex_linux.cc:1378]   PSS:0x91f340: del fd 0x9216e0
+D0309 17:12:44.054873983   21026 ev_epollex_linux.cc:389]    FD 9 0x9216e0 unref 2 3 -> 1 [pollset_set; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1384]
+I0309 17:12:44.054914415   21026 ev_posix.cc:266]            (polling-api) fd_orphan(9, (nil), (nil), tcp_client_orphan)
+I0309 17:12:44.054949856   21026 ev_posix.cc:267]            (fd-trace) grpc_fd_orphan, fd:9 closed
+D0309 17:12:44.055002757   21026 ev_epollex_linux.cc:352]    FD 9 0x9216e0   ref 1 1 -> 2 [tcp_client_orphan; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:492]
+D0309 17:12:44.055048348   21026 ev_epollex_linux.cc:389]    FD 9 0x9216e0 unref 2 2 -> 0 [tcp_client_orphan; /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:503]
+I0309 17:12:44.055102790   21026 executor.cc:300]            EXECUTOR (default-executor) try to schedule 0x91fda0 (short) (created /public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:63) to thread 0
+I0309 17:12:44.055203513   21028 executor.cc:251]            EXECUTOR (default-executor) [0]: execute
+I0309 17:12:44.055251484   21028 executor.cc:119]            EXECUTOR (default-executor) run 0x91fda0 [created by /public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:63]
+D0309 17:12:44.055331677   21028 error.cc:304]               0x9233c0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:125]
+D0309 17:12:44.055387828   21028 error.cc:352]               0x9233c0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/executor.cc:134]
+D0309 17:12:44.055432740   21028 exec_ctx.cc:34]             running closure 0x9202f0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:651]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:133]
+I0309 17:12:44.055551503   21028 subchannel.cc:947]          subchannel 0x920180 {address=ipv4:12.8.10.78:5000, args=grpc.client_channel_factory=0x916bd0, grpc.default_authority=12.8.10.78:5000, grpc.internal.channel_credentials=0x9152b0, grpc.internal.security_connector=0x91f3a0, grpc.internal.subchannel_pool=0x916910, grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x9146d0, grpc.server_uri=dns:///12.8.10.78:5000}: connect failed: {"created":"@1678353164.054780601","description":"Failed to connect to remote host: Connection refused","errno":111,"file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc","file_line":201,"os_error":"Connection refused","syscall":"connect","target_address":"ipv4:12.8.10.78:5000"}
+I0309 17:12:44.055645726   21028 dual_ref_counted.h:198]     Subchannel:0x920180 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:954 weak_unref 1 -> 0 (refs=1) connecting
+D0309 17:12:44.055692597   21028 error.cc:352]               0x9233c0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.055738619   21028 exec_ctx.cc:54]             closure 0x9202f0 finished
+D0309 17:12:44.055776760   21028 exec_ctx.cc:34]             running closure 0x2b7c400009a8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:371]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:362]
+I0309 17:12:44.055813411   21028 client_channel.cc:577]      chand=0x9184a0: connectivity change for subchannel wrapper 0x921110 subchannel 0x920180; hopping into work_serializer
+I0309 17:12:44.055853452   21028 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:589]
+I0309 17:12:44.055891813   21028 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.055929144   21028 client_channel.cc:612]      chand=0x9184a0: processing connectivity change in work serializer for subchannel wrapper 0x921110 subchannel 0x920180 watcher=0x914ec0
+I0309 17:12:44.055973805   21028 subchannel_list.h:246]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): connectivity changed: state=TRANSIENT_FAILURE, shutting_down=0, pending_watcher=0x914ec0
+I0309 17:12:44.056015347   21028 subchannel_list.h:333]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): canceling connectivity watch (connection attempt failed)
+I0309 17:12:44.056066948   21028 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x91f340, 0x91f020)
+I0309 17:12:44.056150351   21028 pick_first.cc:396]          Pick First 0x91f190 subchannel list 0x91f610 failed to connect to all subchannels
+I0309 17:12:44.056196172   21028 child_policy_handler.cc:87] [child_policy_handler 0x91ecf0] started name re-resolving
+I0309 17:12:44.056234643   21028 client_channel.cc:956]      chand=0x9184a0: started name re-resolving
+D0309 17:12:44.056277304   21028 dns_resolver_ares.cc:434]   (c-ares resolver) resolver:0x91dfe0 In cooldown from last resolution (from 26 ms ago). Will resolve again in 29974 ms
+I0309 17:12:44.056317116   21028 ref_counted.h:86]           Resolver:0x91dfe8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:439 ref 1 -> 2 next_resolution_timer_cooldown
+I0309 17:12:44.056354367   21028 timer_generic.cc:344]       TIMER 0x91e0e8: SET 31229 now 1255 call 0x91e040[0x2b7c3019f2a8]
+I0309 17:12:44.056408608   21028 timer_generic.cc:382]         .. add to shard 25 with queue_deadline_cap=2206 => is_first_timer=false
+I0309 17:12:44.056550672   21028 client_channel.cc:941]      chand=0x9184a0: update: state=TRANSIENT_FAILURE status=(UNAVAILABLE: failed to connect to all addresses) picker=0x2b7c40000b20
+I0309 17:12:44.056604314   21028 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x918550]: CONNECTING -> TRANSIENT_FAILURE (helper, UNAVAILABLE: failed to connect to all addresses)
+I0309 17:12:44.056684466   21028 client_channel.cc:3141]     chand=0x9184a0 lb_call=0x9229d0: LB pick failed: UNAVAILABLE: failed to connect to all addresses
+D0309 17:12:44.056735558   21028 error.cc:508]               0x2b7c40000cc0 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc:165]
+D0309 17:12:44.056777239   21028 error.cc:508]               0x2b7c40000d70 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3151]
+D0309 17:12:44.056815580   21028 error.cc:304]               0x2b7c40000cc0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:531]
+D0309 17:12:44.056852591   21028 error.cc:352]               0x2b7c40000cc0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3152]
+I0309 17:12:44.056889192   21028 client_channel.cc:3011]     chand=0x9184a0 lb_call=0x9229d0: removing from queued picks list
+I0309 17:12:44.056925113   21028 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x916390, 0x913420)
+I0309 17:12:44.056960294   21028 ev_epollex_linux.cc:1399]   PSS:0x916390: del pollset 0x913420
+I0309 17:12:44.056999735   21028 ev_epollex_linux.cc:661]    PS:0x913420 (pollable:0x91dab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=0x7ffd689b84e0 (target:NULL) cpsc=0 (target:0)
+I0309 17:12:44.057058477   21028 ref_counted.h:182]          LoadBalancingPolicy:0x91f198 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.h:410 unref 3 -> 2 QueuePicker
+I0309 17:12:44.057106339   21028 subchannel_list.h:313]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): starting watch (from TRANSIENT_FAILURE)
+I0309 17:12:44.057147290   21028 ref_counted.h:86]           SubchannelList:0x91f618 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/subchannel_list.h:322 ref 2 -> 3 Watcher
+I0309 17:12:44.057194921   21028 ref_counted.h:86]           SubchannelWrapper:0x921118 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:506 ref 2 -> 3 WatcherWrapper
+I0309 17:12:44.057246323   21028 ev_posix.cc:377]            (polling-api) pollset_set_add_pollset_set(0x91f340, 0x91f020)
+I0309 17:12:44.057286004   21028 ev_epollex_linux.cc:1489]   PSS: merge (0x91f340, 0x91f020)
+I0309 17:12:44.057335015   21028 dual_ref_counted.h:310]     Subchannel:0x920180 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:876 weak_ref 0 -> 1 (refs=1) connecting
+I0309 17:12:44.057427138   21028 subchannel.cc:890]          subchannel 0x920180 {address=ipv4:12.8.10.78:5000, args=grpc.client_channel_factory=0x916bd0, grpc.default_authority=12.8.10.78:5000, grpc.internal.channel_credentials=0x9152b0, grpc.internal.security_connector=0x91f3a0, grpc.internal.subchannel_pool=0x916910, grpc.primary_user_agent=grpc-c++/1.45.0, grpc.resource_quota=0x9146d0, grpc.server_uri=dns:///12.8.10.78:5000}: Retry in 972 milliseconds
+I0309 17:12:44.057474959   21028 timer_generic.cc:344]       TIMER 0x920520: SET 2229 now 1257 call 0x920560[0x2b7c30209230]
+I0309 17:12:44.057526641   21028 timer_generic.cc:382]         .. add to shard 24 with queue_deadline_cap=2206 => is_first_timer=false
+I0309 17:12:44.057571162   21028 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+I0309 17:12:44.057625064   21028 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:572]
+I0309 17:12:44.057665935   21028 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.057707686   21028 ref_counted.h:182]          SubchannelWrapper:0x921118 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:570 unref 3 -> 2 WatcherWrapper
+I0309 17:12:44.057745047   21028 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+I0309 17:12:44.057786968   21028 ref_counted.h:182]          SubchannelList:0x91f618 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/subchannel_list.h:144 unref 3 -> 2 Watcher dtor
+D0309 17:12:44.057851490   21028 exec_ctx.cc:54]             closure 0x2b7c400009a8 finished
+D0309 17:12:44.057892252   21028 exec_ctx.cc:34]             running closure 0x922a70: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3035]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3036]
+I0309 17:12:44.057953053   21028 client_channel.cc:3044]     chand=0x9184a0 lb_call=0x9229d0: failed to pick subchannel: error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.057992704   21028 error.cc:304]               0x2b7c40000d70: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:3048]
+I0309 17:12:44.058037336   21028 client_channel.cc:2655]     chand=0x9184a0 lb_call=0x9229d0: failing 1 pending batches: {"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.058077367   21028 error.cc:304]               0x2b7c40000d70: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2667]
+I0309 17:12:44.058120438   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x91f8b0 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=PendingBatchesFail
+D0309 17:12:44.058162519   21028 error.cc:352]               0x2b7c40000d70: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.058199361   21028 exec_ctx.cc:54]             closure 0x922a70 finished
+D0309 17:12:44.058234562   21028 exec_ctx.cc:34]             running closure 0x91f8b0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2666]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+D0309 17:12:44.058269893   21028 error.cc:304]               0x2b7c40000d70: 2 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2640]
+D0309 17:12:44.058311824   21028 error.cc:304]               0x2b7c40000d70: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:171]
+D0309 17:12:44.058352435   21028 error.cc:304]               0x2b7c40000d70: 4 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:175]
+D0309 17:12:44.058400526   21028 error.cc:304]               0x2b7c40000d70: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:180]
+D0309 17:12:44.058440368   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:183]
+I0309 17:12:44.058481429   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x922660 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:169: failing recv_message_ready] error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.058525300   21028 call_combiner.cc:136]         size: 1 -> 2
+I0309 17:12:44.058560851   21028 call_combiner.cc:150]         QUEUING
+I0309 17:12:44.058600222   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x922c10 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:169: failing recv_trailing_metadata_ready] error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.058642663   21028 call_combiner.cc:136]         size: 2 -> 3
+I0309 17:12:44.058677254   21028 call_combiner.cc:150]         QUEUING
+I0309 17:12:44.058715286   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x91f8f8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:169: failing on_complete] error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.058751637   21028 call_combiner.cc:136]         size: 3 -> 4
+I0309 17:12:44.058785208   21028 call_combiner.cc:150]         QUEUING
+I0309 17:12:44.058822379   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x922610 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=failing recv_initial_metadata_ready
+D0309 17:12:44.058862810   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:188]
+D0309 17:12:44.058901331   21028 error.cc:352]               0x2b7c40000d70: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.058936322   21028 exec_ctx.cc:54]             closure 0x91f8b0 finished
+D0309 17:12:44.058972103   21028 exec_ctx.cc:34]             running closure 0x922610: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2013]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0309 17:12:44.059014834   21028 retry_filter.cc:1391]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0 batch_data=0x91f870: got recv_initial_metadata_ready, error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.059058596   21028 retry_filter.cc:1418]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: deferring recv_initial_metadata_ready (Trailers-Only)
+D0309 17:12:44.059095187   21028 error.cc:304]               0x2b7c40000d70: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1425]
+D0309 17:12:44.059131548   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1428]
+I0309 17:12:44.059168919   21028 ref_counted.h:86]           CallAttempt:0x921ed8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:360 ref 2 -> 3 CreateBatch
+I0309 17:12:44.059207770   21028 retry_filter.cc:1298]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: creating batch 0x2b7c40001760
+D0309 17:12:44.059248471   21028 transport.h:158]            CALL_STACK 0x91d1e0:0x91d1d0 REF Retry BatchData
+I0309 17:12:44.059284092   21028 ref_counted.h:115]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 3 -> 4 Retry BatchData
+I0309 17:12:44.059332444   21028 retry_filter.cc:865]        chand=0x921d50 calld=0x91d270 attempt=0x921ed0: adding batch (start cancellation batch on call attempt):  CANCEL:{"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.059386225   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x2b7c400017a0 error="OK" reason=start cancellation batch on call attempt
+D0309 17:12:44.059430936   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.059468657   21028 exec_ctx.cc:54]             closure 0x922610 finished
+D0309 17:12:44.059503769   21028 exec_ctx.cc:34]             running closure 0x2b7c400017a0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:871]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+D0309 17:12:44.059538660   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2813]
+I0309 17:12:44.059575991   21028 client_channel.cc:2815]     chand=0x9184a0 lb_call=0x9229d0: recording cancel_error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.059613682   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2819]
+D0309 17:12:44.059649333   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2648]
+I0309 17:12:44.059687324   21028 client_channel.cc:2655]     chand=0x9184a0 lb_call=0x9229d0: failing 0 pending batches: {"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.059735295   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2822]
+D0309 17:12:44.059774516   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:164]
+D0309 17:12:44.059810618   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:183]
+I0309 17:12:44.059856279   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x2b7c400017e8 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=failing on_complete
+D0309 17:12:44.059897900   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:188]
+D0309 17:12:44.059935371   21028 exec_ctx.cc:54]             closure 0x2b7c400017a0 finished
+D0309 17:12:44.059971152   21028 exec_ctx.cc:34]             running closure 0x2b7c400017e8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2050]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0309 17:12:44.060020044   21028 retry_filter.cc:1927]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0 batch_data=0x2b7c40001760: got on_complete for cancel_stream batch, error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}, batch= CANCEL:{"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.060062665   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1936: on_complete for internally generated cancel_stream op]
+I0309 17:12:44.060097866   21028 call_combiner.cc:172]         size: 4 -> 3
+I0309 17:12:44.060131767   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.060168948   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x922660 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.060207439   21028 ref_counted.h:165]          BatchData:0x2b7c40001768 unref 1 -> 0
+I0309 17:12:44.060243950   21028 retry_filter.cc:1319]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: destroying batch 0x2b7c40001760
+D0309 17:12:44.060278901   21028 transport.h:175]            CALL_STACK 0x91d1e0:0x91d1d0 UNREF Retry BatchData
+I0309 17:12:44.060320602   21028 ref_counted.h:182]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 4 -> 3 Retry BatchData
+I0309 17:12:44.060357034   21028 ref_counted.h:182]          CallAttempt:0x921ed8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1324 unref 3 -> 2 ~BatchData
+D0309 17:12:44.060404415   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.060440466   21028 exec_ctx.cc:54]             closure 0x2b7c400017e8 finished
+D0309 17:12:44.060480687   21028 exec_ctx.cc:34]             running closure 0x922660: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2025]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.060519268   21028 retry_filter.cc:1491]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0 batch_data=0x91f870: got recv_message_ready, error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.060559289   21028 retry_filter.cc:1517]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: deferring recv_message_ready (nullptr message and recv_trailing_metadata pending)
+D0309 17:12:44.060596251   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1523]
+D0309 17:12:44.060632792   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1526]
+D0309 17:12:44.060668263   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:897]
+I0309 17:12:44.060705144   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:163: no closures to schedule]
+I0309 17:12:44.060740895   21028 call_combiner.cc:172]         size: 3 -> 2
+I0309 17:12:44.060774906   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.060810917   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x922c10 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.060849168   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.060885319   21028 exec_ctx.cc:54]             closure 0x922660 finished
+D0309 17:12:44.060920510   21028 exec_ctx.cc:34]             running closure 0x922c10: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2775]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+D0309 17:12:44.060967371   21028 closure.h:259]              running closure 0x9228c0: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:2040]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2932]
+I0309 17:12:44.061016223   21028 retry_filter.cc:1686]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0 batch_data=0x91f870: got recv_trailing_metadata_ready, error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.061065084   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1710]
+D0309 17:12:44.061136856   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1575]
+I0309 17:12:44.061188468   21028 retry_filter.cc:1713]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: call finished, status=UNAVAILABLE server_pushback=N/A is_lb_drop=0 stream_network_state=N/A
+I0309 17:12:44.061231179   21028 retry_filter.cc:2536]       chand=0x921d50 calld=0x91d270: committing retries
+I0309 17:12:44.061269140   21028 retry_filter.cc:783]        chand=0x921d50 calld=0x91d270 attempt=0x921ed0: retry state no longer needed; moving LB call to parent and unreffing the call attempt
+I0309 17:12:44.061308641   21028 ref_counted.h:182]          CallAttempt:0x921ed8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:789 unref 2 -> 1 MaybeSwitchToFastPath
+D0309 17:12:44.061345182   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1778]
+D0309 17:12:44.061418574   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1669]
+I0309 17:12:44.061465506   21028 retry_filter.cc:2518]       chand=0x921d50 calld=0x91d270: invoking recv_trailing_metadata_ready for pending batch at index 0
+I0309 17:12:44.061522367   21028 retry_filter.cc:2518]       chand=0x921d50 calld=0x91d270: invoking recv_initial_metadata_ready for pending batch at index 0
+I0309 17:12:44.061575969   21028 ref_counted.h:182]          BatchData:0x91f878 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1625 unref 4 -> 3 resuming deferred recv_initial_metadata_ready
+I0309 17:12:44.061618090   21028 retry_filter.cc:2518]       chand=0x921d50 calld=0x91d270: invoking recv_message_ready for pending batch at index 0
+I0309 17:12:44.061660682   21028 ref_counted.h:182]          BatchData:0x91f878 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1634 unref 3 -> 2 resuming deferred recv_message_ready
+D0309 17:12:44.061700163   21028 error.cc:304]               0x2b7c40000d70: 8 -> 9 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1673]
+D0309 17:12:44.061737094   21028 error.cc:352]               0x2b7c40000d70: 9 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1661]
+I0309 17:12:44.061776685   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x91cc68 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:169: recv_initial_metadata_ready for pending batch] error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.061818646   21028 call_combiner.cc:136]         size: 2 -> 3
+I0309 17:12:44.061854067   21028 call_combiner.cc:150]         QUEUING
+I0309 17:12:44.061892808   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x91cc20 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:169: recv_message_ready for pending batch] error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.061934660   21028 call_combiner.cc:136]         size: 3 -> 4
+I0309 17:12:44.061969451   21028 call_combiner.cc:150]         QUEUING
+I0309 17:12:44.062008782   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x91cf48 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=recv_trailing_metadata_ready for pending batch
+D0309 17:12:44.062050093   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1677]
+I0309 17:12:44.062088514   21028 ref_counted.h:165]          BatchData:0x91f878 unref 2 -> 1
+D0309 17:12:44.062123825   21028 closure.h:268]              closure 0x9228c0 finished
+D0309 17:12:44.062158726   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:271]
+D0309 17:12:44.062194147   21028 error.cc:352]               0x2b7c40000d70: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.062228518   21028 exec_ctx.cc:54]             closure 0x922c10 finished
+D0309 17:12:44.062264139   21028 exec_ctx.cc:34]             running closure 0x91cf48: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2283]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+D0309 17:12:44.062301630   21028 error.cc:304]               0x2b7c40000d70: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2273]
+D0309 17:12:44.062337671   21028 closure.h:259]              running closure 0x91ce30: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/deadline/deadline_filter.cc:152]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2272]
+D0309 17:12:44.062383433   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/deadline/deadline_filter.cc:142]
+D0309 17:12:44.062428944   21028 closure.h:259]              running closure 0x91ccb0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1668]: run [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/deadline/deadline_filter.cc:140]
+I0309 17:12:44.062465375   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1310: recv_trailing_metadata_ready]
+I0309 17:12:44.062499436   21028 call_combiner.cc:172]         size: 4 -> 3
+I0309 17:12:44.062532657   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.062570108   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x91f8f8 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.062614229   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1312]
+D0309 17:12:44.062651141   21028 call.cc:716]                set_final_status CLI
+D0309 17:12:44.062687012   21028 call.cc:717]                {"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.062729943   21028 error.cc:304]               0x2b7c40000d70: 8 -> 9 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.h:431]
+D0309 17:12:44.062768984   21028 error.cc:352]               0x2b7c40000d70: 9 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:727]
+D0309 17:12:44.062843776   21028 closure.h:268]              closure 0x91ccb0 finished
+D0309 17:12:44.062882727   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:271]
+D0309 17:12:44.062917168   21028 closure.h:268]              closure 0x91ce30 finished
+D0309 17:12:44.062952099   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:271]
+D0309 17:12:44.062987490   21028 error.cc:352]               0x2b7c40000d70: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.063030932   21028 exec_ctx.cc:54]             closure 0x91cf48 finished
+D0309 17:12:44.063065993   21028 exec_ctx.cc:34]             running closure 0x91f8f8: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1312]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.063136385   21028 retry_filter.cc:1851]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0 batch_data=0x91f870: got on_complete, error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}, batch= SEND_INITIAL_METADATA{:path: /mathtest.MathTest/sendRequest} SEND_MESSAGE(flag and length unknown, already orphaned) SEND_TRAILING_METADATA{} RECV_INITIAL_METADATA RECV_MESSAGE RECV_TRAILING_METADATA
+I0309 17:12:44.063183926   21028 retry_filter.cc:2337]       chand=0x921d50 calld=0x91d270: destroying send_initial_metadata
+I0309 17:12:44.063229417   21028 retry_filter.cc:2346]       chand=0x921d50 calld=0x91d270: destroying send_messages[0]
+I0309 17:12:44.063275039   21028 retry_filter.cc:2357]       chand=0x921d50 calld=0x91d270: destroying send_trailing_metadata
+D0309 17:12:44.063318180   21028 error.cc:304]               0x2b7c40000d70: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1905]
+I0309 17:12:44.063357161   21028 retry_filter.cc:2518]       chand=0x921d50 calld=0x91d270: completed pending batch at index 0
+I0309 17:12:44.063403112   21028 retry_filter.cc:2462]       chand=0x921d50 calld=0x91d270: clearing pending batch
+I0309 17:12:44.063445984   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x91d108 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=on_complete for pending batch
+I0309 17:12:44.063492315   21028 ref_counted.h:165]          BatchData:0x91f878 unref 1 -> 0
+I0309 17:12:44.063530546   21028 retry_filter.cc:1319]       chand=0x921d50 calld=0x91d270 attempt=0x921ed0: destroying batch 0x91f870
+D0309 17:12:44.063566427   21028 transport.h:175]            CALL_STACK 0x91d1e0:0x91d1d0 UNREF Retry BatchData
+I0309 17:12:44.063603008   21028 ref_counted.h:182]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 3 -> 2 Retry BatchData
+I0309 17:12:44.063639159   21028 ref_counted.h:182]          CallAttempt:0x921ed8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:1324 unref 1 -> 0 ~BatchData
+I0309 17:12:44.063673490   21028 retry_filter.cc:717]        chand=0x921d50 calld=0x91d270 attempt=0x921ed0: destroying call attempt
+D0309 17:12:44.063734902   21028 error.cc:352]               0x2b7c40000d70: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.063777603   21028 exec_ctx.cc:54]             closure 0x91f8f8 finished
+D0309 17:12:44.063813734   21028 exec_ctx.cc:34]             running closure 0x91d108: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1715]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+I0309 17:12:44.063849365   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1319: on_complete]
+I0309 17:12:44.063884416   21028 call_combiner.cc:172]         size: 3 -> 2
+I0309 17:12:44.063918087   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.063956038   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x91cc68 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.063995440   21028 error.cc:304]               0x2b7c40000d70: 5 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.h:431]
+D0309 17:12:44.064031561   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1324]
+D0309 17:12:44.064066872   21028 transport.h:158]            CALL_STACK 0x91cd80:0x91c070 REF termination
+I0309 17:12:44.064103973   21028 ref_counted.h:115]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 2 -> 3 termination
+D0309 17:12:44.064139744   21028 error.cc:304]               0x2b7c40000d70: 7 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:683]
+I0309 17:12:44.064176725   21028 call_combiner.cc:279]       call_combiner=0x91c088: scheduling notify_on_cancel callback=0x921338
+D0309 17:12:44.064212806   21028 error.cc:304]               0x2b7c40000d70: 8 -> 9 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:283]
+I0309 17:12:44.064256477   21028 call_combiner.cc:127]       ==> CallCombiner::Start() [0x91c088] closure=0x2b7c400011c8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:623: executing batch] error="OK"
+I0309 17:12:44.064294078   21028 call_combiner.cc:136]         size: 2 -> 3
+I0309 17:12:44.064333629   21028 call_combiner.cc:150]         QUEUING
+D0309 17:12:44.064368100   21028 error.cc:352]               0x2b7c40000d70: 9 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.064425012   21028 exec_ctx.cc:54]             closure 0x91d108 finished
+D0309 17:12:44.064461973   21028 exec_ctx.cc:34]             running closure 0x91cc68: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1599]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.064497784   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1252: recv_initial_metadata_ready]
+I0309 17:12:44.064532175   21028 call_combiner.cc:172]         size: 3 -> 2
+I0309 17:12:44.064565786   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.064601187   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x91cc20 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.064637808   21028 error.cc:304]               0x2b7c40000d70: 8 -> 9 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1271]
+D0309 17:12:44.064674099   21028 error.cc:352]               0x2b7c40000d70: 9 -> 8 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:675]
+D0309 17:12:44.064709690   21028 error.cc:352]               0x2b7c40000d70: 8 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.064744221   21028 exec_ctx.cc:54]             closure 0x91cc68 finished
+D0309 17:12:44.064779493   21028 exec_ctx.cc:34]             running closure 0x921338: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2973]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:283]
+I0309 17:12:44.064821804   21028 client_channel.cc:2985]     chand=0x9184a0 lb_call=0x9229d0: cancelling queued pick: error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} self=0x921330 calld->pick_canceller=(nil)
+D0309 17:12:44.064861725   21028 transport.h:175]            CALL_STACK 0x91d1e0:0x91d1d0 UNREF LbQueuedCallCanceller
+I0309 17:12:44.064903136   21028 ref_counted.h:182]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 2 -> 1 LbQueuedCallCanceller
+I0309 17:12:44.064940997   21028 ref_counted.h:165]          LoadBalancedCall:0x9229d8 unref 2 -> 1
+D0309 17:12:44.064977108   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.065011409   21028 exec_ctx.cc:54]             closure 0x921338 finished
+D0309 17:12:44.065046520   21028 exec_ctx.cc:34]             running closure 0x91cc20: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1633]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.065081231   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1200: recv_message_ready]
+I0309 17:12:44.065115012   21028 call_combiner.cc:172]         size: 2 -> 1
+I0309 17:12:44.065148513   21028 call_combiner.cc:179]         checking queue
+I0309 17:12:44.065184054   21028 call_combiner.cc:201]         EXECUTING FROM QUEUE: closure=0x2b7c400011c8 error="OK"
+D0309 17:12:44.065221795   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1181]
+D0309 17:12:44.065263167   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:675]
+D0309 17:12:44.065300518   21028 error.cc:304]               0x2b7c40000d70: 6 -> 7 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1017]
+D0309 17:12:44.065342889   21028 error.cc:352]               0x2b7c40000d70: 7 -> 6 [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:1055]
+D0309 17:12:44.065391380   21028 error.cc:352]               0x2b7c40000d70: 6 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.h:430]
+I0309 17:12:44.065433812   21028 completion_queue.cc:776]    cq_end_op_for_pluck(cq=0x9132a0, tag=0x7ffd689b8890, error="OK", done=0x2b7c3044c4ba, done_arg=0x91cfe0, storage=0x91d050)
+I0309 17:12:44.065475693   21028 ev_posix.cc:331]            (polling-api) pollset_kick(0x913420, 0x7ffd689b84e0)
+I0309 17:12:44.065520174   21028 ev_epollex_linux.cc:728]    PS:0x913420 kick 0x7ffd689b84e0 tls_pollset=(nil) tls_worker=(nil) pollset.root_worker=0x7ffd689b84e0
+I0309 17:12:44.065558725   21028 ev_epollex_linux.cc:703]    PS:0x91dab0 kicked_specific_via_wakeup_fd
+D0309 17:12:44.065608447   21028 error.cc:352]               0x2b7c40000d70: 5 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.065646638   21028 exec_ctx.cc:54]             closure 0x91cc20 finished
+D0309 17:12:44.065681919   21028 exec_ctx.cc:34]             running closure 0x2b7c400011c8: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:621]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:109]
+I0309 17:12:44.065729390   21028 call.cc:610]                OP[client-channel:0x91cdf0]:  CANCEL:{"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.065771722   21028 client_channel.cc:1929]     chand=0x9184a0 calld=0x91ce10: starting batch on dynamic_call=0x91d1d0
+I0309 17:12:44.065817063   21028 dynamic_filters.cc:66]      OP[retry_filter:0x91d250]:  CANCEL:{"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.065863684   21028 retry_filter.cc:2157]       chand=0x921d50 calld=0x91d270: batch started from surface:  CANCEL:{"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+I0309 17:12:44.065907305   21028 client_channel.cc:2797]     chand=0x9184a0 lb_call=0x9229d0: failing batch with error: {"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}
+D0309 17:12:44.065945457   21028 error.cc:304]               0x2b7c40000d70: 4 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2802]
+D0309 17:12:44.065987748   21028 error.cc:352]               0x2b7c40000d70: 5 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:164]
+D0309 17:12:44.066026209   21028 error.cc:304]               0x2b7c40000d70: 4 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:183]
+I0309 17:12:44.066067920   21028 call_combiner.h:172]        CallCombinerClosureList executing closure while already holding call_combiner 0x91c088: closure=0x2b7c40001a50 error={"created":"@1678353164.056850341","description":"Failed to pick subchannel","file":"/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3151,"referenced_errors":[{"created":"@1678353164.056773969","description":"failed to connect to all addresses","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]} reason=failing on_complete
+D0309 17:12:44.066109411   21028 error.cc:352]               0x2b7c40000d70: 5 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:188]
+D0309 17:12:44.066151673   21028 exec_ctx.cc:54]             closure 0x2b7c400011c8 finished
+D0309 17:12:44.066189074   21028 exec_ctx.cc:34]             running closure 0x2b7c40001a50: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:237]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.h:180]
+D0309 17:12:44.066228405   21028 error.cc:304]               0x2b7c40000d70: 4 -> 5 [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:228]
+D0309 17:12:44.066265476   21028 closure.h:259]              running closure 0x2b7c40001210: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:687]: run [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:228]
+I0309 17:12:44.066301157   21028 call_combiner.cc:166]       ==> CallCombiner::Stop() [0x91c088] [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:668: on_complete for cancel_stream op]
+I0309 17:12:44.066335388   21028 call_combiner.cc:172]         size: 1 -> 0
+I0309 17:12:44.066369639   21028 call_combiner.cc:208]         queue empty
+D0309 17:12:44.066416210   21028 transport.h:175]            CALL_STACK 0x91cd80:0x91c070 UNREF termination
+I0309 17:12:44.066453141   21028 ref_counted.h:182]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 3 -> 2 termination
+D0309 17:12:44.066488782   21028 closure.h:268]              closure 0x2b7c40001210 finished
+D0309 17:12:44.066524213   21028 error.cc:352]               0x2b7c40000d70: 5 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/closure.h:271]
+D0309 17:12:44.066559864   21028 error.cc:352]               0x2b7c40000d70: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.066594766   21028 exec_ctx.cc:54]             closure 0x2b7c40001a50 finished
+I0309 17:12:44.066630167   21028 executor.cc:231]            EXECUTOR (default-executor) [0]: step (sub_depth=1)
+D0309 17:12:44.066676058   21026 exec_ctx.cc:54]             closure 0x9218f0 finished
+D0309 17:12:44.066716509   21026 exec_ctx.cc:34]             running closure 0x9218a0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/tcp_client_posix.cc:319]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+I0309 17:12:44.066758020   21026 tcp_client_posix.cc:108]    CLIENT_CONNECT: ipv4:12.8.10.78:5000: on_alarm: error="CANCELLED"
+I0309 17:12:44.066805532   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 7 -> 6
+I0309 17:12:44.066845853   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:80 unref 4 -> 3 connector_arg_destroy
+D0309 17:12:44.066892564   21026 exec_ctx.cc:54]             closure 0x9218a0 finished
+D0309 17:12:44.066929305   21026 exec_ctx.cc:34]             running closure 0x923370: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:401]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:400]
+D0309 17:12:44.067038459   21026 exec_ctx.cc:54]             closure 0x923370 finished
+I0309 17:12:44.067085070   21026 ref_counted.h:182]          pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:1083 unref 2 -> 1 pollset_worker
+I0309 17:12:44.067125921   21026 ev_epollex_linux.cc:661]    PS:0x913420 (pollable:0x91dab0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0309 17:12:44.067162422   21026 ev_posix.cc:325]            (polling-api) pollset_work(0x913420, 9223372036854775807) end
+D0309 17:12:44.067200053   21026 transport.h:175]            CALL_STACK 0x91cd80:0x91c070 UNREF completion
+I0309 17:12:44.067238234   21026 ref_counted.h:182]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 2 -> 1 completion
+I0309 17:12:44.067321667   21026 completion_queue.cc:1311]   RETURN_EVENT[0x9132a0]: OP_COMPLETE: tag:0x7ffd689b8890 OK
+I0309 17:12:44.067423010   21026 completion_queue.cc:1417]   grpc_completion_queue_destroy(cq=0x9132a0)
+I0309 17:12:44.067469001   21026 completion_queue.cc:1411]   grpc_completion_queue_shutdown(cq=0x9132a0)
+I0309 17:12:44.067509422   21026 ev_posix.cc:308]            (polling-api) pollset_shutdown(0x913420)
+I0309 17:12:44.067547323   21026 ev_epollex_linux.cc:661]    PS:0x913420 (pollable:0x91dab0) maybe_finish_shutdown sc=0x9132e0 (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+D0309 17:12:44.067590955   21026 exec_ctx.cc:34]             running closure 0x9132e0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/completion_queue.cc:538]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:670]
+D0309 17:12:44.067628036   21026 exec_ctx.cc:54]             closure 0x9132e0 finished
+I0309 17:12:44.067666797   21026 init.cc:237]                grpc_shutdown(void)
+I0309 17:12:44.067749359   21026 call.cc:559]                grpc_call_unref(c=0x91c070)
+I0309 17:12:44.067789360   21026 call_combiner.cc:222]       call_combiner=0x91c088: scheduling notify_on_cancel callback=(nil) for pre-existing cancellation
+D0309 17:12:44.067826062   21026 error.cc:304]               0x2b7c40000d70: 3 -> 4 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:227]
+D0309 17:12:44.067862933   21026 error.cc:352]               0x2b7c40000d70: 4 -> 3 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:102]
+D0309 17:12:44.067898634   21026 transport.h:175]            CALL_STACK 0x91cd80:0x91c070 UNREF destroy
+I0309 17:12:44.067935445   21026 ref_counted.h:182]          stream_refcount:0x91cd80 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 1 -> 0 destroy
+D0309 17:12:44.067980216   21026 exec_ctx.cc:34]             running closure 0x91cd90: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0309 17:12:44.068024267   21026 ev_posix.cc:313]            (polling-api) pollset_destroy(0x913420)
+I0309 17:12:44.068063958   21026 ref_counted.h:182]          pollable_refcount:0x91dab8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:925 unref 1 -> 0 pollset
+I0309 17:12:44.068099299   21026 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 7
+D0309 17:12:44.068150231   21026 error.cc:352]               0x2b7c40000d70: 3 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.h:430]
+D0309 17:12:44.068201402   21026 transport.h:175]            CALL_STACK 0x91d1e0:0x91d1d0 UNREF 
+I0309 17:12:44.068243884   21026 ref_counted.h:182]          stream_refcount:0x91d1e0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 1 -> 0 
+D0309 17:12:44.068286125   21026 exec_ctx.cc:54]             closure 0x91cd90 finished
+D0309 17:12:44.068323486   21026 exec_ctx.cc:34]             running closure 0x91d1f0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0309 17:12:44.068361507   21026 retry_filter.cc:2337]       chand=0x921d50 calld=0x91d270: destroying send_initial_metadata
+I0309 17:12:44.068413239   21026 retry_filter.cc:2357]       chand=0x921d50 calld=0x91d270: destroying send_trailing_metadata
+I0309 17:12:44.068476720   21026 ref_counted.h:165]          LoadBalancedCall:0x9229d8 unref 1 -> 0
+D0309 17:12:44.068522692   21026 error.cc:352]               0x2b7c40000d70: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2580]
+D0309 17:12:44.068573703   21026 exec_ctx.cc:54]             closure 0x91d1f0 finished
+D0309 17:12:44.068612084   21026 exec_ctx.cc:34]             running closure 0x91d960: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:649]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:2591]
+D0309 17:12:44.068647675   21026 exec_ctx.cc:54]             closure 0x91d960 finished
+D0309 17:12:44.068682496   21026 exec_ctx.cc:34]             running closure 0x91cd08: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/call.cc:545]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/retry_filter.cc:634]
+D0309 17:12:44.068741148   21026 error.cc:352]               0x2b7c40000d70: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/call_combiner.cc:67]
+D0309 17:12:44.068783789   21026 error.cc:352]               0x2b7c40000cc0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:323]
+D0309 17:12:44.068832831   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF call
+I0309 17:12:44.068872152   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 5 -> 4 call
+D0309 17:12:44.068911393   21026 exec_ctx.cc:54]             closure 0x91cd08 finished
+I0309 17:12:44.068952774   21026 metadata_array.cc:34]       grpc_metadata_array_destroy(array=0x7ffd689b8d28)
+I0309 17:12:44.068996906   21026 metadata_array.cc:34]       grpc_metadata_array_destroy(array=0x7ffd689b8cd8)
+I0309 17:12:44.069108889   21026 channel.cc:491]             grpc_channel_destroy(channel=0x9183a0)
+D0309 17:12:44.069153010   21026 error.cc:508]               0x921850 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/channel.cc:493]
+D0309 17:12:44.069192601   21026 transport.h:158]            CLIENT_CHANNEL 0x918420:0x9183a0 REF start_transport_op
+I0309 17:12:44.069231173   21026 ref_counted.h:115]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:161 ref 4 -> 5 start_transport_op
+I0309 17:12:44.069271294   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1779]
+I0309 17:12:44.069308485   21026 work_serializer.cc:90]        Executing immediately
+I0309 17:12:44.069404968   21026 client_channel.cc:1737]     chand=0x9184a0: disconnect_with_error: {"created":"@1678353164.069189051","description":"Channel Destroyed","file":"/public/home/lifei/xinzk/source/grpc/src/core/lib/surface/channel.cc","file_line":493}
+I0309 17:12:44.069451209   21026 client_channel.cc:1563]     chand=0x9184a0: shutting down resolver=0x91dfe0
+I0309 17:12:44.069493740   21026 timer_generic.cc:447]       TIMER 0x91e0e8: CANCEL pending=true
+I0309 17:12:44.069535811   21026 ref_counted.h:165]          Resolver:0x91dfe8 unref 2 -> 1
+I0309 17:12:44.069578933   21026 client_channel.cc:1569]     chand=0x9184a0: shutting down lb_policy=0x91ecf0
+I0309 17:12:44.069616064   21026 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x90c890, 0x916390)
+I0309 17:12:44.069660695   21026 child_policy_handler.cc:127] [child_policy_handler 0x91ecf0] shutting down
+I0309 17:12:44.069698546   21026 child_policy_handler.cc:132] [child_policy_handler 0x91ecf0] shutting down lb_policy 0x91f190
+I0309 17:12:44.069734827   21026 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x91f020, 0x90c890)
+I0309 17:12:44.069770838   21026 pick_first.cc:156]          Pick First 0x91f190 Shutting down
+I0309 17:12:44.069807209   21026 subchannel_list.h:411]      [pick_first 0x91f190] Shutting down subchannel_list 0x91f610
+I0309 17:12:44.069844810   21026 subchannel_list.h:333]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): canceling connectivity watch (shutdown)
+I0309 17:12:44.069886572   21026 ev_posix.cc:383]            (polling-api) pollset_set_del_pollset_set(0x91f340, 0x91f020)
+I0309 17:12:44.069932253   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:572]
+I0309 17:12:44.069972724   21026 work_serializer.cc:101]       Scheduling on queue : item 0x923580
+I0309 17:12:44.070011285   21026 ref_counted.h:182]          SubchannelList:0x91f618 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/subchannel_list.h:144 unref 2 -> 1 Watcher dtor
+I0309 17:12:44.070059317   21026 subchannel_list.h:290]      [pick_first 0x91f190] subchannel list 0x91f610 index 0 of 1 (subchannel 0x921110): unreffing subchannel (shutdown)
+I0309 17:12:44.070103168   21026 ref_counted.h:165]          SubchannelWrapper:0x921118 unref 2 -> 1
+I0309 17:12:44.070139799   21026 ref_counted.h:182]          SubchannelList:0x91f618 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/subchannel_list.h:203 unref 1 -> 0 shutdown
+I0309 17:12:44.070175920   21026 ref_counted.h:182]          LoadBalancingPolicy:0x91f198 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc:97 unref 2 -> 1 subchannel_list
+I0309 17:12:44.070212351   21026 subchannel_list.h:400]      [pick_first 0x91f190] Destroying subchannel_list 0x91f610
+I0309 17:12:44.070250392   21026 ref_counted.h:182]          LoadBalancingPolicy:0x91f198 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:50 unref 1 -> 0 Orphan
+I0309 17:12:44.070293224   21026 pick_first.cc:148]          Destroying Pick First 0x91f190
+I0309 17:12:44.070336775   21026 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x91f020)
+I0309 17:12:44.070390776   21026 ref_counted.h:182]          LoadBalancingPolicy:0x91ecf8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy/child_policy_handler.cc:39 unref 2 -> 1 Helper
+I0309 17:12:44.070439218   21026 ref_counted.h:182]          LoadBalancingPolicy:0x91ecf8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/lb_policy.cc:50 unref 1 -> 0 Orphan
+I0309 17:12:44.070483109   21026 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x90c890)
+D0309 17:12:44.070526760   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF ClientChannelControlHelper
+I0309 17:12:44.070566282   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 5 -> 4 ClientChannelControlHelper
+D0309 17:12:44.070623173   21026 transport.h:175]            DynamicFilters 0x921cd0:0x921cd0 UNREF ~DynamicFilters
+I0309 17:12:44.070667234   21026 ref_counted.h:182]          stream_refcount:0x921cd0 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 1 -> 0 ~DynamicFilters
+I0309 17:12:44.070713126   21026 connectivity_state.cc:159]  ConnectivityStateTracker client_channel[0x918550]: TRANSIENT_FAILURE -> SHUTDOWN (shutdown from API, OK)
+D0309 17:12:44.070775258   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF start_transport_op
+I0309 17:12:44.070819019   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 4 -> 3 start_transport_op
+I0309 17:12:44.070855720   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+I0309 17:12:44.070892341   21026 work_serializer.cc:201]       Running item 0x923580 : callback scheduled at [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:572]
+I0309 17:12:44.070928902   21026 ref_counted.h:182]          SubchannelWrapper:0x921118 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:570 unref 1 -> 0 WatcherWrapper
+I0309 17:12:44.070969983   21026 client_channel.cc:474]      chand=0x9184a0: destroying subchannel wrapper 0x921110 for subchannel 0x920180
+D0309 17:12:44.071071816   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF SubchannelWrapper
+I0309 17:12:44.071116038   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 3 -> 2 SubchannelWrapper
+I0309 17:12:44.071161339   21026 dual_ref_counted.h:74]      Subchannel:0x920180 unref 1 -> 0, weak_ref 1 -> 2
+I0309 17:12:44.071223311   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:80 unref 3 -> 2 connector_arg_destroy
+I0309 17:12:44.071263782   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 6 -> 5
+I0309 17:12:44.071304093   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 5 -> 4
+D0309 17:12:44.071352685   21026 error.cc:508]               0x921ad0 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/connector.h:72]
+D0309 17:12:44.071429807   21026 error.cc:352]               0x921ad0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/transport/chttp2/client/chttp2_connector.cc:109]
+I0309 17:12:44.071508559   21026 dual_ref_counted.h:176]     Subchannel:0x920180 weak_unref 2 -> 1 (refs=0)
+D0309 17:12:44.071552970   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF channel
+I0309 17:12:44.071590831   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 2 -> 1 channel
+D0309 17:12:44.071627993   21026 exec_ctx.cc:34]             running closure 0x91e040: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:157]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+I0309 17:12:44.071667684   21026 work_serializer.cc:78]      WorkSerializer::Run() 0x915220 Scheduling callback [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:203]
+I0309 17:12:44.071709725   21026 work_serializer.cc:90]        Executing immediately
+D0309 17:12:44.071747416   21026 dns_resolver_ares.cc:211]   (c-ares resolver) resolver:0x91dfe0 re-resolution timer fired. error: "CANCELLED". shutdown_initiated_: 1
+I0309 17:12:44.071785367   21026 ref_counted.h:182]          Resolver:0x91dfe8 /public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/dns_resolver_ares.cc:220 unref 1 -> 0 next_resolution_timer
+D0309 17:12:44.071822458   21026 dns_resolver_ares.cc:163]   (c-ares resolver) resolver:0x91dfe0 destroying AresClientChannelDNSResolver
+I0309 17:12:44.071863559   21026 client_channel.cc:414]      chand=0x9184a0: resolver shutdown complete
+D0309 17:12:44.071901271   21026 transport.h:175]            CLIENT_CHANNEL 0x918420:0x9183a0 UNREF ResolverResultHandler
+I0309 17:12:44.071942262   21026 ref_counted.h:182]          stream_refcount:0x918420 /public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.h:178 unref 1 -> 0 ResolverResultHandler
+I0309 17:12:44.071984233   21026 work_serializer.cc:158]     WorkSerializer::DrainQueueOwned() 0x915220
+D0309 17:12:44.072021924   21026 exec_ctx.cc:54]             closure 0x91e040 finished
+D0309 17:12:44.072058575   21026 exec_ctx.cc:34]             running closure 0x921ce0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+D0309 17:12:44.072094836   21026 exec_ctx.cc:54]             closure 0x921ce0 finished
+D0309 17:12:44.072130317   21026 exec_ctx.cc:34]             running closure 0x921ed0: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:210]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1762]
+D0309 17:12:44.072174128   21026 exec_ctx.cc:54]             closure 0x921ed0 finished
+D0309 17:12:44.072210690   21026 exec_ctx.cc:34]             running closure 0x918430: created [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:73]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/transport/transport.cc:55]
+I0309 17:12:44.072251751   21026 client_channel.cc:1120]     chand=0x9184a0: destroying channel
+I0309 17:12:44.072340693   21026 ev_posix.cc:371]            (polling-api) pollset_set_del_pollset(0x916390, 0x915b90)
+I0309 17:12:44.072396455   21026 ev_epollex_linux.cc:1399]   PSS:0x916390: del pollset 0x915b90
+I0309 17:12:44.072438126   21026 ev_epollex_linux.cc:661]    PS:0x915b90 (pollable:0x910cd0) maybe_finish_shutdown sc=(nil) (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0309 17:12:44.072478777   21026 ev_posix.cc:308]            (polling-api) pollset_shutdown(0x915b90)
+I0309 17:12:44.072516388   21026 ev_epollex_linux.cc:661]    PS:0x915b90 (pollable:0x910cd0) maybe_finish_shutdown sc=0x915c88 (target:!NULL) rw=(nil) (target:NULL) cpsc=0 (target:0)
+I0309 17:12:44.072555270   21026 timer_generic.cc:447]       TIMER 0x915c00: CANCEL pending=true
+I0309 17:12:44.072596391   21026 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x916390)
+D0309 17:12:44.072634702   21026 error.cc:352]               0x921850: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/client_channel.cc:1127]
+I0309 17:12:44.072689424   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 4 -> 3
+I0309 17:12:44.072747425   21026 work_serializer.cc:122]     WorkSerializer::Orphan() 0x915220
+I0309 17:12:44.072785006   21026 work_serializer.cc:128]       Destroying
+I0309 17:12:44.072985662   21026 init.cc:237]                grpc_shutdown(void)
+D0309 17:12:44.073036914   21026 exec_ctx.cc:54]             closure 0x918430 finished
+D0309 17:12:44.073075645   21026 exec_ctx.cc:34]             running closure 0x915c88: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/backup_poller.cc:109]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:670]
+D0309 17:12:44.073111766   21026 exec_ctx.cc:54]             closure 0x915c88 finished
+D0309 17:12:44.073147337   21026 exec_ctx.cc:34]             running closure 0x915c40: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/backup_poller.cc:153]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:454]
+I0309 17:12:44.073184338   21026 ev_posix.cc:313]            (polling-api) pollset_destroy(0x915b90)
+I0309 17:12:44.073232679   21026 ref_counted.h:182]          pollable_refcount:0x910cd8 /public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/ev_epollex_linux.cc:925 unref 1 -> 0 pollset
+I0309 17:12:44.073267940   21026 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 5
+D0309 17:12:44.073312842   21026 exec_ctx.cc:54]             closure 0x915c40 finished
+I0309 17:12:44.073364143   21026 init.cc:237]                grpc_shutdown(void)
+D0309 17:12:44.073415325   21026 init.cc:248]                grpc_shutdown starts clean-up now
+I0309 17:12:44.073459916   21026 timer_manager.cc:318]       stop timer threads: threaded=1
+I0309 17:12:44.086417254   21026 timer_manager.cc:324]       num timer threads: 1
+I0309 17:12:44.086528848   21030 timer_manager.cc:205]       wait ended: was_timed:1 kicked:0
+I0309 17:12:44.086582839   21030 timer_generic.cc:705]       TIMER CHECK BEGIN: now=1286 next=9223372036854775807 tls_min=1191 glob_min=2207
+I0309 17:12:44.086624600   21030 timer_generic.cc:730]       TIMER CHECK END: r=1; next=2207
+I0309 17:12:44.086666352   21030 timer_manager.cc:277]       End timer thread
+I0309 17:12:44.086768015   21026 timer_manager.cc:329]       num timer threads: 0
+I0309 17:12:44.086942180   21026 timer_manager.cc:318]       stop timer threads: threaded=0
+D0309 17:12:44.086995581   21026 error.cc:508]               0x921cd0 create [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:279]
+I0309 17:12:44.087043133   21026 timer_generic.cc:603]         .. shard[31]->min_deadline = 2207
+I0309 17:12:44.087096784   21026 timer_generic.cc:518]         .. shard[31]: heap_empty=true
+I0309 17:12:44.087136215   21026 timer_generic.cc:489]         .. shard[31]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087173256   21026 timer_generic.cc:563]         .. shard[31] popped 0
+I0309 17:12:44.087210267   21026 timer_generic.cc:622]         .. result --> 1, shard[31]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.087249909   21026 timer_generic.cc:518]         .. shard[30]: heap_empty=true
+I0309 17:12:44.087287970   21026 timer_generic.cc:489]         .. shard[30]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087325731   21026 timer_generic.cc:563]         .. shard[30] popped 0
+I0309 17:12:44.087362362   21026 timer_generic.cc:622]         .. result --> 1, shard[30]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.087410293   21026 timer_generic.cc:518]         .. shard[29]: heap_empty=true
+I0309 17:12:44.087449764   21026 timer_generic.cc:489]         .. shard[29]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087488356   21026 timer_generic.cc:563]         .. shard[29] popped 0
+I0309 17:12:44.087525447   21026 timer_generic.cc:622]         .. result --> 1, shard[29]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.087564358   21026 timer_generic.cc:518]         .. shard[28]: heap_empty=true
+I0309 17:12:44.087601879   21026 timer_generic.cc:489]         .. shard[28]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087640220   21026 timer_generic.cc:563]         .. shard[28] popped 0
+I0309 17:12:44.087677311   21026 timer_generic.cc:622]         .. result --> 1, shard[28]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.087720982   21026 timer_generic.cc:518]         .. shard[27]: heap_empty=true
+I0309 17:12:44.087758814   21026 timer_generic.cc:489]         .. shard[27]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087796315   21026 timer_generic.cc:563]         .. shard[27] popped 0
+I0309 17:12:44.087832146   21026 timer_generic.cc:622]         .. result --> 1, shard[27]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.087869987   21026 timer_generic.cc:518]         .. shard[26]: heap_empty=true
+I0309 17:12:44.087906248   21026 timer_generic.cc:489]         .. shard[26]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.087943159   21026 timer_generic.cc:563]         .. shard[26] popped 0
+I0309 17:12:44.087979160   21026 timer_generic.cc:622]         .. result --> 1, shard[26]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.088016791   21026 timer_generic.cc:518]         .. shard[25]: heap_empty=true
+I0309 17:12:44.088053182   21026 timer_generic.cc:489]         .. shard[25]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088096373   21026 timer_generic.cc:563]         .. shard[25] popped 0
+I0309 17:12:44.088132654   21026 timer_generic.cc:622]         .. result --> 1, shard[25]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.088175006   21026 timer_generic.cc:518]         .. shard[24]: heap_empty=true
+I0309 17:12:44.088213437   21026 timer_generic.cc:489]         .. shard[24]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088250418   21026 timer_generic.cc:501]         .. add timer with deadline 2229 to heap
+I0309 17:12:44.088287349   21026 timer_generic.cc:531]         .. check top timer deadline=2229 now=9223372036854775807
+I0309 17:12:44.088328270   21026 timer_generic.cc:538]       TIMER 0x920520: FIRE 9223372036854775807ms late
+D0309 17:12:44.088370801   21026 error.cc:304]               0x921cd0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:557]
+I0309 17:12:44.088419933   21026 timer_generic.cc:518]         .. shard[24]: heap_empty=true
+I0309 17:12:44.088456464   21026 timer_generic.cc:489]         .. shard[24]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088493685   21026 timer_generic.cc:563]         .. shard[24] popped 1
+I0309 17:12:44.088530486   21026 timer_generic.cc:622]         .. result --> 2, shard[24]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.088570077   21026 timer_generic.cc:518]         .. shard[23]: heap_empty=true
+I0309 17:12:44.088607478   21026 timer_generic.cc:489]         .. shard[23]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088644039   21026 timer_generic.cc:563]         .. shard[23] popped 0
+I0309 17:12:44.088679330   21026 timer_generic.cc:622]         .. result --> 2, shard[23]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.088717102   21026 timer_generic.cc:518]         .. shard[22]: heap_empty=true
+I0309 17:12:44.088754763   21026 timer_generic.cc:489]         .. shard[22]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088792034   21026 timer_generic.cc:563]         .. shard[22] popped 0
+I0309 17:12:44.088828515   21026 timer_generic.cc:622]         .. result --> 2, shard[22]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.088867456   21026 timer_generic.cc:518]         .. shard[21]: heap_empty=true
+I0309 17:12:44.088905217   21026 timer_generic.cc:489]         .. shard[21]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.088946518   21026 timer_generic.cc:563]         .. shard[21] popped 0
+I0309 17:12:44.088982419   21026 timer_generic.cc:622]         .. result --> 2, shard[21]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089020610   21026 timer_generic.cc:518]         .. shard[20]: heap_empty=true
+I0309 17:12:44.089058081   21026 timer_generic.cc:489]         .. shard[20]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089095363   21026 timer_generic.cc:563]         .. shard[20] popped 0
+I0309 17:12:44.089130394   21026 timer_generic.cc:622]         .. result --> 2, shard[20]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089168275   21026 timer_generic.cc:518]         .. shard[19]: heap_empty=true
+I0309 17:12:44.089205496   21026 timer_generic.cc:489]         .. shard[19]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089242607   21026 timer_generic.cc:563]         .. shard[19] popped 0
+I0309 17:12:44.089277908   21026 timer_generic.cc:622]         .. result --> 2, shard[19]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089315239   21026 timer_generic.cc:518]         .. shard[18]: heap_empty=true
+I0309 17:12:44.089351370   21026 timer_generic.cc:489]         .. shard[18]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089396501   21026 timer_generic.cc:563]         .. shard[18] popped 0
+I0309 17:12:44.089434712   21026 timer_generic.cc:622]         .. result --> 2, shard[18]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089478104   21026 timer_generic.cc:518]         .. shard[17]: heap_empty=true
+I0309 17:12:44.089521005   21026 timer_generic.cc:489]         .. shard[17]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089558576   21026 timer_generic.cc:563]         .. shard[17] popped 0
+I0309 17:12:44.089594447   21026 timer_generic.cc:622]         .. result --> 2, shard[17]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089632058   21026 timer_generic.cc:518]         .. shard[16]: heap_empty=true
+I0309 17:12:44.089668499   21026 timer_generic.cc:489]         .. shard[16]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089705910   21026 timer_generic.cc:563]         .. shard[16] popped 0
+I0309 17:12:44.089742841   21026 timer_generic.cc:622]         .. result --> 2, shard[16]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089781773   21026 timer_generic.cc:518]         .. shard[15]: heap_empty=true
+I0309 17:12:44.089818614   21026 timer_generic.cc:489]         .. shard[15]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.089855015   21026 timer_generic.cc:563]         .. shard[15] popped 0
+I0309 17:12:44.089891216   21026 timer_generic.cc:622]         .. result --> 2, shard[15]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.089929287   21026 timer_generic.cc:518]         .. shard[14]: heap_empty=true
+I0309 17:12:44.089966648   21026 timer_generic.cc:489]         .. shard[14]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090004269   21026 timer_generic.cc:563]         .. shard[14] popped 0
+I0309 17:12:44.090040570   21026 timer_generic.cc:622]         .. result --> 2, shard[14]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090083701   21026 timer_generic.cc:518]         .. shard[13]: heap_empty=true
+I0309 17:12:44.090126863   21026 timer_generic.cc:489]         .. shard[13]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090163754   21026 timer_generic.cc:563]         .. shard[13] popped 0
+I0309 17:12:44.090199655   21026 timer_generic.cc:622]         .. result --> 2, shard[13]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090237426   21026 timer_generic.cc:518]         .. shard[12]: heap_empty=true
+I0309 17:12:44.090274907   21026 timer_generic.cc:489]         .. shard[12]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090313518   21026 timer_generic.cc:563]         .. shard[12] popped 0
+I0309 17:12:44.090350229   21026 timer_generic.cc:622]         .. result --> 2, shard[12]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090396251   21026 timer_generic.cc:518]         .. shard[11]: heap_empty=true
+I0309 17:12:44.090434642   21026 timer_generic.cc:489]         .. shard[11]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090471443   21026 timer_generic.cc:563]         .. shard[11] popped 0
+I0309 17:12:44.090508304   21026 timer_generic.cc:622]         .. result --> 2, shard[11]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090546645   21026 timer_generic.cc:518]         .. shard[10]: heap_empty=true
+I0309 17:12:44.090584206   21026 timer_generic.cc:489]         .. shard[10]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090620757   21026 timer_generic.cc:563]         .. shard[10] popped 0
+I0309 17:12:44.090655798   21026 timer_generic.cc:622]         .. result --> 2, shard[10]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090693939   21026 timer_generic.cc:518]         .. shard[9]: heap_empty=true
+I0309 17:12:44.090736161   21026 timer_generic.cc:489]         .. shard[9]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090774152   21026 timer_generic.cc:563]         .. shard[9] popped 0
+I0309 17:12:44.090810463   21026 timer_generic.cc:622]         .. result --> 2, shard[9]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.090854294   21026 timer_generic.cc:518]         .. shard[8]: heap_empty=true
+I0309 17:12:44.090892965   21026 timer_generic.cc:489]         .. shard[8]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.090930906   21026 timer_generic.cc:563]         .. shard[8] popped 0
+I0309 17:12:44.090967567   21026 timer_generic.cc:622]         .. result --> 2, shard[8]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091006748   21026 timer_generic.cc:518]         .. shard[7]: heap_empty=true
+I0309 17:12:44.091044239   21026 timer_generic.cc:489]         .. shard[7]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091081101   21026 timer_generic.cc:563]         .. shard[7] popped 0
+I0309 17:12:44.091116542   21026 timer_generic.cc:622]         .. result --> 2, shard[7]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091154823   21026 timer_generic.cc:518]         .. shard[6]: heap_empty=true
+I0309 17:12:44.091192104   21026 timer_generic.cc:489]         .. shard[6]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091229155   21026 timer_generic.cc:563]         .. shard[6] popped 0
+I0309 17:12:44.091264836   21026 timer_generic.cc:622]         .. result --> 2, shard[6]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091303067   21026 timer_generic.cc:518]         .. shard[5]: heap_empty=true
+I0309 17:12:44.091345708   21026 timer_generic.cc:489]         .. shard[5]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091390580   21026 timer_generic.cc:563]         .. shard[5] popped 0
+I0309 17:12:44.091429411   21026 timer_generic.cc:622]         .. result --> 2, shard[5]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091468012   21026 timer_generic.cc:518]         .. shard[4]: heap_empty=true
+I0309 17:12:44.091505983   21026 timer_generic.cc:489]         .. shard[4]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091542934   21026 timer_generic.cc:563]         .. shard[4] popped 0
+I0309 17:12:44.091579465   21026 timer_generic.cc:622]         .. result --> 2, shard[4]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091617426   21026 timer_generic.cc:518]         .. shard[3]: heap_empty=true
+I0309 17:12:44.091655037   21026 timer_generic.cc:489]         .. shard[3]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091692598   21026 timer_generic.cc:563]         .. shard[3] popped 0
+I0309 17:12:44.091727679   21026 timer_generic.cc:622]         .. result --> 2, shard[3]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091764701   21026 timer_generic.cc:518]         .. shard[2]: heap_empty=true
+I0309 17:12:44.091802112   21026 timer_generic.cc:489]         .. shard[2]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091839993   21026 timer_generic.cc:563]         .. shard[2] popped 0
+I0309 17:12:44.091876864   21026 timer_generic.cc:622]         .. result --> 2, shard[2]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.091914665   21026 timer_generic.cc:518]         .. shard[1]: heap_empty=true
+I0309 17:12:44.091957676   21026 timer_generic.cc:489]         .. shard[1]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.091994877   21026 timer_generic.cc:563]         .. shard[1] popped 0
+I0309 17:12:44.092029768   21026 timer_generic.cc:622]         .. result --> 2, shard[1]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+I0309 17:12:44.092066309   21026 timer_generic.cc:518]         .. shard[0]: heap_empty=true
+I0309 17:12:44.092103950   21026 timer_generic.cc:489]         .. shard[0]->queue_deadline_cap --> 9223372036854775807
+I0309 17:12:44.092141672   21026 timer_generic.cc:563]         .. shard[0] popped 0
+I0309 17:12:44.092177813   21026 timer_generic.cc:622]         .. result --> 2, shard[0]->min_deadline 2207 --> 9223372036854775807, now=9223372036854775807
+D0309 17:12:44.092219164   21026 error.cc:352]               0x921cd0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:663]
+D0309 17:12:44.092389369   21026 exec_ctx.cc:34]             running closure 0x920560: created [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:894]: scheduled [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/timer_generic.cc:556]
+D0309 17:12:44.092437990   21026 error.cc:508]               0x9185c0 create [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:905]
+D0309 17:12:44.092477551   21026 error.cc:304]               0x921cd0: 1 -> 2 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:531]
+D0309 17:12:44.092514102   21026 error.cc:352]               0x9185c0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/ext/filters/client_channel/subchannel.cc:921]
+D0309 17:12:44.092550754   21026 error.cc:352]               0x921cd0: 2 -> 1 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/error.cc:323]
+I0309 17:12:44.092587895   21026 dual_ref_counted.h:176]     Subchannel:0x920180 weak_unref 1 -> 0 (refs=0)
+I0309 17:12:44.092631816   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 3 -> 2
+I0309 17:12:44.092676547   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:80 unref 2 -> 1 connector_arg_destroy
+I0309 17:12:44.092714148   21026 ev_posix.cc:357]            (polling-api) pollset_set_destroy(0x91f340)
+I0309 17:12:44.092790290   21026 ref_counted.h:182]          security_connector_refcount:0x91f3a8 /public/home/lifei/xinzk/source/grpc/src/core/lib/security/security_connector/security_connector.cc:80 unref 1 -> 0 connector_arg_destroy
+I0309 17:12:44.092846202   21026 ref_counted.h:165]          SubchannelPoolInterface:0x916918 unref 2 -> 1
+D0309 17:12:44.092887663   21026 error.cc:352]               0x921cd0: 1 -> 0 [/public/home/lifei/xinzk/source/grpc/src/core/lib/iomgr/exec_ctx.cc:50]
+D0309 17:12:44.092924574   21026 exec_ctx.cc:54]             closure 0x920560 finished
+I0309 17:12:44.092960875   21026 executor.cc:405]            EXECUTOR Executor::ShutdownAll() enter
+I0309 17:12:44.092998097   21026 executor.cc:150]            EXECUTOR (default-executor) SetThreading(0) begin
+I0309 17:12:44.093044358   21028 executor.cc:242]            EXECUTOR (default-executor) [0]: shutdown
+I0309 17:12:44.093205833   21026 executor.cc:196]            EXECUTOR (default-executor) Thread 1 of 1 joined
+I0309 17:12:44.093296675   21026 executor.cc:217]            EXECUTOR (default-executor) SetThreading(0) done
+I0309 17:12:44.093336976   21026 executor.cc:150]            EXECUTOR (resolver-executor) SetThreading(0) begin
+I0309 17:12:44.093396208   21029 executor.cc:242]            EXECUTOR (resolver-executor) [0]: shutdown
+I0309 17:12:44.093543592   21026 executor.cc:196]            EXECUTOR (resolver-executor) Thread 1 of 1 joined
+I0309 17:12:44.093628105   21026 executor.cc:217]            EXECUTOR (resolver-executor) SetThreading(0) done
+I0309 17:12:44.093665716   21026 executor.cc:434]            EXECUTOR Executor::ShutdownAll() done
+I0309 17:12:44.093715417   21026 ev_epollex_linux.cc:147]    (fd-trace) pollable_unref: Closing epfd: 3

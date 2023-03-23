@@ -1,0 +1,8 @@
+server ip and port: 12.8.10.78:5000
+before init
+after init
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:Connected()
+14: failed to connect to all addresses
+Answer received: 5 * 10 = -1
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:Shutdown() 1
+src/core/ext/transport/chttp2/client/chttp2_connector.cc:Shutdown() 2

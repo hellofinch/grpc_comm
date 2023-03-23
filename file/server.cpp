@@ -1,0 +1,41 @@
+#include "message.grpc.pb.h"
+#include <grpc++/server_builder.h>
+
+using namespace grpc;
+
+class MagicNumberService final : public NumberService::Service
+{
+public:
+	Status Sum([[maybe_unused]]ServerContext* context, ServerReader<SumRequest>* reader, SumResponse* response) override
+	{
+		uint64_t sum = 0;
+		SumRequest request;
+		while (reader->Read(&request))
+		{
+			std::cout << "[MagicNumberService.Sum] read: " << request.value() << "\n";
+			sum += request.value();
+		}
+		response->set_value(sum);
+		return Status::OK;
+	}
+// private:
+// 	std::atomic<uint64_t> m_incremental = 0;
+};
+
+
+int main(int argc,char* argv[])
+{
+    std::string port(":5000");
+    std::string address=std::string(argv[1])+port;//("12.9.11.3:5000");
+    std::cout << "server ip: " << address << std::endl;
+	MagicNumberService service;
+	ServerBuilder builder;
+	builder.AddListeningPort(address, InsecureServerCredentials());
+	builder.RegisterService(&service);
+	auto server = builder.BuildAndStart();
+	std::cout << "The service is listening! Press Enter to shutdown\n";
+	std::cin.get();
+	server->Shutdown();
+	server->Wait();
+    return 0;
+}
