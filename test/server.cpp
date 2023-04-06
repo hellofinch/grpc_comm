@@ -2,13 +2,15 @@
 // #include "rdma_helper.h"
 #include "rdma_message.h"
 #include <cstdio>
+#include <unistd.h>
 
 using namespace std;
 
 void on_connect_request(struct rdma_cm_id *id, struct resources *res){
   struct ibv_qp_init_attr qp_init_attr;
-    struct rdma_conn_param cm_params;
+  struct rdma_conn_param cm_params;
   struct ibv_comp_channel *recv_comp_channel, *send_comp_channel;
+  struct ibv_comp_channel *comp_channel;
   struct ibv_recv_wr wr, *bad_wr = NULL;
   struct ibv_sge sge;
   size_t size;
@@ -22,24 +24,33 @@ void on_connect_request(struct rdma_cm_id *id, struct resources *res){
   cq_size = 1;
   send_comp_channel = ibv_create_comp_channel(id->verbs);
   recv_comp_channel = ibv_create_comp_channel(id->verbs);
+  comp_channel = ibv_create_comp_channel(id->verbs);
   // 创建完成队列
   res->send_cq = ibv_create_cq(res->ib_ctx, cq_size, send_comp_channel, nullptr, 0);
   res->recv_cq = ibv_create_cq(res->ib_ctx, cq_size, recv_comp_channel, nullptr, 0);
-  res->cq = ibv_create_cq(res->ib_ctx, cq_size, nullptr, nullptr, 0);
+  res->cq = ibv_create_cq(res->ib_ctx, cq_size, comp_channel, nullptr, 0);
+  // res->cq = ibv_create_cq(res->ib_ctx, cq_size, nullptr, nullptr, 0);
   ibv_req_notify_cq(res->send_cq, 0);
   ibv_req_notify_cq(res->recv_cq, 0);
+  ibv_req_notify_cq(res->cq, 0);
   int flags;
   flags = fcntl(send_comp_channel->fd, F_GETFL);
   fcntl(send_comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
   flags = fcntl(recv_comp_channel->fd, F_GETFL);
   fcntl(recv_comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
+  flags = fcntl(comp_channel->fd, F_GETFL);
+  fcntl(comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
   res->send_comp_channel=send_comp_channel;
   res->recv_comp_channel=recv_comp_channel;
+  res->comp_channel=comp_channel;
   size = kMemSize;
   res->buf = (char *) malloc(size);
   memset(res->buf, 0, size);
   mr_flags = IBV_ACCESS_LOCAL_WRITE | IBV_ACCESS_REMOTE_READ | IBV_ACCESS_REMOTE_WRITE;
   res->mr = ibv_reg_mr(res->pd, res->buf, size, mr_flags);
+  std::string data = "server server!";
+  memcpy(res->buf, data.c_str(), data.size());
+  std::cout << "mem in server: " << res->buf << std::endl;
   memset(&qp_init_attr, 0, sizeof(qp_init_attr));
   qp_init_attr.qp_type = IBV_QPT_RC;
   // qp_init_attr.send_cq = res->send_cq;
@@ -63,6 +74,10 @@ void on_connect_request(struct rdma_cm_id *id, struct resources *res){
   wr.sg_list = &sge;
   wr.num_sge = 1;
   ibv_post_recv(res->qp, &wr, &bad_wr);
+  struct ibv_cq *cq=res->cq;
+  void *ctx;
+  std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->send_comp_channel, &cq, &ctx) << std::endl;
+  std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->recv_comp_channel, &cq, &ctx) << std::endl;
   rdma_accept(id, &cm_params);
 }
 
@@ -80,29 +95,41 @@ void on_connected(struct rdma_cm_id *id, struct resources *res){
   sge.length = kMemSize;
   sge.lkey = res->mr->lkey;
   void *ctx;
-  ibv_get_cq_event(res->recv_comp_channel, &cq, &ctx);
-  ibv_ack_cq_events(cq, 1);
-  ibv_req_notify_cq(cq, 0);
-  ibv_poll_cq(cq,1,&wc);
+  
+  std::cout << "ibv_poll_cq " << ibv_poll_cq(cq, 1, &wc) << std::endl;
+  std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->recv_comp_channel, &cq, &ctx) << std::endl;
+  int count=0;
+  while(!ibv_poll_cq(cq,1,&wc)&&count<10){
+    sleep(1);
+    count++;
+    std::cout << "wait" << std::endl;
+  }
+  // ibv_get_cq_event(res->recv_comp_channel, &cq, &ctx);
+  // ibv_ack_cq_events(cq, 1);
+  // ibv_req_notify_cq(cq, 0);
+  // ibv_poll_cq(cq,1,&wc);
     if(wc.status==IBV_WC_SUCCESS){
       // rdma_post_recv(id,NULL,res->buf,kMemSize,res->mr);
       std::cout << "mem in server: " << res->buf << std::endl;
       std::string data = "server server!";
       memcpy(res->buf, data.c_str(), data.size());
       std::cout << "mem in server: " << res->buf << std::endl;
-  //     rdma_post_send(id,NULL,res->buf,kMemSize,res->mr,0);
+      rdma_post_send(id,NULL,res->buf,kMemSize,res->mr,0);
     }
 
 
 }
 
 void on_disconnected(struct rdma_cm_id *id, struct resources *res){
+  rdma_disconnect(id);
   ibv_dereg_mr(res->mr); 
   ibv_dealloc_pd(res->pd);
   ibv_destroy_cq(res->send_cq);
   ibv_destroy_cq(res->recv_cq);
+  ibv_destroy_cq(res->cq);
   free(res->buf);
   rdma_destroy_id(id);
+  std::cout << "free id" << std::endl;
 }
 
 int main(){
@@ -119,6 +146,12 @@ int main(){
   rdma_create_id(event_channel,&id,NULL,RDMA_PS_TCP);
   rdma_bind_addr(id,(struct sockaddr *)&addr);
   rdma_listen(id,10);
+
+  // resources_.buf = (char *) malloc(kMemSize);
+  // std::string data = "server server!";
+  // memcpy(resources_.buf, data.c_str(), data.size());
+  // std::cout << "mem in server: " << resources_.buf << std::endl;
+
   // int flags = fcntl(event_channel->fd, F_GETFL);
   // fcntl(event_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
   // Wait for events on the event channel

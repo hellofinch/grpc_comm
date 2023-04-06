@@ -5,12 +5,13 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 
 #define TIMEOUT_IN_MS 2000
 void on_addr_resolved(struct rdma_cm_id *id, struct resources *res) {
   struct ibv_qp_init_attr qp_init_attr;
-  struct ibv_comp_channel *recv_comp_channel, *send_comp_channel;
+  struct ibv_comp_channel *recv_comp_channel, *send_comp_channel, *comp_channel;
   size_t size;
   int i;
   int mr_flags = 0;
@@ -22,19 +23,24 @@ void on_addr_resolved(struct rdma_cm_id *id, struct resources *res) {
   cq_size = 1;
   send_comp_channel = ibv_create_comp_channel(id->verbs);
   recv_comp_channel = ibv_create_comp_channel(id->verbs);
+  comp_channel = ibv_create_comp_channel(id->verbs);
   // 创建完成队列
   res->send_cq = ibv_create_cq(res->ib_ctx, cq_size, send_comp_channel, nullptr, 0);
   res->recv_cq = ibv_create_cq(res->ib_ctx, cq_size, recv_comp_channel, nullptr, 0);
-  res->cq = ibv_create_cq(res->ib_ctx, cq_size, nullptr, nullptr, 0);
+  res->cq = ibv_create_cq(res->ib_ctx, cq_size, comp_channel, nullptr, 0);
   ibv_req_notify_cq(res->send_cq, 0);
   ibv_req_notify_cq(res->recv_cq, 0);
+  ibv_req_notify_cq(res->cq, 0);
   int flags;
   flags = fcntl(send_comp_channel->fd, F_GETFL);
   fcntl(send_comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
   flags = fcntl(recv_comp_channel->fd, F_GETFL);
   fcntl(recv_comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
+  flags = fcntl(comp_channel->fd, F_GETFL);
+  fcntl(comp_channel->fd, F_SETFL, flags | O_NONBLOCK); //set non-blocking
   res->send_comp_channel=send_comp_channel;
   res->recv_comp_channel=recv_comp_channel;
+  res->comp_channel=comp_channel;
   size = kMemSize;
   res->buf = (char *) malloc(size);
   memset(res->buf, 0, size);
@@ -94,11 +100,57 @@ void on_connected(struct rdma_cm_id *id, struct resources *res){
   ibv_post_send(res->qp, &sr, &bad_wr);
   std::cout << "ibv_post_send" << std::endl;
   void *ctx;
-  ibv_get_cq_event(res->send_comp_channel, &cq, &ctx);
-  ibv_ack_cq_events(cq, 1);
-  ibv_req_notify_cq(cq, 0);
-  while (ibv_poll_cq(cq, 1, &wc))
-      std::cout << "wc.opcode " << wc.opcode << std::endl;
+  // std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->send_comp_channel, &cq, &ctx) << std::endl;
+  // std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->recv_comp_channel, &cq, &ctx) << std::endl;
+  // std::cout << "ibv_get_cq_event " << ibv_get_cq_event(res->comp_channel, &cq, &ctx) << std::endl;
+  // ibv_ack_cq_events(cq, 1);
+  // ibv_req_notify_cq(cq, 0);
+  // std::cout << "ibv_poll_cq " << ibv_poll_cq(cq, 1, &wc) << std::endl;
+  while (1) {
+    int x=ibv_get_cq_event(res->comp_channel, &cq, &ctx);
+    if (x) {
+        // 处理错误情况
+        std::cout << "ibv_get_cq_event error! " << x <<std::endl;
+    }
+
+    // 查询已完成操作的数量
+    int num_wc = ibv_poll_cq(cq, 1, &wc);
+    if (num_wc < 0) {
+        // 处理错误情况
+        std::cout << num_wc << " poll error!" << std::endl;
+    }
+
+    // 处理完成事件
+    // for (int i = 0; i < num_wc; ++i) {
+        // if (wc[i].status == IBV_WC_SUCCESS) {
+        if (wc.status == IBV_WC_SUCCESS) {
+            // 完成的是成功的接收或发送操作
+            // 处理代码
+            std::cout << "mem in client: " << res->buf << std::endl;
+            sleep(2);
+        } else {
+            // 完成的是错误通知
+            // 处理代码
+            std::cout << "error!" << std::endl;
+        }
+    // }
+
+    // 确认处理完的完成事件
+    ibv_ack_cq_events(cq, num_wc);
+
+    // 请求下一个完成事件
+    if (ibv_req_notify_cq(cq, 0)) {
+        // 处理错误情况
+        std::cout << "ibv_req_notify_cq error!" << std::endl;
+    }
+}
+  // while(!ibv_poll_cq(cq,1,&wc)){
+
+  // }
+  // if(wc.status==IBV_WC_SUCCESS){
+  //     std::cout << "mem in client: " << res->buf << std::endl;
+  //   }
+  // // std::cout << "wc.opcode " << wc.opcode << std::endl;
 }
 
 void on_disconnected(struct rdma_cm_id *id, struct resources *res){
@@ -114,33 +166,28 @@ void on_disconnected(struct rdma_cm_id *id, struct resources *res){
 using namespace std;
 
 int main(){
-    struct rdma_event_channel *event_channel;
-    struct rdma_cm_id *id;
-    struct rdma_conn_param cm_params;
-    int fd;
-    struct resources resources_;
-    memset(&resources_, 0, sizeof(resources_));
-    // Create an event channel
-    event_channel = rdma_create_event_channel();
-    rdma_create_id(event_channel,&id,NULL,RDMA_PS_TCP);
-    struct sockaddr_in addr;
+  struct rdma_event_channel *event_channel;
+  struct rdma_cm_id *id;
+  struct rdma_conn_param cm_params;
+  int fd;
+  struct resources resources_;
+  memset(&resources_, 0, sizeof(resources_));
+  // Create an event channel
+  event_channel = rdma_create_event_channel();
+  rdma_create_id(event_channel,&id,NULL,RDMA_PS_TCP);
+  struct sockaddr_in addr;
 
-    memset(&addr, 0, sizeof(addr));
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(1234);
-    inet_pton(AF_INET, "12.8.10.72", &addr.sin_addr);
-    rdma_resolve_addr(id, NULL, (struct sockaddr *)&addr, 2000);
+  memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_port = htons(1234);
+  inet_pton(AF_INET, "12.8.10.40", &addr.sin_addr);
+  rdma_resolve_addr(id, NULL, (struct sockaddr *)&addr, 2000);
 
-    if (!event_channel) {
-    perror("rdma_create_event_channel");
-    exit(1);
-    }
-
-    // Get the file descriptor associated with the event channel
-    // fd = event_channel->fd;
-    // Wait for events on the event channel
-    struct rdma_event_channel *ec = event_channel;
-    struct rdma_cm_event *event;
+  // Get the file descriptor associated with the event channel
+  // fd = event_channel->fd;
+  // Wait for events on the event channel
+  struct rdma_event_channel *ec = event_channel;
+  struct rdma_cm_event *event;
   while (true) {
 
     // Get the next event on the event channel
@@ -150,16 +197,16 @@ int main(){
     switch (event->event) {
       case RDMA_CM_EVENT_ADDR_RESOLVED:
         // Address resolution completed successfully
-        std::cout << "Address resolution completed successfully" << std::endl;
         on_addr_resolved(id,&resources_);
         rdma_ack_cm_event(event);
+        std::cout << "Address resolution completed successfully" << std::endl;
         break;
       case RDMA_CM_EVENT_ROUTE_RESOLVED:
         // Route resolution completed successfully
-        std::cout << "Route resolution completed successfully" << std::endl;
         memset(&cm_params, 0, sizeof(cm_params));
         rdma_connect(id, &cm_params);
         rdma_ack_cm_event(event);
+        std::cout << "Route resolution completed successfully" << std::endl;
         break;
       case RDMA_CM_EVENT_CONNECT_REQUEST:
         // Received a connection request from a remote peer
@@ -168,16 +215,16 @@ int main(){
         break;
       case RDMA_CM_EVENT_ESTABLISHED:
         // Connection has been established
-        std::cout << "Connection has been established" << std::endl;
         on_connected(id,&resources_);
         rdma_ack_cm_event(event);
+        std::cout << "Connection has been established" << std::endl;
         break;
       case RDMA_CM_EVENT_DISCONNECTED:
         // Connection has been disconnected
-        std::cout << "Connection has been disconnected" << std::endl;
         on_disconnected(id,&resources_);
         rdma_ack_cm_event(event);
-        return 0;
+        std::cout << "Connection has been disconnected" << std::endl;
+        break;
       default:
         // Other events ...
         break;
